@@ -1,2 +1,2 @@
-#Projeto de desenvolvimento WEB
-Objetivo: Ficar Doido
+# Projeto de desenvolvimento WEB
+## Tema: Supermercado
