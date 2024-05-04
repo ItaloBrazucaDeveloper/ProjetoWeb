@@ -1,7 +1,6 @@
 # Projeto de desenvolvimento WEB
 
-> Situação problema: Desenvolver um site que possibilite a 
-conexão entre a aglicultura local com moradores da região.
+> Situação problema: Uma academia, com 10 anos no mercado, precisa de um site moderno para chamar atenção de novos clientes e incentivar a prática de exercícios.
 
 Página HOME:
 - HTML -> Benício
