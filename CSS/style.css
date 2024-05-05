@@ -4,9 +4,56 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-
 /* Conteúdo CSS do HEADER */
 
+
+
 /* Conteúdo CSS do MAIN */
+.pages {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+#upper-button {
+    position: fixed;
+    top: 95%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+
+    background-color: #00000051;
+    color: azure;
+    border: 0px;
+
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+#upper-button:hover {
+    background-color: #ffffff51;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: sticky;
+    top: 0; left: 0;
+    height: 100vh;
+
+    scroll-snap-align: start;
+}
+
+/* ⬇️⬇️⬇️ Temporário */
+section#first-page {
+    background-color: tomato;
+}
+section#second-page {
+    background-color: crimson;
+}
+section#third-page {
+    background-color: rebeccapurple;
+}
 
 /* Conteúdo CSS do FOOTER */
