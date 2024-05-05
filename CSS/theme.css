@@ -1,4 +1,12 @@
 /* Cores da página */
-body{
-    background-color: #f0ffff;
+
+/* ⬇️⬇️⬇️ Temporário!!!! */
+section#first-page {
+    background-color: cornflowerblue;
+}
+section#second-page {
+    background-color: #dc143c;
+}
+section#third-page {
+    background-color: #212121;
 }

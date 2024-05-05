@@ -14,6 +14,17 @@
     overflow-y: scroll;
     height: 100vh;
 }
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: sticky;
+    top: 0; left: 0;
+    height: 100vh;
+    
+    scroll-snap-align: start;
+}
 
 #upper-button {
     position: fixed;
@@ -33,27 +44,17 @@
     background-color: #ffffff51;
 }
 
-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: sticky;
-    top: 0; left: 0;
-    height: 100vh;
-
-    scroll-snap-align: start;
-}
-
-/* ⬇️⬇️⬇️ Temporário */
+/* Conteúdo CSS de cada 'Section' */
 section#first-page {
-    background-color: tomato;
+    color: azure;
 }
+
 section#second-page {
-    background-color: crimson;
+    color: azure;
 }
+
 section#third-page {
-    background-color: rebeccapurple;
+    color: azure;
 }
 
 /* Conteúdo CSS do FOOTER */
