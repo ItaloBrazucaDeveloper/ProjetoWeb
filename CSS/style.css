@@ -4,16 +4,42 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+html {
+    overflow-x: hidden;
+}
+
 /* Conteúdo CSS do HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    width: 100vw;
+    height: 7vh;
+}
 
+header h1 {
+    margin-left: 20px;
+    width: 20vw;
+}
+nav li {
+    text-align: right;
+    display: inline;
+    padding: 10px 5px;
+}
+nav li a {
+    margin-right: 30px;
+    text-decoration: none;
+    padding: 0px 5px;
+
+    font-size: 25px;
+    transition: 0.1s;
+}
+nav li a:hover {
+    border-bottom: solid #000000 3px;
+}
 
 /* Conteúdo CSS do MAIN */
-.pages {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
-}
 section {
     display: flex;
     align-items: center;
@@ -22,39 +48,56 @@ section {
     position: sticky;
     top: 0; left: 0;
     height: 100vh;
-    
-    scroll-snap-align: start;
 }
 
 #upper-button {
     position: fixed;
-    top: 95%; left: 50%;
+    top: 95%; right: 0%;
     transform: translate(-50%, -50%);
-    z-index: 0;
 
-    background-color: #00000051;
-    color: azure;
+    z-index: 0;
     border: 0px;
 
     border-radius: 50%;
     height: 50px;
     width: 50px;
 }
-#upper-button:hover {
-    background-color: #ffffff51;
-}
-
-/* Conteúdo CSS de cada 'Section' */
-section#first-page {
-    color: azure;
-}
-
-section#second-page {
-    color: azure;
-}
-
-section#third-page {
-    color: azure;
-}
 
 /* Conteúdo CSS do FOOTER */
+footer{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    width: 100vw;
+    height: 30vh;
+    padding-top: 20px;
+}
+footer li {
+    list-style-type: none;
+}
+footer li a {
+    text-decoration: none;
+}
+footer h4{
+    margin-bottom: 5px;
+}
+#info, #help ul {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+#social-network li {
+    display: inline;
+}
+#social-network i {
+    padding: 10px;
+    border-radius: 50%;
+}
+#social-network ul{
+    margin-top: auto;
+}
