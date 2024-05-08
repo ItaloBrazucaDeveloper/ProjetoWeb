@@ -1,35 +1,41 @@
-/* ⬇️⬇️⬇️ Temporário!!!! */
-section#first-page {
-    background-color: cornflowerblue;
+/* ---------- ⬇️⬇️⬇️ Temporário!!!! ---------- */
+section.first-section {
+    background-image: url('img/pexels-olly-3775603.jpg');
 }
-section#second-page {
+section.second-section {
     background-color: #dc143c;
 }
-section#third-page {
+section.third-section {
     background-color: #212121;
 }
 
-/* Botão que sobe a página */
-#upper-button{
+/* ---------- Botão que sobe a página ---------- */
+.upper-button {
     background-color: #00000051;
-    color: azure;
+    color: #f0ffff;
 }
-#upper-button:hover {
+.upper-button:hover {
     background-color: #ffffff51;
 }
 
-/* Rodapé da página */
-footer{
-    background-color: black;
-    color: azure;
+/* ---------- Cabeçalho da página ---------- */
+nav li a:hover {
+    border-bottom: solid #000000 3px;
 }
-footer li a{
+
+/* ---------- Rodapé da página ---------- */
+footer {
+    background-color: #000000;
+    color: #f0ffff;
+}
+footer li a {
     color: #727272;
 }
 footer li a:hover {
     color: #e2e0e0;
 }
-#social-network i{
+
+.social-network i {
     color: black;
-    background-color: aliceblue;
+    background-color: #f0f8ff;
 }

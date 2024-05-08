@@ -6,14 +6,15 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="CSS/style.css">
         <link rel="stylesheet" href="CSS/theme.css">
+        <script src="JavaScript/functions.js"></script>
     </head>
 
     <body>
-        <!--Cabeçalho da página-->
+<!-- ========== Cabeçalho da página ========== -->
         <header>
-            <h1 id="logo">Shape Elite</h1>
-            <nav>
-                <ul>
+            <nav class="navigation">
+                <h1 id="logo">Shape de Elite</h1>
+                <ul class="nav-menu">
                     <li><a href="">Home</a>
                     <li><a href="">Planos</a>
                     <li><a href="">Novidades</a>
@@ -23,57 +24,61 @@
             </nav>
         </header>
         
-        <!--Corpo da página-->
-        <main class="pages">
-            <!--Convite para se matricular-->
-            <section id="first-page">
-                <h1>Melhor construtora de shape do Brasil!</h1>
+<!-- ========== Corpo da página ========== -->
+        <main>
+            <section class="first-section">
+                <div class="home-text">
+                    <h2>Sua força na</h2>
+                    <h1>Shape de elite!</h1>
+                    <p>
+                        Nossa academia é especialmente feita para você! 
+                        Damos toda a infraestrutura para você consiguir 
+                        o shape desejado, a maneira Elite. Tenha uma vida 
+                        mais saudável e conte com nossa equipe de profissionais!
+                    </p>
+                    <button>Seja Elite!</button>
+                </div>
             </section>
-            
-            <!--Vantagens da Shape Elite-->
-            <section id="second-page">
+
+            <section class="second-section"> <!-- Vantagens da Shape Elite -->
                 <h1>Aqui evoluimos com você</h1>
             </section>
-            
-            <!--Locais-->
-            <section id="third-page">
+
+            <section class="third-section"> <!-- Localidades da Shape Elite -->
                 <h1>Nossas unidades</h1>
             </section>
 
-            <button id="upper-button">
+            <button onclick="resetScroll()" id="up-button">
                 <i class="bi bi-caret-up-fill"></i>
             </button>
         </main>
 
-        <!--Rodapé da página-->
+<!-- ========== Rodapé da página ========== -->
         <footer>
-            <ul id="social-network">
+            <ul class="social-network">
                 <h4>Redes sociais</h4>
                 <li><a href=""><i class="bi bi-facebook"></i></a>
                 <li><a href=""><i class="bi bi-instagram"></i></a>
                 <li><a href=""><i class="bi bi-tiktok"></i></a>
                 <li><a href=""><i class="bi bi-linkedin"></i></a>
             </ul>
-
-            <ul id="info">
+            <ul class="info">
                 <h4>Informações</h4>
                 <li><a href="">Trabalhe conosco</a>
                 <li><a href="">Nossos serviços</a>
                 <li><a href="">Política de privacidade</a>
                 <li><a href="">Programas afiliados</a>
             </ul>
-
-            <ul id="help">
-                <ul>
-                    <h4>Ajuda</h4>
-                    <li><a href="">FAQ</a>
-                    <li><a href="">Qual o melhor plano para mim?</a>
-                    <li><a href="">Opções de pagamento</a>
-                    <li><a href="">Lorem ipsum dolor</a>
-                    <li><a href="">Lorem ipsum dolor</a>
-                </ul>
+            <ul class="help">
+                <h4>Ajuda</h4>
+                <li><a href="">Perguntas frequentes</a>
+                <li><a href="">lorem ipsum dolor</a>
+                <li><a href="">Opções de pagamento</a>
+                <li><a href="">Lorem ipsum dolor</a>
+                <li><a href="">Lorem ipsum dolor</a>
             </ul>
             <p>&copy;Todos os direitos reservados</p>
         </footer>
+
     </body>
 </html>

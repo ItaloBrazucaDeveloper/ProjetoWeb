@@ -1,56 +1,44 @@
-/* Conteúdo CSS principal da página */
+/* ---------- Conteúdo CSS principal da página ---------- */
 * {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
 }
 html {
     overflow-x: hidden;
 }
 
-/* Conteúdo CSS do HEADER */
-header {
+
+/* ---------- Conteúdo CSS do HEADER ---------- */
+.navigation {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
-    width: 100vw;
-    height: 7vh;
+    padding: 18px 40px;
+    width: 100%;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
 }
-
-header h1 {
-    margin-left: 20px;
-    width: 20vw;
+.navigation ul {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
 }
-nav li {
-    text-align: right;
-    display: inline;
-    padding: 10px 5px;
-}
-nav li a {
-    margin-right: 30px;
-    text-decoration: none;
-    padding: 0px 5px;
-
+.navigation li a {
     font-size: 25px;
     transition: 0.1s;
 }
-nav li a:hover {
-    border-bottom: solid #000000 3px;
+#logo {
+    font-size: 1.7rem;
+    font-weight: 600;
 }
 
-/* Conteúdo CSS do MAIN */
-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    position: sticky;
-    top: 0; left: 0;
-    height: 100vh;
-}
-
-#upper-button {
+/* ---------- Conteúdo CSS do MAIN ---------- */
+.upper-button {
     position: fixed;
     top: 95%; right: 0%;
     transform: translate(-50%, -50%);
@@ -62,9 +50,60 @@ section {
     height: 50px;
     width: 50px;
 }
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-/* Conteúdo CSS do FOOTER */
-footer{
+    position: sticky;
+    top: 0; left: 0;
+    height: 100vh; 
+    width: 100vw;
+}
+
+
+/* ---------- Conteúdo CSS das SECTIONs ---------- */
+.first-section {
+    position: relative;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+.first-section button {
+    box-shadow: 3px 3px 10px #00000070;
+    font-weight: 500;
+    padding: 15px 45px;
+
+    border: none;
+    border-radius: 3px;
+    margin-top: 2.5rem;
+}
+
+.home-text {
+    max-width: 50rem;
+}
+.home-text h1 {
+    font-size: 70pt;
+    margin-bottom: 15px;
+
+    background: linear-gradient(45deg, #ff0000, #044be5, #ff0000);
+    background-size: 400% 100%;
+
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: degrade 10s linear infinite alternate;
+}
+@keyframes degrade {
+    0% { background-position-x: 0%; }
+    100% { background-position-x: 400%; }
+}
+.home-text h2 {
+    font-size: 25pt;
+}
+
+
+/* ---------- Conteúdo CSS do FOOTER ---------- */
+footer {
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -86,18 +125,20 @@ footer li a {
 footer h4{
     margin-bottom: 5px;
 }
-#info, #help ul {
+
+.info, .help ul {
     margin-left: 20px;
     display: flex;
     flex-direction: column;
 }
-#social-network li {
+
+.social-network li {
     display: inline;
 }
-#social-network i {
+.social-network i {
     padding: 10px;
     border-radius: 50%;
 }
-#social-network ul{
+.social-network ul {
     margin-top: auto;
 }
