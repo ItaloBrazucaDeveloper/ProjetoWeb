@@ -38,6 +38,13 @@ html {
 
 
 /* ---------- Conteúdo CSS do MAIN ---------- */
+.first-section {
+    background-image: url(https://i.pinimg.com/564x/89/e9/ef/89e9eff00d0d08ec62878a2b4e2dea3e.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
 .upper-button {
     position: fixed;
     top: 95%; right: 0%;

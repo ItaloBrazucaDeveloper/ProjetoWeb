@@ -1,7 +1,4 @@
 /* ---------- ⬇️⬇️⬇️ Temporário!!!! ---------- */
-section.first-section {
-    background-image: url('img/pexels-olly-3775603.jpg');
-}
 section.second-section {
     background-color: #dc143c;
 }
@@ -9,6 +6,7 @@ section.third-section {
     background-color: #212121;
 }
 
+/* ---------- Botão da primeira section ---------- */
 .first-section button:hover {
     background-color: #e3e3e3;
 }
