@@ -4,7 +4,6 @@ window.addEventListener('scroll', () => {
     button_up.classList.toggle('upper-button', window.scrollY > 400)
     changeColorsUpButton(button_up, window.scrollY)
 })
-
 function changeColorsUpButton(element, scroll_value) {
     const scroll_position = scroll_value + window.innerHeight
     const document_height = document.documentElement.offsetHeight
@@ -17,7 +16,6 @@ function changeColorsUpButton(element, scroll_value) {
         element.style.color = '#fff'
     }
 }
-
 function resetScroll() {
     window.scrollTo(0, 0)
 }
