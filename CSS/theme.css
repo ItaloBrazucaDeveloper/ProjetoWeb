@@ -9,6 +9,10 @@ section.third-section {
     background-color: #212121;
 }
 
+.first-section button:hover {
+    background-color: #e3e3e3;
+}
+
 /* ---------- Botão que sobe a página ---------- */
 .upper-button {
     background-color: #00000051;
