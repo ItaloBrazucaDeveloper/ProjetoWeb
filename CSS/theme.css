@@ -1,4 +1,8 @@
 /* ---------- ⬇️⬇️⬇️ Temporário!!!! ---------- */
+section.first-section {
+    background-color: #0D0D0D;
+}
+
 section.second-section {
     background-color: #dc143c;
 }
@@ -9,9 +13,20 @@ section.fourth-section {
     background-color: #ffd500;
 }
 
+.navigation {
+    color: #b700ff;
+    background-color: rgb(255, 255, 255);
+}
+
 /* ---------- Botão da primeira section ---------- */
 .first-section button:hover {
-    background-color: #e3e3e3;
+    background-color: #ffffff;
+}
+.home-text {
+    color: rgb(255, 255, 255);
+}
+.home-text h2 {
+    color: rgb(209, 207, 77);
 }
 
 /* ---------- Botão que sobe a página ---------- */
