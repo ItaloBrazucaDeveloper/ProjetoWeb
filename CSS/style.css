@@ -20,7 +20,10 @@ html {
 
     padding: 18px 40px;
     width: 100%;
-    box-shadow: 0 0.1rem 0.5rem #ccc;
+    box-shadow: 0 0.1rem 0.5rem #00000051;
+
+    position: fixed;
+    z-index: 1;
 }
 .navigation ul {
     display: flex;
@@ -39,8 +42,9 @@ html {
 
 /* ---------- Conteúdo CSS do MAIN ---------- */
 .first-section {
-    background-image: url(https://i.pinimg.com/564x/89/e9/ef/89e9eff00d0d08ec62878a2b4e2dea3e.jpg);
-    background-size: cover; 
+/*     background-image: url(https://images.pexels.com/photos/2294363/pexels-photo-2294363.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+ */ background-image: url(https://images.pexels.com/photos/8874380/pexels-photo-8874380.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: contain; 
     background-repeat: no-repeat;
     background-position: right;
 }
@@ -71,7 +75,6 @@ section {
 
 /* ---------- Conteúdo CSS das SECTIONs ---------- */
 .first-section {
-    position: relative;
     justify-content: space-between;
     padding: 0 10%;
 }
@@ -108,6 +111,28 @@ section {
     font-size: 25pt;
 }
 
+.second-section {
+    flex-direction: column;
+}
+
+.second-section h1 {
+    margin-bottom: 10%;
+    font-size: 30pt;
+}
+
+.second-section li {
+    display: inline;
+    margin: 0 25px;
+    font-size: 20pt;
+}
+
+.second-section i::after{
+    content: " ";
+    background-color: black;
+    margin: 0 5px;
+
+    width: 0px;
+}
 
 /* ---------- Conteúdo CSS do FOOTER ---------- */
 footer {
