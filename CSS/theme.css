@@ -3,7 +3,10 @@ section.second-section {
     background-color: #dc143c;
 }
 section.third-section {
-    background-color: #212121;
+    background-color: #057aff;
+}
+section.fourth-section {
+    background-color: #ffd500;
 }
 
 /* ---------- Botão da primeira section ---------- */
@@ -21,7 +24,11 @@ section.third-section {
 }
 
 /* ---------- Cabeçalho da página ---------- */
-nav li a:hover {
+.navigation {
+    background-color: #fff;
+}
+
+.navigation li a:hover:not(#account) {
     border-bottom: solid #000000 3px;
 }
 
