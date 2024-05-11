@@ -1,10 +1,6 @@
 /* ---------- ⬇️⬇️⬇️ Temporário!!!! ---------- */
-section.first-section {
-    background-color: #0D0D0D;
-}
-
 section.second-section {
-    background-color: #dc143c;
+    background-color: #ce053b;
 }
 section.third-section {
     background-color: #057aff;
@@ -13,30 +9,31 @@ section.fourth-section {
     background-color: #ffd500;
 }
 
+
+/* ---------- Barra de navegação ---------- */
 .navigation {
-    color: #b700ff;
-    background-color: rgb(255, 255, 255);
+    color: #910fc4;
+}
+.navigation a:link {
+    color: #270734;
 }
 
-/* ---------- Botão da primeira section ---------- */
+
+/* ---------- Botão Seja Elite ---------- */
 .first-section button:hover {
     background-color: #ffffff;
 }
-.home-text {
-    color: rgb(255, 255, 255);
-}
-.home-text h2 {
-    color: rgb(209, 207, 77);
-}
+
 
 /* ---------- Botão que sobe a página ---------- */
 .upper-button {
-    background-color: #00000051;
+    background-color: #000000;
     color: #f0ffff;
 }
 .upper-button:hover {
-    background-color: #ffffff51;
+    background-color: #ffffff;
 }
+
 
 /* ---------- Cabeçalho da página ---------- */
 .navigation {
@@ -46,6 +43,26 @@ section.fourth-section {
 .navigation li a:hover:not(#account) {
     border-bottom: solid #000000 3px;
 }
+
+
+/* ---------- Primeira section ---------- */
+.first-section {
+    background-color: #0D0D0D;
+}
+/* ---------- Cards que mostram os preços ---------- */
+.premium, .standard, .basic {
+    background-color: #fff;
+}
+
+
+/* ---------- Textos da primeira section do site ---------- */
+.home-text {
+    color: #dbe3e3;
+}
+.home-text h2 {
+    color: #f1c811;
+}
+
 
 /* ---------- Rodapé da página ---------- */
 footer {

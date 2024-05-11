@@ -9,10 +9,10 @@ function changeColorsUpButton(element, scroll_value) {
     const document_height = document.documentElement.offsetHeight
 
     if (scroll_position >= document_height - 150) {
-        element.style.backgroundColor = '#ffffff51'
+        element.style.backgroundColor = '#ffffff'
         element.style.color = '#000'
     } else {
-        element.style.backgroundColor = '#00000051'
+        element.style.backgroundColor = '#000000'
         element.style.color = '#fff'
     }
 }
