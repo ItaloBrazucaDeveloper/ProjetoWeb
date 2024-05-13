@@ -34,14 +34,17 @@ a { text-decoration: none; }
 /* ---------- Conteúdo CSS do MAIN ---------- */
 section {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    height: 75vh; width: 100%;
+    height: 70vh; width: 100%;
 
     background-image: url(../img/backgrounds/HomemNegroMusculoso.jpeg);
     background-size: contain; 
     background-repeat: no-repeat;
-    background-position: 100%;
+    background-position: right;
+}
+section img {
+    height: 100%;
 }
 section button {
     box-shadow: 3px 3px 10px #00000070;
@@ -49,16 +52,15 @@ section button {
     border: none;
 
     border-radius: 3px;
-    margin-top: 2.5em;
+    margin-top: 1.5em;
     cursor: pointer;
-}
-section button a {
+
     font-size: 1.3rem;
     font-weight: 600;
 }
 #home-text {
     max-width: 70em;
-    margin: 5% 10%;
+    margin-left: 7%;
     cursor: default;
 }
 #home-text h1 {
@@ -97,8 +99,8 @@ footer {
 }
 #social-media {
     display: flex;
-    column-gap: 1.5rem;
-    margin-top: 1rem;
+    column-gap: 1.2rem;
+    margin-top: 0.6rem;
 }
 #social-media .footer-link {
     display: flex;
@@ -109,7 +111,7 @@ footer {
     height: 2.5rem; width: 2.5rem;
 }
 #social-media .footer-link i {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
 }
 #footer-copyright {
     display: flex;
