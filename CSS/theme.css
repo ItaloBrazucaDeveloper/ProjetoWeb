@@ -1,4 +1,47 @@
-/* Temas e cores da página - Daniel */
-body {
-    background-color: #16132b;
+/* ---------- Botão Seja Elite ---------- */
+#first-section button:hover {
+    background-color: #ffffff;
+}
+
+/* ---------- Barra de navegação da página ---------- */
+#navigation {
+    color: #7c17a3;
+    background-color: #fff;
+}
+#navigation a:link {
+    color: #270734;
+}
+#navigation li a:hover:not(#account) {
+    border-bottom: solid #000000 3px;
+}
+
+/* ---------- Section ---------- */
+#first-section {
+    background-color: #0D0D0D;
+}
+#second-section {
+    background-color: #ea1756;
+}
+
+/* ---------- Textos da primeira section do site ---------- */
+#home-text {
+    color: #dbe3e3;
+}
+#home-text h2 {
+    color: #f1c811;
+}
+
+/* ---------- Rodapé da página ---------- */
+footer {
+    background-color: #000000;
+    color: #f0ffff;
+}
+footer li a {
+    color: #727272;
+}
+footer li a:hover {
+    color: #e2e0e0;
+}
+#social-network i {
+    color: #ffffff;
 }

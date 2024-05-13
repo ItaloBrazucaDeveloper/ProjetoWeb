@@ -1,6 +1,114 @@
-/* Conteúdo CSS principal da página - Ítalo */
+/* ---------- Conteúdo CSS PRINCIPAL DA PÁGINA ---------- */
 * {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+a { text-decoration: none; }
+
+/* ---------- Conteúdo CSS do HEADER ---------- */
+#navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 40px;
+    box-shadow: 0 0.1rem 0.5rem #00000051;
+    height: 2rem;
+}
+#navigation ul {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+#navigation li a {
+    font-size: 1.5rem;
+    transition: 0.1s;
+}
+#logo {
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+/* ---------- Conteúdo CSS do MAIN ---------- */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; width: 100%;
+}
+
+/* ---------- Conteúdo CSS da FIRST-SECTION ---------- */
+#first-section {
+    justify-content: flex-start;
+}
+#first-section {
+    background-image: url(../img/backgrounds/HomemNegroMusculoso.jpeg);
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: right;
+}
+#first-section button {
+    box-shadow: 3px 3px 10px #00000070;
+    padding: 15px 45px;
+    border: none;
+
+    border-radius: 3px;
+    margin-top: 2.5em;
+    cursor: pointer;
+}
+#first-section button a {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+#home-text {
+    max-width: 70em;
+    margin: 5% 10%;
+    cursor: default;
+}
+#home-text h1 {
+    position: relative;
+    font-size: 7rem;
+    margin-bottom: 15px;
+
+    background: linear-gradient(45deg, #f6fad1, #8e4e00, #ffe600, #e5ff00);
+    background-size: 400% 100%;
+
+    background-clip: text;
+    color: transparent;
+
+    animation: degrade 10s linear infinite alternate;
+}
+@keyframes degrade {
+    0% { background-position-x: 0%; }
+    100% { background-position-x: 400%; }
+}
+#home-text h2 {
+    font-size: 1.5rem;
+}
+#home-text p {
+    text-align: justify;
+    max-width: 40rem;
+}
+
+/* ---------- Conteúdo CSS do FOOTER ---------- */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    flex-direction: row;
+    height: 20vh;
+    padding-top: 20px;
+}
+#social-network h4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+#social-network li {
+    display: inline;
+    font-size: 1.8rem;
+    margin: 0 0.5em;
 }
