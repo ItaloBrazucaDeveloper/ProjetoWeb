@@ -4,8 +4,9 @@
 
 Página HOME:
 - Convite para se matricular 
-* Vantagens da Shape Elite 
-+ Localidades da Shape Elite
+* Vantagens
++ Serviços
+* Planos
 
 > [!NOTE]
 > Autoria: Benício, Daniel e Ítalo
