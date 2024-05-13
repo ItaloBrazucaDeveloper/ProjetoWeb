@@ -1,5 +1,5 @@
 /* ---------- Botão Seja Elite ---------- */
-#first-section button:hover {
+section button:hover {
     background-color: #ffffff;
 }
 
@@ -16,11 +16,8 @@
 }
 
 /* ---------- Section ---------- */
-#first-section {
+section {
     background-color: #0D0D0D;
-}
-#second-section {
-    background-color: #ea1756;
 }
 
 /* ---------- Textos da primeira section do site ---------- */
