@@ -4,30 +4,27 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     list-style: none;
-    text-decoration: none;
 }
-html {
-    overflow-x: hidden;
-}
+a { text-decoration: none; }
 
 
 /* ---------- Conteúdo CSS do HEADER ---------- */
-.navigation {
+#navigation {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     padding: 18px 40px;
     box-shadow: 0 0.1rem 0.5rem #00000051;
-    height: 3rem;
+    height: 2rem;
 }
-.navigation ul {
+#navigation ul {
     display: flex;
     align-items: center;
     gap: 4rem;
 }
-.navigation li a {
-    font-size: 25px;
+#navigation li a {
+    font-size: 1.5rem;
     transition: 0.1s;
 }
 #logo {
@@ -44,64 +41,59 @@ html {
 
     z-index: 0;
     border: 0px;
-    font-size: 14pt;
+    font-size: 1.2rem;
 
     border-radius: 25%;
-    height: 50px;
-    width: 50px;
+    height: 2.3em; width: 2.3em;
 }
 
 section {
     display: flex;
-    align-items: center;
     justify-content: center;
-
-    position: sticky;
-    top: 0; left: 0;
-    height: 100vh; 
-    width: 100vw;
+    align-items: center;
+    height: 100vh; width: 100%;
 }
 
 
 /* ---------- Conteúdo CSS da FIRST-SECTION ---------- */
-.first-section {
-    justify-content: left;
-    padding: 0 10%;
+#first-section {
+    justify-content: flex-start;
 }
-.first-section {
-    background-image: url(https://images.pexels.com/photos/8874380/pexels-photo-8874380.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+#first-section {
+    background-image: url(../img/backgrounds/HomemNegroMusculoso.jpeg);
     background-size: contain; 
     background-repeat: no-repeat;
-    background-position: 80%;
+    background-position: right;
 }
-.first-section button {
+#first-section button {
     box-shadow: 3px 3px 10px #00000070;
     padding: 15px 45px;
-
     border: none;
+
     border-radius: 3px;
-    margin-top: 2.5rem;
+    margin-top: 2.5em;
     cursor: pointer;
 }
-.first-section button a {
-    font-size: 16pt;
+#first-section button a {
+    font-size: 1.3rem;
     font-weight: 600;
 }
 
-.home-text {
-    max-width: 70rem;
-    margin-bottom: 5%;
+#home-text {
+    max-width: 70em;
+    margin: 5% 10%;
     cursor: default;
 }
-.home-text h1 {
-    font-size: 90pt;
+#home-text h1 {
+    position: relative;
+    font-size: 7rem;
     margin-bottom: 15px;
 
     background: linear-gradient(45deg, #f6fad1, #8e4e00, #ffe600, #e5ff00);
     background-size: 400% 100%;
 
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
 
     animation: degrade 10s linear infinite alternate;
 }
@@ -109,16 +101,61 @@ section {
     0% { background-position-x: 0%; }
     100% { background-position-x: 400%; }
 }
-.home-text h2 {
-    font-size: 20pt;
+#home-text h2 {
+    font-size: 1.5rem;
 }
-.home-text p {
+#home-text p {
     text-align: justify;
     max-width: 40rem;
 }
 
-/* ---------- Conteúdo da SECOND-SECTION ---------- */
 
+/* ---------- Conteúdo da SECOND-SECTION ---------- */
+.second-section {
+    align-items: center;
+    justify-content: end;
+    /* background-image: url(../img/backgrounds/MulherMusculosaDePerfil.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain; */
+}
+/* ---------- Conteúdo CSS das avaliações dos clientes ---------- */
+
+
+/* ---------- Conteúdo CSS dos depoimentos de clientes ---------- */
+#container {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.2em;
+    margin-right: 5em;
+}
+.review {
+    background-color: azure;
+    padding: 1.5em;
+    border-radius: 10px;
+    width: 35%;
+}
+.header-review, .client-review-info {
+    display: flex;
+}
+.header-review {
+    justify-content: flex-start;
+}
+.client-review-info {
+    margin-bottom: 1em;
+}
+.header-review img {
+    width: 3rem; height: 3rem;
+    border-radius: 50%;
+    margin-right: 0.7em;
+}
+#container, .client-review-info {
+    flex-direction: column;
+}
+.stars {
+    margin-left: auto;
+    margin-top: 2%;
+}
 
 
 /* ---------- Conteúdo da THIRD-SECTION ---------- */
@@ -126,25 +163,34 @@ section {
 
 
 /* ---------- Conteúdo da FOURTH-SECTION ---------- */
-.fourth-section h1 {
-    font-size: 20pt;
+#title {
+    font-size: 1.7rem;
+    margin-top: -2%;
+    margin-bottom: 3%;
 }
-.fourth-section h2 {
-    font-size: 25pt;
+
+#fourth-section {
+    flex-direction: column;
+    background-image: url();
 }
-.fourth-section h2, h1 {
+.plans {
+    display: flex;
+    flex-direction: row;
+}
+
+#fourth-section h2, h1, h3 {
     text-align: center;
 }
-.fourth-section button {
+#fourth-section button {
     width: 70%; height: 10%;
     font-size: 18pt;
     font-weight: bold;
-
+    
     border-radius: 8px;
     border: none;
     box-shadow: 0.5rem 0.5rem 8px #00000051;
     
-    margin-top: 10px;
+    margin-top: 5px;
     position: absolute;
     left: 50%;
 
@@ -152,19 +198,37 @@ section {
     cursor: pointer;
 }
 
-.premium, .standard, .basic {
-    padding: 20px;
-    border-radius: 5px;
-    height: 60vh; width: 25vw;
+.plan-name {
+    font-size: 1.8rem;
+}
+.plan-price {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.offer-plan-price {
+    font-size: 2.5rem;
+}
+.benefits {
+    margin: 5% 0;
+}
+.benefits li {
+    font-size: 1.3rem;
+    margin: 15px 10px;
 }
 
-.premium {
+.premium, .standard, .basic {
     position: relative;
-    margin: 0 30px;
+    padding: 20px;
+    border-radius: 8px;
 }
-.premium li {
-    font-size: 18pt;
-    margin: 5px 10px;
+.standard, .basic {
+    top: 3%;
+    height: 60vh; width: 20vw;
+}
+.premium {
+    margin: 0 2.5em;
+    height: 65vh; width: 25vw;
 }
 
 
@@ -178,21 +242,13 @@ footer {
     height: 30vh;
     padding-top: 20px;
 }
-footer ul {
-    flex-direction: column;
-}
-
-.social-network h4 {
+#social-network h4 {
     margin-bottom: 1.5rem;
     text-align: center;
+    font-size: 1.2rem;
 }
-.social-network li {
+#social-network li {
     display: inline;
-}
-.social-network i {
-    padding: 10px;
-    border-radius: 50%;
-
-    margin-inline: 5px;
-    font-size: 21pt;
+    font-size: 1.8rem;
+    margin: 0 0.5em;
 }

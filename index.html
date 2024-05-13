@@ -12,9 +12,9 @@
     <body>
 <!-- ========== Cabeçalho da página ========== -->
         <header>
-            <nav class="navigation">
+            <nav id="navigation">
                 <h1 id="logo">Shape de Elite</h1>
-                <ul class="nav-menu">
+                <ul id="nav-menu">
                     <li><a href="#first-section">Home
                     <li><a href="#second-section">Vantagens
                     <li><a href="#third-section">Serviços
@@ -23,69 +23,156 @@
                 </ul>
             </nav>
         </header>
-        
 <!-- ========== Corpo da página ========== -->
         <main>
-            <section id="first-section" class="first-section">
-                <div class="home-text">
+            <section id="first-section"> <!-- Convite para ser elite -->
+                <div id="home-text">
                     <h2>Conquite sua força agora!!</h2>
                     <h1>Shape de elite</h1>
                     <p>
                         Nossa academia é especialmente feita para você! 
-                        Damos toda a infraestrutura para você consiguir 
-                        o shape desejado, a maneira Elite.
+                        Damos toda a infraestrutura para você conseguir 
+                        o shape desejado, do jeito Elite.
                     </p>
                     <button>
                         <a href="">Seja Elite!</a>
                     </button>
                 </div>
             </section>
-
-            <section id="second-section" class="second-section"> <!-- Vantagens da Shape Elite -->
-                <h1>Vantagens</h1>
+<!-- ========== Vantagens da shape de Elite ========== -->
+            <section id="second-section" class="second-section">
+                <div> <!-- Gráfico dos sobre aprovação, permanencia, etc -->
+                    <h1>Nossos números!</h1>
+                </div>
+                
+                <div id="container"> <!-- Depoimentos de clientes-->
+                    <div class="review">
+                        <header class="header-review">
+                            <img class="photo-profile" src="img/profilePhotos/FotoPerfilHomemOculos.jpg" 
+                                alt="Foto de perfil de um homem com óculos escuro">
+                            <div class="client-review-info">
+                                <h2>Nome</h2>
+                                <p>@Nome_usuário</p>
+                            </div>
+                            <h3 class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </h3>
+                        </header>
+                        <p> 
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum est nulla, 
+                            vitae, ab, perspiciatis aliquam atque ex commodi sequi modi rerum amet labore 
+                            velit dolore unde! Aliquid culpa illo tempora!
+                        </p>
+                    </div>
+                    <div class="review">
+                        <header class="header-review">
+                            <img class="photo-profile" src="/img/profilePhotos/Hoia.png" 
+                                alt="Homem fazendo posso de crossfit">
+                            <div class="client-review-info">
+                                <h2>Nome</h2>
+                                <p>@Nome_usuário</p>
+                            </div>
+                            <h3 class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </h3>
+                        </header>
+                        <p> 
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum est nulla, 
+                            vitae, ab, perspiciatis aliquam atque ex commodi sequi modi rerum amet labore 
+                            velit dolore unde! Aliquid culpa illo tempora!
+                        </p>
+                    </div>
+                    <div class="review">
+                        <header class="header-review">
+                            <img class="photo-profile" src="" alt="">
+                            <div class="client-review-info">
+                                <h2>Nome</h2>
+                                <p>@Nome_usuário</p>
+                            </div>
+                            <h3 class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </h3>
+                        </header>
+                        <p> 
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum est nulla, 
+                            vitae, ab, perspiciatis aliquam atque ex commodi sequi modi rerum amet labore 
+                            velit dolore unde! Aliquid culpa illo tempora!
+                        </p>
+                    </div>
+                    <div class="review">
+                        <header class="header-review">
+                            <img class="photo-profile" src="" alt="">
+                            <div class="client-review-info">
+                                <h2>Nome</h2>
+                                <p>@Nome_usuário</p>
+                            </div>
+                            <h3 class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </h3>
+                        </header>
+                        <p> 
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum est nulla, 
+                            vitae, ab, perspiciatis aliquam atque ex commodi sequi modi rerum amet labore 
+                            velit dolore unde! Aliquid culpa illo tempora!
+                        </p>
+                    </div>
+                </div>
             </section>
-
-            <section id="third-section" class="third-section"> 
+<!-- ========== Serviços da Shape de Elite - Carrosel ========== -->
+            <section id="third-section"> 
                 <h1>Serviços</h1>
             </section>
-
-            <section id="fourth-section" class="fourth-section">
-                <!--Planos de assinatura-->
-                <!--
-                    Nome do plano (h1)
-                    Uma barra vertical
-                    7 coisas que o plano terá
-                    Preço total por mês (h2)
-                    Botão para matricular-se
+<!-- ========== Mensalidades da Shape de Elite ========== -->
+            <section id="fourth-section">
+                <!-- Modelo:
+                    Nome do plano(h1) -> class="plan-name"
+                    7 benéficios(lista) -> class="benefits"
+                    Preço total(h3) -> class="plan-price"
+                    Preço com desconto (h2) -> class="offer-plan-price"
+                    Botão para se matricular -> class="subscribe-button"
                 -->
-                <div class="basic">
-                </div>
-
-                <div class="premium">
-                </div>
-
-                <div class="standard">
+                <h1 id="title">Mensalidades</h1>
+                <div class="plans">
+                    <div class="basic"> <!-- Plano básico -->
+                    </div>
+                    <div class="premium"> <!-- Plano premium -->
+                    </div>
+                    <div class="standard"> <!-- Plano padrão -->
+                    </div>
                 </div>
             </section>
-
+<!-- ========== Botão que sobe a página inteira ========== -->
             <button onclick="resetScroll()" id="up-button">
-                <i class="fa-solid fa-up-long"></i>
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
             </button>
         </main>
 
 <!-- ========== Rodapé da página ========== -->
         <footer>
-            <div class="social-network">
+            <div id="social-network">
                 <h4>Redes sociais</h4>
-                <ul>
-                    <li><a href=""><i class="fa-brands fa-square-facebook"></i>
+                    <li><a href=""><i class="fa-brands fa-facebook-f"></i>
                     <li><a href="https://www.instagram.com/benicio_swk"><i class="fa-brands fa-instagram"></i>
-                    <li><a href=""><i class="fa-brands fa-tiktok"></i>
+                    <li><a href=""><i class="fa-brands fa-youtube"></i>
                     <li><a href=""><i class="fa-brands fa-whatsapp"></i></a>
-                </ul>
             </div>
             <p>&copy;Todos os direitos reservados</p>
         </footer>
-
     </body>
 </html>

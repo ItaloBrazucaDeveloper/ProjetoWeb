@@ -8,6 +8,8 @@ function changeColorsUpButton(element, scroll_value) {
     const scroll_position = scroll_value + window.innerHeight
     const document_height = document.documentElement.offsetHeight
 
+    console.log(document.documentElement.scrollHeight)
+
     if (scroll_position >= document_height - 150) {
         element.style.backgroundColor = '#ffffff'
         element.style.color = '#000'
