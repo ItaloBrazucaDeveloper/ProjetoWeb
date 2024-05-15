@@ -8,11 +8,11 @@ Página HOME:
 + Serviços
 - Planos
 
-Página de login e registro:
-- Logar com conta registrada
-* Logar com conta de terceiros
-+ Registrar com email, nome, senha
-- Registrar com conta de terceiros
+Página de pagamento:
+- Escolher assinatura
++ Identificação
+* Escolher forma de pagamento
+- Confirmação
 
 > [!NOTE]
 > Autoria: Benício, Daniel e Ítalo

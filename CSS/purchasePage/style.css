@@ -1,0 +1,32 @@
+/* ---------- Conteúdo CSS PRINCIPAL DA PÁGINA ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+a { text-decoration: none; }
+
+/* ---------- Conteúdo CSS do HEADER ---------- */
+#navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 40px;
+    box-shadow: 0 0.1rem 0.5rem #00000051;
+    height: 2rem;
+}
+#navigation ul {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+#navigation li a {
+    font-size: 1.5rem;
+    transition: 0.1s;
+}
+#logo {
+    font-size: 1.7rem;
+    font-weight: 600;
+}
