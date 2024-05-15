@@ -159,8 +159,67 @@ section {
 
 
 /* ---------- Conteúdo da THIRD-SECTION ---------- */
+#third-section {
+    background-image: url(https://images.pexels.com/photos/917653/pexels-photo-917653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
 
+    justify-content: flex-start;
+}
+#service {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+    flex-direction: column;
+    width: 45%;
+    height: 100%;
 
+    background-color: #fff;
+    border-radius: 0 50px 50px 0;
+    gap: 3rem;
+}
+#service-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+
+    margin-inline: 20px;
+    text-align: justify;
+}
+#service-info h1 {
+    background-color: tomato;
+    padding: 0.5em;
+}
+#service-info button {
+    width: 25%;
+    padding: 0.8rem;
+    margin-inline: auto;
+
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+
+    border-radius: 8px;
+    cursor: pointer;
+}
+#icons-service {
+    font-size: 1.5rem;
+    text-align: center;
+}
+#choicer-service {
+    display: flex;
+    column-gap: 1em;
+}
+
+#choicer-service input:checked {
+    width: 1.45rem;
+}
+#right-arrow, #left-arrow {
+    width: 2rem;
+    height: 2rem;
+    background-color: grey;
+}
 
 /* ---------- Conteúdo da FOURTH-SECTION ---------- */
 #title {
