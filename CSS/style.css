@@ -160,11 +160,11 @@ section {
 
 /* ---------- Conteúdo da THIRD-SECTION ---------- */
 #third-section {
-    background-image: url(https://images.pexels.com/photos/917653/pexels-photo-917653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    transition: .5s ease-in-out;
+    background-image: url(../img/backgrounds/HomemFlexão.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-
-    justify-content: flex-start;
+    justify-content: start;
 }
 #service {
     display: flex;
@@ -172,7 +172,7 @@ section {
     align-items: center; 
     
     flex-direction: column;
-    width: 45%;
+    width: 40%;
     height: 100%;
 
     background-color: #fff;
@@ -192,7 +192,7 @@ section {
     padding: 0.5em;
 }
 #service-info button {
-    width: 25%;
+    width: 15em;
     padding: 0.8rem;
     margin-inline: auto;
 
@@ -207,18 +207,47 @@ section {
     font-size: 1.5rem;
     text-align: center;
 }
+
 #choicer-service {
     display: flex;
-    column-gap: 1em;
+    gap: 0.2em;
 }
+#choicer-service input[type='radio'] {
+    display: none;
+}
+#choicer-service label {
+    display: flex;
+    background-color: #ffe600;
+    border-radius: 8px;
 
-#choicer-service input:checked {
-    width: 1.45rem;
+    width: 2em;
+    height: 1.2em;
+    transition: .4s ease-in-out;
 }
-#right-arrow, #left-arrow {
-    width: 2rem;
-    height: 2rem;
-    background-color: grey;
+#choicer-service i {
+    font-size: 1.5rem;
+    line-height: 0.85em;
+    margin: 0 10px;
+}
+#choicer-service #slide-0:checked ~ #label-0 {
+    width: 3rem;
+    transition: .4s ease-in-out;
+}
+#choicer-service #slide-1:checked ~ #label-1 {
+    width: 3rem;
+    transition: .4s ease-in-out;
+}
+#choicer-service #slide-2:checked ~ #label-2 {
+    width: 3rem;
+    transition: .4s ease-in-out;
+}
+#choicer-service #slide-3:checked ~ #label-3 {
+    width: 3rem;
+    transition: .4s ease-in-out;
+}
+#choicer-service #slide-4:checked ~ #label-4 {
+    width: 3rem;
+    transition: .4s ease-in-out;
 }
 
 /* ---------- Conteúdo da FOURTH-SECTION ---------- */

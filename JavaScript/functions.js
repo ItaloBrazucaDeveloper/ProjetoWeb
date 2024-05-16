@@ -19,3 +19,38 @@ function changeColorsUpButton(element, scroll_value) {
 function resetScroll() {
     window.scrollTo(0, 0)
 }
+
+// Funções para o carrosel
+function changeChekedRadio(direction) {
+    for (let i = 0; i <= 4; i++) {
+        if ( document.querySelector('#choicer-service #slide-' + i).checked ) {
+            switch (direction) {
+                case 'right':
+                    i == 4 ? i = -1 : i = i;
+                    document.querySelector('#choicer-service #slide-'+ (i + 1) ).checked = true
+                    changeImageService(i + 1)
+                    break;
+                case 'left':
+                    i == 0 ? i = 5 : i = i;
+                    document.querySelector('#choicer-service #slide-'+ (i - 1) ).checked = true
+                    changeImageService(i - 1)
+                    break;
+            }
+            break;
+        }
+    }
+}
+function changeImageService(index) {
+    const background_img = document.getElementById('third-section') 
+    switch (index) {
+        case 0: background_img.style.backgroundImage = 'url("../img/backgrounds/HomemFlexão.jpg")'
+            break;
+        case 1: background_img.style.backgroundImage = 'url("../img/backgrounds/SegurandoBarra.jpg")'
+            break;
+        case 2: background_img.style.backgroundImage = 'url("../img/backgrounds/MulherAbdominal.jpg")'
+            break;
+        case 3: background_img.style.backgroundImage = 'url("../img/backgrounds/PessoasPrancha.jpg")'
+            break;
+        case 4: background_img.style.backgroundImage = 'url("../img/backgrounds/AeroHit.jpg")'
+    }
+}

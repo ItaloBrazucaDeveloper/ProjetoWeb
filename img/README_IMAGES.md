@@ -7,8 +7,13 @@ Planos de fundo:
 
 * Mulher loira de perfil olhando reto -> Link: https://images.pexels.com/photos/28054/pexels-photo-28054.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
 
-+ [Descrição da imagem] -> [Link]
++ Homem negro fazendo flexão, apoiando em cima de duas bolas de ferro com alça -> Link: https://www.pexels.com/pt-br/foto/saudavel-homem-borrao-mancha-4720268/
 
+- Homem segurando uma barra com pesos, apoiada no chão -> Link: https://www.pexels.com/pt-br/foto/pessoa-segurando-fotografia-halteres-de-aco-preto-e-prateado-949126/
+
+* Mulher fazendo abdominal -> Link: https://www.pexels.com/pt-br/foto/pessoa-mulher-ginastica-fitness-14036850/
+
++ Pessoas fazendo prancha na academia -> Link: https://www.pexels.com/pt-br/foto pessoas-mulheres-ginastica-fitness-13896768/
 
 Fotos de perfil:
 

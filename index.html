@@ -111,27 +111,6 @@
                             velit dolore unde! Aliquid culpa illo tempora!
                         </p>
                     </div>
-                    <div class="review">
-                        <header class="header-review">
-                            <img class="photo-profile" src="" alt="">
-                            <div class="client-review-info">
-                                <h2>Nome</h2>
-                                <p>@Nome_usuário</p>
-                            </div>
-                            <h3 class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </h3>
-                        </header>
-                        <p> 
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum est nulla, 
-                            vitae, ab, perspiciatis aliquam atque ex commodi sequi modi rerum amet labore 
-                            velit dolore unde! Aliquid culpa illo tempora!
-                        </p>
-                    </div>
                 </div>
             </section>
 <!-- ========== Serviços da Shape de Elite - Carrosel ========== -->
@@ -141,8 +120,11 @@
                         <h1>CrossFit</h1>
                         <div id="icons-service">
                             <h6>
-                                <i class="fa-regular fa-clock"></i> 40min 
-                                <i class="fa-solid fa-battery-quarter"></i> Intensidade
+                                <i class="fa-regular fa-clock"></i> 40min<br>
+                                Intensidade
+                                <i class="fa-solid fa-dumbbell"></i>
+                                <i class="fa-solid fa-dumbbell"></i>
+                                <i class="fa-solid fa-dumbbell"></i>
                             </h6>
                         </div>
                         <hr>
@@ -154,15 +136,21 @@
                         </p>
                         <button>Saiba mais</button>
                     </div>
-
                     <div id="choicer-service">
-                        <div id="left-arrow"><i class="fa-solid fa-circle-arrow-left"></i></div>
-                        <input type="radio" checked="true" name="slide" id="">
-                        <input type="radio" name="slide" id="">
-                        <input type="radio" name="slide" id="">
-                        <input type="radio" name="slide" id="">
-                        <input type="radio" name="slide" id="">
-                        <div id="right-arrow"><i class="fa-solid fa-circle-arrow-right"></i></div>
+                        <i onclick="changeChekedRadio('left')" class="fa-solid fa-circle-arrow-left"></i>
+
+                        <input onchange="changeImageService(0)" type="radio" checked="true" name="slide" id="slide-0">
+                            <label id="label-0" for="slide-0"></label>
+                        <input onchange="changeImageService(1)" type="radio" name="slide" id="slide-1">
+                            <label id="label-1" for="slide-1"></label>
+                        <input onchange="changeImageService(2)" type="radio" name="slide" id="slide-2">
+                            <label id="label-2" for="slide-2"></label>
+                        <input onchange="changeImageService(3)" type="radio" name="slide" id="slide-3">
+                            <label id="label-3" for="slide-3"></label>
+                        <input onchange="changeImageService(4)" type="radio" name="slide" id="slide-4">
+                            <label id="label-4" for="slide-4"></label>
+
+                        <i onclick="changeChekedRadio('right')" class="fa-solid fa-circle-arrow-right"></i>
                     </div>
                 </div>
             </section>
