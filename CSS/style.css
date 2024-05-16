@@ -220,14 +220,15 @@ section {
     background-color: #ffe600;
     border-radius: 8px;
 
-    width: 2em;
-    height: 1.2em;
+    width: 2em; height: 1.2em;
+    cursor: pointer;
     transition: .4s ease-in-out;
 }
 #choicer-service i {
     font-size: 1.5rem;
     line-height: 0.85em;
     margin: 0 10px;
+    cursor: pointer;
 }
 #choicer-service #slide-0:checked ~ #label-0 {
     width: 3rem;
