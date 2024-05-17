@@ -16,7 +16,7 @@ a { text-decoration: none; }
 
     padding: 18px 40px;
     box-shadow: 0 0.1rem 0.5rem #00000051;
-    height: 2rem;
+    height: 2.5rem;
 }
 #navigation ul {
     display: flex;
@@ -73,6 +73,7 @@ section {
     border-radius: 3px;
     margin-top: 2.5em;
     cursor: pointer;
+    transition: box-shadow .3s ease;
 }
 #first-section button a {
     font-size: 1.3rem;
@@ -89,7 +90,7 @@ section {
     font-size: 7rem;
     margin-bottom: 15px;
 
-    background: linear-gradient(45deg, #f6fad1, #8e4e00, #ffe600, #e5ff00);
+    background: linear-gradient(45deg, #f6fad1, #b26f1d, #f1e04c, #dbec3e);
     background-size: 400% 100%;
 
     background-clip: text;
@@ -160,11 +161,12 @@ section {
 
 /* ---------- Conteúdo da THIRD-SECTION ---------- */
 #third-section {
-    transition: .5s ease-in-out;
     background-image: url(../img/backgrounds/HomemFlexão.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    
     justify-content: start;
+    transition: .5s linear;
 }
 #service {
     display: flex;
@@ -175,7 +177,7 @@ section {
     width: 40%;
     height: 100%;
 
-    background-color: #fff;
+    background-color: #2f1e3d;
     border-radius: 0 50px 50px 0;
     gap: 3rem;
 }
@@ -188,8 +190,12 @@ section {
     text-align: justify;
 }
 #service-info h1 {
-    background-color: tomato;
+    color: #f0ffff;
+    background: linear-gradient(90deg, purple ,pink);
+    box-shadow: 3px 3px 20px #00000051;
+
     padding: 0.5em;
+    border-radius: 8px;
 }
 #service-info button {
     width: 15em;
@@ -204,8 +210,12 @@ section {
     cursor: pointer;
 }
 #icons-service {
+    color: #fefe;
     font-size: 1.5rem;
     text-align: center;
+}
+#icons-service i {
+    color: #ffe600;
 }
 
 #choicer-service {
@@ -310,14 +320,15 @@ section {
     position: relative;
     padding: 20px;
     border-radius: 8px;
-}
-.standard, .basic {
-    top: 3%;
+
     height: 60vh; width: 20vw;
+    transition: transform .2s ease-out;
+}
+.premium:hover, .standard:hover, .basic:hover {
+    transform: scale(1.03);
 }
 .premium {
     margin: 0 2.5em;
-    height: 65vh; width: 25vw;
 }
 
 
