@@ -47,15 +47,14 @@ section img {
     height: 100%;
 }
 section button {
-    box-shadow: 3px 3px 10px #00000070;
     padding: 15px 45px;
     border: none;
-
     border-radius: 3px;
+
     margin-top: 1.5em;
     cursor: pointer;
-
     font-size: 1.3rem;
+
     font-weight: 600;
 }
 #home-text {
