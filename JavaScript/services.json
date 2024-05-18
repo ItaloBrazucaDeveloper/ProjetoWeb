@@ -1,0 +1,37 @@
+{
+    "First-Service":[
+        {
+            "h1": "CrossFit",
+            "intensidade": 4,
+            "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.\\nEst facere non molestiae obcaecati fugiat voluptates a,\\nvitae, id magni itaque laborum optio aliquam nisi dignissimos\\nlibero. Dolore ex sapiente asperiores."
+        }
+    ],
+    "Second-Service":[
+        {
+            "h1": "Cardio",
+            "intensidade": 4,
+            "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.\\nEst facere non molestiae obcaecati fugiat voluptates a,\\nvitae, id magni itaque laborum optio aliquam nisi dignissimos\\nlibero. Dolore ex sapiente asperiores."
+        }
+    ],
+    "Third-Service":[
+        {
+            "h1": "AeroHit",
+            "intensidade": 3,
+            "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.\\nEst facere non molestiae obcaecati fugiat voluptates a,\\nvitae, id magni itaque laborum optio aliquam nisi dignissimos\\nlibero. Dolore ex sapiente asperiores."
+        }
+    ],
+    "Fourth-Service":[
+        {
+            "h1": "Musculação",
+            "intensidade": 5,
+            "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.\\nEst facere non molestiae obcaecati fugiat voluptates a,\\nvitae, id magni itaque laborum optio aliquam nisi dignissimos\\nlibero. Dolore ex sapiente asperiores."
+        }
+    ],
+    "Fifth-Service":[
+        {
+            "h1": "Aeróbica",
+            "intensidade": 3,
+            "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.\\nEst facere non molestiae obcaecati fugiat voluptates a,\\nvitae, id magni itaque laborum optio aliquam nisi dignissimos\\nlibero. Dolore ex sapiente asperiores."
+        }
+    ]
+}

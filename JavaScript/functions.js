@@ -38,13 +38,6 @@ function changeCheckedRadio(index) {
 }
 
 function changeServiceInfo(index) {
-
-    fetch('JavaScript/services.txt')
-    .then(res=> {res.text()})
-    .then(res=> {
-        console.log(res)
-    })
-
     let h1 = document.querySelector('#service-info h1');
     switch(index) {
         case 0:
