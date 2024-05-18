@@ -7,6 +7,9 @@
 }
 a { text-decoration: none; }
 
+button {
+    cursor: pointer;
+}
 
 /* ---------- Conteúdo CSS do HEADER ---------- */
 #navigation {
@@ -72,7 +75,6 @@ section {
 
     border-radius: 3px;
     margin-top: 2.5em;
-    cursor: pointer;
     transition: box-shadow .3s ease;
 }
 #first-section button a {
@@ -160,104 +162,116 @@ section {
 
 
 /* ---------- Conteúdo da THIRD-SECTION ---------- */
-#third-section {
-    background-image: url(../img/backgrounds/HomemFlexão.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    justify-content: start;
-    transition: .5s linear;
+#slider {
+    position: relative;
+    max-height: 100vh;
+    width: 100%; height: 100vh;
+    z-index: 0;
 }
+#slider img {
+    position: absolute;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+#slider img.selected {
+    opacity: 1;
+}
+
 #service {
     display: flex;
     justify-content: center;
     align-items: center; 
     
     flex-direction: column;
-    width: 40%;
     height: 100%;
+    max-width: 38%;
 
-    background-color: #2f1e3d;
     border-radius: 0 50px 50px 0;
-    gap: 3rem;
+    row-gap: 2.5em;
+    z-index: 1;
+    left: 2%;
+}
+#service button {
+    width: 10em;
+    padding: 0.8em;
+    border: none;
+
+    font-size: 1.25rem;
+    border-radius: 8px;
+    transition: .4s all ease;
+}
+#service button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px #00000051;
 }
 #service-info {
     display: flex;
     flex-direction: column;
     row-gap: 1.5rem;
 
-    margin-inline: 20px;
+    margin-inline: 30px;
     text-align: justify;
 }
 #service-info h1 {
-    color: #f0ffff;
-    background: linear-gradient(90deg, purple ,pink);
-    box-shadow: 3px 3px 20px #00000051;
-
+    font-size: 2.6rem;
     padding: 0.5em;
     border-radius: 8px;
 }
-#service-info button {
-    width: 15em;
-    padding: 0.8rem;
-    margin-inline: auto;
-
-    border: none;
-    font-weight: 600;
-    font-size: 1rem;
-
-    border-radius: 8px;
-    cursor: pointer;
+#service-info p {
+    font-size: 1.15rem;
 }
 #icons-service {
-    color: #fefe;
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     text-align: center;
-}
-#icons-service i {
-    color: #ffe600;
 }
 
 #choicer-service {
     display: flex;
     gap: 0.2em;
+    margin-top: .5em;
+    max-width: 90%;
 }
 #choicer-service input[type='radio'] {
     display: none;
 }
 #choicer-service label {
     display: flex;
-    background-color: #ffe600;
     border-radius: 8px;
 
-    width: 2em; height: 1.2em;
+    width: 3.75em; height: 1.5em;
     cursor: pointer;
     transition: .4s ease-in-out;
 }
 #choicer-service i {
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 0.85em;
-    margin: 0 10px;
+    margin-inline: 10px;
     cursor: pointer;
+    transition: .2s linear;
+}
+#choicer-service i:active {
+    transform: scale(1.07);
 }
 #choicer-service #slide-0:checked ~ #label-0 {
-    width: 3rem;
+    width: 5.65em;
     transition: .4s ease-in-out;
 }
 #choicer-service #slide-1:checked ~ #label-1 {
-    width: 3rem;
+    width: 5.65em;
     transition: .4s ease-in-out;
 }
 #choicer-service #slide-2:checked ~ #label-2 {
-    width: 3rem;
+    width: 5.65em;
     transition: .4s ease-in-out;
 }
 #choicer-service #slide-3:checked ~ #label-3 {
-    width: 3rem;
+    width: 5.65em;
     transition: .4s ease-in-out;
 }
 #choicer-service #slide-4:checked ~ #label-4 {
-    width: 3rem;
+    width: 5.65em;
     transition: .4s ease-in-out;
 }
 

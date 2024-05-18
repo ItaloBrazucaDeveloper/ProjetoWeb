@@ -22,7 +22,7 @@
 
 /* ---------- Botão que sobe a página ---------- */
 .upper-button {
-    background-color: #da8d1a;
+    background-color: #800080;
     color: #f6f6f6;
 }
 
@@ -42,14 +42,30 @@
     background-color: #ea1756;
 }
 
+/* ---------- Service ---------- */
+#service {
+    background-color: #fefefe;
+    box-shadow: 15px 0 0 rgb(255, 108, 71);
+}
+#service-info h1 {
+    color: #f0ffff;
+    background: linear-gradient(90deg, #e1563d ,#f4b033);
+}
+#icons-service i {
+    background: #f6d500;
+    background-clip: text;
+    color: transparent;
+}
+#choicer-service label {
+    background-color: #ffb52b;
+}
+
+
 /* ---------- Cards que mostram os preços ---------- */
 .premium, .standard, .basic {
     background-color: transparent;
     backdrop-filter: blur(8px);
     border: 3px solid black;
-}
-.subscribe-button {
-    background-color: #f1c811;
 }
 
 /* ---------- Textos da primeira section do site ---------- */
