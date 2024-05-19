@@ -42,7 +42,7 @@
     background-color: #ea1756;
 }
 
-/* ---------- Service ---------- */
+/* ---------- Serviços ---------- */
 #service {
     background-color: #fefefe;
     box-shadow: 15px 0 0 rgb(255, 108, 71);
@@ -52,14 +52,11 @@
     background: linear-gradient(90deg, #e1563d ,#f4b033);
 }
 #icons-service i {
-    background: #f6d500;
-    background-clip: text;
-    color: transparent;
+    color: #ec7737;
 }
 #choicer-service label {
     background-color: #ffb52b;
 }
-
 
 /* ---------- Cards que mostram os preços ---------- */
 .premium, .standard, .basic {

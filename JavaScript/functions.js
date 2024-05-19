@@ -6,6 +6,7 @@ window.addEventListener('scroll', () => {
 function resetScroll() {
     window.scrollTo(0, 0);
 }
+
 // Funções para o carrosel
 function changeCheckedRadioArrow(direction) {
     let images = document.querySelectorAll('#slider img');
@@ -34,21 +35,23 @@ function changeCheckedRadio(index) {
     for (let i = 0; i <= 4; i++) {
         i == index ? i = i : images[i].classList.remove('selected');
     }
-    changeServiceInfo(index)
+    changeServiceInfo(index);
 }
-
 function changeServiceInfo(index) {
-    let h1 = document.querySelector('#service-info h1');
-    switch(index) {
-        case 0:
-            h1.innerHTML = 'CrossFit'; break;
-        case 1:
-            h1.innerHTML = 'Cardio'; break;
-        case 2:
-            h1.innerHTML = 'AeroHit'; break;
-        case 3:
-            h1.innerHTML = 'Musculação'; break;
-        case 4:
-            h1.innerHTML = 'Aeróbica';   
-    }
+    let service_info = document.querySelector('#service-info');
+    fetch('JavaScript/services.json')
+        .then(res => res.json())
+        .then(json => {
+            service_info.innerHTML = 
+                `<h1>${json[index]['h1']}</h1>
+                <div id="icons-service">
+                    <h6>
+                        Intensidade:
+                        ${(json[index]['intensidade'][0]).repeat(json[index]['intensidade'][1])}
+                    </h6>
+                </div><hr>
+                <p>
+                    ${json[index]['info']}
+                </p>`
+        });
 }
