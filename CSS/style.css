@@ -113,51 +113,6 @@ section {
 
 
 /* ---------- Conteúdo da SECOND-SECTION ---------- */
-.second-section {
-    align-items: center;
-    justify-content: end;
-    /* background-image: url(../img/backgrounds/MulherMusculosaDePerfil.jpg);
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: contain; */
-}
-/* ---------- Conteúdo CSS das avaliações dos clientes ---------- */
-
-
-/* ---------- Conteúdo CSS dos depoimentos de clientes ---------- */
-#container {
-    display: flex;
-    align-items: flex-end;
-    gap: 1.2em;
-    margin-right: 5em;
-}
-.review {
-    background-color: azure;
-    padding: 1.5em;
-    border-radius: 10px;
-    width: 35%;
-}
-.header-review, .client-review-info {
-    display: flex;
-}
-.header-review {
-    justify-content: flex-start;
-}
-.client-review-info {
-    margin-bottom: 1em;
-}
-.header-review img {
-    width: 3rem; height: 3rem;
-    border-radius: 50%;
-    margin-right: 0.7em;
-}
-#container, .client-review-info {
-    flex-direction: column;
-}
-.stars {
-    margin-left: auto;
-    margin-top: 2%;
-}
 
 
 /* ---------- Conteúdo da THIRD-SECTION ---------- */
@@ -211,6 +166,7 @@ section {
 
     margin-inline: 30px;
     text-align: justify;
+    text-align: center;
 }
 #service-info h1 {
     font-size: 2.6rem;
@@ -274,74 +230,6 @@ section {
 }
 
 /* ---------- Conteúdo da FOURTH-SECTION ---------- */
-#title {
-    font-size: 1.7rem;
-    margin-top: -2%;
-    margin-bottom: 3%;
-}
-
-#fourth-section {
-    flex-direction: column;
-    background-image: url();
-}
-.plans {
-    display: flex;
-    flex-direction: row;
-}
-
-#fourth-section h2, h1, h3 {
-    text-align: center;
-}
-#fourth-section button {
-    width: 70%; height: 10%;
-    font-size: 18pt;
-    font-weight: bold;
-    
-    border-radius: 8px;
-    border: none;
-    box-shadow: 0.5rem 0.5rem 8px #00000051;
-    
-    margin-top: 5px;
-    position: absolute;
-    left: 50%;
-
-    transform: translateX(-50%);
-    cursor: pointer;
-}
-
-.plan-name {
-    font-size: 1.8rem;
-}
-.plan-price {
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-.offer-plan-price {
-    font-size: 2.5rem;
-}
-.benefits {
-    margin: 5% 0;
-}
-.benefits li {
-    font-size: 1.3rem;
-    margin: 15px 10px;
-}
-
-.premium, .standard, .basic {
-    position: relative;
-    padding: 20px;
-    border-radius: 8px;
-
-    height: 60vh; width: 20vw;
-    transition: transform .2s ease-out;
-}
-.premium:hover, .standard:hover, .basic:hover {
-    transform: scale(1.03);
-}
-.premium {
-    margin: 0 2.5em;
-}
 
 
 /* ---------- Conteúdo CSS do FOOTER ---------- */
@@ -355,8 +243,8 @@ footer {
 }
 #social-media {
     display: flex;
-    column-gap: 1.5rem;
-    margin-top: 1rem;
+    column-gap: 1.2rem;
+    margin-top: 0.6rem;
 }
 #social-media .footer-link {
     display: flex;
@@ -367,7 +255,7 @@ footer {
     height: 2.5rem; width: 2.5rem;
 }
 #social-media .footer-link i {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
 }
 #footer-copyright {
     display: flex;

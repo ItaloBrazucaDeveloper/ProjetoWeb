@@ -47,7 +47,7 @@ function changeServiceInfo(index) {
                 <div id="icons-service">
                     <h6>
                         Intensidade:
-                        ${(json[index]['intensidade'][0]).repeat(json[index]['intensidade'][1])}
+                        ${(json[index]['intensity'][0]).repeat(json[index]['intensity'][1])}
                     </h6>
                 </div><hr>
                 <p>

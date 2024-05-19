@@ -1,27 +1,27 @@
 [
     {
         "h1": "CrossFit",
-        "intensidade": ["<i class='fa-solid fa-dumbbell'></i>", 3],
+        "intensity": ["<i class='fa-solid fa-dumbbell'></i>", 3],
         "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Est facere non molestiae obcaecati fugiat voluptates a,vitae, id magni itaque laborum optio aliquam nisi dignissimoslibero. Dolore ex sapiente asperiores."
     },
     {
         "h1": "Cardio",
-        "intensidade": ["<i class='fa-solid fa-dumbbell'></i>", 4],
+        "intensity": ["<i class='fa-solid fa-dumbbell'></i>", 4],
         "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Est facere non molestiae obcaecati fugiat voluptates a,vitae, id magni itaque laborum optio aliquam nisi dignissimoslibero. Dolore ex sapiente asperiores."
     },
     {
         "h1": "AeroHit",
-        "intensidade": ["<i class='fa-solid fa-dumbbell'></i>", 3],
+        "intensity": ["<i class='fa-solid fa-dumbbell'></i>", 3],
         "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Est facere non molestiae obcaecati fugiat voluptates a,vitae, id magni itaque laborum optio aliquam nisi dignissimoslibero. Dolore ex sapiente asperiores."
     },
     {
         "h1": "Musculação",
-        "intensidade": ["<i class='fa-solid fa-dumbbell'></i>", 5],
+        "intensity": ["<i class='fa-solid fa-dumbbell'></i>", 5],
         "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Est facere non molestiae obcaecati fugiat voluptates a,vitae, id magni itaque laborum optio aliquam nisi dignissimoslibero. Dolore ex sapiente asperiores."
     },
     {
         "h1": "Aeróbica",
-        "intensidade": ["<i class='fa-solid fa-dumbbell'></i>", 3],
+        "intensity": ["<i class='fa-solid fa-dumbbell'></i>", 3],
         "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Est facere non molestiae obcaecati fugiat voluptates a,vitae, id magni itaque laborum optio aliquam nisi dignissimoslibero. Dolore ex sapiente asperiores."
     }
 ]
