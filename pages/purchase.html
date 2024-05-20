@@ -4,6 +4,7 @@
         <title>Assinatura - Shape de Elite</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../CSS/purchasePage/style.css">
+        <script src="https://kit.fontawesome.com/2ef0937c77.js" crossorigin="anonymous"></script>
         <script src="../JavaScript/functions.js"></script>
     </head>
     
@@ -23,50 +24,34 @@
 <!-- ========== Corpo da página ========== -->
         <main>
             <section id="plan-choice">
-                <div id="basic-plan">
-                    <h1>Básico</h1>
-                    <hr>
-                    <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li>5</li>
-                        <li>6</li>
+                <div id="basic">
+                </div>
+
+                <div id="premium">
+                    <div id="plan-name">
+                        <h1>Premium</h1>
+                        <hr>
+                    </div>
+                    <ul id="benefits">
+                        <li class="selected-benefit">
+                            <i class="fa-solid fa-dumbbell"></i> Fisioterapia
+                        <li class="selected-benefit">
+                            <i class="fa-solid fa-dumbbell"></i> Convide até 7 amigos 
+                        <li class="selected-benefit">
+                            <i class="fa-solid fa-dumbbell"></i> Acesso a ducha
+                        <li class="selected-benefit">
+                            <i class="fa-solid fa-dumbbell"></i> Treinador particular
+                        <li class="selected-benefit">
+                            <i class="fa-solid fa-dumbbell"></i> 20%OFF na lanchonete
+                        <li class="selected-benefit">
+                            <i class="fa-solid fa-dumbbell"></i> 1 açaí grátis por mês
                     </ul>
-                    <h6>De <s>R$180,56</s> por</h6>
-                    <h2>R$95,99</h2>
+                    <h6 id="plan-price">De <s>R$250,56</s> por</h6>
+                    <h2 id="offer-plan-price">R$120,90</h2>
                     <input type="button" value="Escolher plano">
                 </div>
-                <div id="premium-plan">
-                    <h1>Premium</h1>
-                    <hr>
-                    <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li>5</li>
-                        <li>6</li>
-                    </ul>
-                    <h6>De <s>R$250,56</s> por</h6>
-                    <h2>R$120,90</h2>
-                    <input type="button" value="Escolher plano">
-                </div>
-                <div id="standard-plan">
-                    <h1>Padrão</h1>
-                    <hr>
-                    <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li>5</li>
-                        <li>6</li>
-                    </ul>
-                    <h6>De <s>R$210,90</s> por</h6>
-                    <h2>R$170,25</h2>
-                    <input type="button" value="Escolher plano">
+
+                <div id="standard">
                 </div>
             </section>
         </main>
