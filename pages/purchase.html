@@ -17,21 +17,37 @@
                     <li>Assinatura
                     <li>Identificação
                     <li>Pagamento
-                    <li>lorem ipsum
+                    <li>Checkout
                 </ul>
             </nav>
         </header>
 <!-- ========== Corpo da página ========== -->
-        <main>
-            <section id="plan-choice">
+        <main>            
+            <div id="plan-choice">
                 <div id="basic">
+                    <h1 id="plan-name">Básico</h1>
+                    <hr>
+                    <ul id="benefits">
+                        <li class="selected-benefit">
+                            <i class="fa-solid fa-dumbbell"></i> Fisioterapia
+                        <li class="selected-benefit">
+                            <i class="fa-solid fa-dumbbell"></i> Convide até 7 amigos 
+                        <li class="unselected-benefit">
+                            <i class="fa-solid fa-dumbbell"></i> Acesso a ducha
+                        <li class="unselected-benefit">
+                            <i class="fa-solid fa-dumbbell"></i> Treinador particular
+                        <li class="unselected-benefit">
+                            <i class="fa-solid fa-dumbbell"></i> 20%OFF na lanchonete
+                        <li class="unselected-benefit">
+                            <i class="fa-solid fa-dumbbell"></i> 1 açaí grátis por mês
+                    </ul>
+                    <h6 id="plan-price">De <s>R$140,90,56</s> por</h6>
+                    <h2 id="offer-plan-price">R$89,90</h2>
+                    <button>Escolher plano</button>
                 </div>
-
                 <div id="premium">
-                    <div id="plan-name">
-                        <h1>Premium</h1>
-                        <hr>
-                    </div>
+                    <h1 id="plan-name">Premium</h1>
+                    <hr>
                     <ul id="benefits">
                         <li class="selected-benefit">
                             <i class="fa-solid fa-dumbbell"></i> Fisioterapia
@@ -47,14 +63,70 @@
                             <i class="fa-solid fa-dumbbell"></i> 1 açaí grátis por mês
                     </ul>
                     <h6 id="plan-price">De <s>R$250,56</s> por</h6>
-                    <h2 id="offer-plan-price">R$120,90</h2>
-                    <input type="button" value="Escolher plano">
+                    <h2 id="offer-plan-price">R$180,90</h2>
+                    <button>Escolher plano</button>
                 </div>
-
                 <div id="standard">
+                    <h1 id="plan-name">Padrão</h1>
+                    <hr>
+                    <ul id="benefits">
+                        <li class="selected-benefit">
+                            <i class="fa-solid fa-dumbbell"></i> Fisioterapia
+                        <li class="selected-benefit">
+                            <i class="fa-solid fa-dumbbell"></i> Convide até 7 amigos 
+                        <li class="selected-benefit">
+                            <i class="fa-solid fa-dumbbell"></i> Acesso a ducha
+                        <li class="unselected-benefit">
+                            <i class="fa-solid fa-dumbbell"></i> Treinador particular
+                        <li class="unselected-benefit">
+                            <i class="fa-solid fa-dumbbell"></i> 20%OFF na lanchonete
+                        <li class="unselected-benefit">
+                            <i class="fa-solid fa-dumbbell"></i> 1 açaí grátis por mês
+                    </ul>
+                    <h6 id="plan-price">De <s>R$190,90</s> por</h6>
+                    <h2 id="offer-plan-price">R$100,90</h2>
+                    <button>Escolher plano</button>
                 </div>
+            </div>
+            <div id="client-identification">
+                <div id="id-container">
+                    <form action="" method="post">
+                        <div class="input-box">
+                            <input type="text" placeholder="Nome completo" required id="client-name">
+                            <div class="icon">
+                                <i class="fa-solid fa-user-pen"></i>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <input type="email" placeholder="Email" id="client-email">
+                            <div class="icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" placeholder="CPF" id="cpf-client">
+                            <div class="icon">
+                                <i class="fa-solid fa-address-card"></i>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <input type="tel" placeholder="Telefone" id="client-phone-number">
+                            <div class="icon">
+                                <i class="fa-solid fa-square-phone"></i>
+                            </div>
+                        </div>
+                    </form>
+                    <button>Confirmar</button>
+                </div>
+            </div>
+            <section id="purchase-type">
+                <form action="" method="post">
+                    
+                </form>
             </section>
         </main>
 <!-- ========== Rodapé da página ========== -->
+        <footer>    
+        </footer>
     </body>
 </html>

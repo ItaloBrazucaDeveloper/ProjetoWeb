@@ -31,48 +31,49 @@ a { text-decoration: none; }
     font-weight: 600;
 }
 
-/* ---------- Conteúdo CSS da Section ---------- */
-section {
-    height: 92vh;
+/* ---------- Conteúdo CSS de todas as SECTIONs ---------- */
+#plan-choice, #client-identification {
+    position: absolute;
+    display: flex;
     width: 100%;
+    height: 89vh;
 }
 
 /* ---------- Conteúdo CSS - Escolha de preços ---------- */
 #plan-choice {
-    display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
-    gap: 1em;
+    
+    column-gap: 1em;
     flex-wrap: wrap;
-    margin: auto;
+}
+#benefits li {
+    font-size: 1.3em;
+    margin: 15px 10px;
 }
 #plan-name {
-    font-size: 1.8rem;
+    font-size: 1.8em;
     text-align: center;
 }
 #plan-price {
-    margin-top: 2rem;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     font-weight: 500;
     text-align: center;
 }
 #offer-plan-price {
-    font-size: 2.5rem;
+    font-size: 2.5em;
     text-align: center;
 }
-#benefits {
-    margin: 5% 0;
-}
-#benefits li {
-    font-size: 1.3rem;
-    margin: 15px 10px;
-}
 #premium, #standard, #basic {
-    position: relative;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
+
     border-radius: 8px;
-    min-width: 25%;
-    height: 54vh; width: 15em;
+    min-width: 20em; 
+    width: 20em;
+
     background-color: grey;
     transition: .2s ease-out;
 }
@@ -83,18 +84,76 @@ section {
     color: gold;
     /* color: #2b2b2b; */
 }
-#plan-choice input {
-    width: 70%; height: 10%;
-    font-size: 18pt;
+.unselected-benefit {
+    color: #363636;
+}
+#plan-choice button {
+    margin-top: 10px;
+    height: 2em;
+    font-size: 1.2em;
+
     font-weight: bold;
-    
     border-radius: 8px;
     border: none;
-    
-    margin-top: 5px;
-    position: absolute;
-    left: 50%;
 
-    transform: translateX(-50%);
     cursor: pointer;
+}
+
+/* ---------- Conteúdo CSS - identificação do usuário ---------- */
+#client-identification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    position: absolute;
+    top: 9%;
+    left: 95%;
+    border-radius: 50px 0 0 50px;
+    /* animation: push 2s 1 ease-out backwards; */
+    transition: all .1s;
+}
+@keyframes push {
+    to { left: 0%; }
+    from { left: 100%; }
+}
+#id-container {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    transform: scale(1.5);
+}
+.input-box {
+    position: relative;
+    display: flex;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 5px #00000030;
+}
+.input-box input {
+    position: relative;
+    padding-left: 42px;
+    border: none;
+    width: 100%;
+    height: 2.5em;
+    border-radius: 0 7px 7px 0;
+}
+.input-box input:focus::placeholder {
+    color: #000;
+}
+.input-box input:focus {
+    background-color: #00ff00;
+}
+.input-box .icon {
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#id-container button {
+    height: 2.5em;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1rem;
 }
