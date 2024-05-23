@@ -34,6 +34,19 @@ button {
     font-size: 1.7rem;
     font-weight: 600;
 }
+#nav-bars {
+    display: none;
+}
+
+@media(max-width: 900px) {
+    #nav-menu li {
+        display: none;
+    }
+    #nav-bars {
+        display: block;
+        font-size: 1.75rem;
+    }
+}
 
 
 /* ---------- Conteúdo CSS do MAIN ---------- */
