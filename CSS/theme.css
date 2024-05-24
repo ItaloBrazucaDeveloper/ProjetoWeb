@@ -45,7 +45,7 @@
 /* ---------- Serviços ---------- */
 #service {
     background-color: #fefefe;
-    box-shadow: 15px 0 0 rgb(255, 108, 71);
+    box-shadow: 15px 0 0 #ff6c47;
 }
 #service-info h1 {
     color: #f0ffff;
