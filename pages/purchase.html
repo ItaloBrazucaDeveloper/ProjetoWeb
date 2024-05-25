@@ -4,10 +4,7 @@
         <title>Assinatura - Shape de Elite</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../CSS/purchasePage/style.css">
-        <script src="https://kit.fontawesome.com/2ef0937c77.js" crossorigin="anonymous"></script>
-        <script src="../JavaScript/functions.js"></script>
-    </head>
-    
+    </head> 
     <body>
 <!-- ========== Cabeçalho da página ========== -->
         <header>
@@ -23,7 +20,7 @@
         </header>
 <!-- ========== Corpo da página ========== -->
         <main>            
-            <div id="plan-choice">
+            <section id="plan-choice">
                 <div id="basic">
                     <h1 id="plan-name">Básico</h1>
                     <hr>
@@ -87,12 +84,12 @@
                     <h2 id="offer-plan-price">R$100,90</h2>
                     <button>Escolher plano</button>
                 </div>
-            </div>
-            <div id="client-identification">
+            </section>
+            <section id="client-identification">
                 <div id="id-container">
                     <form action="" method="post">
                         <div class="input-box">
-                            <input required type="text" placeholder="Nome completo" id="client-name">
+                            <input required type="text" minlength="15" maxlength="30" placeholder="Nome completo" id="client-name">
                             <div class="icon">
                                 <i class="fa-solid fa-user-pen"></i>
                             </div>
@@ -104,21 +101,21 @@
                             </div>
                         </div>
                         <div class="input-box">
-                            <input type="text" placeholder="CPF" id="cpf-client">
+                            <input required type="text" maxlength="14" placeholder="CPF" id="cpf-client">
                             <div class="icon">
                                 <i class="fa-solid fa-address-card"></i>
                             </div>
                         </div>
                         <div class="input-box">
-                            <input type="tel" placeholder="Telefone" id="client-phone-number">
+                            <input required type="tel" maxlength="16" placeholder="Telefone" id="client-phone-number">
                             <div class="icon">
                                 <i class="fa-solid fa-square-phone"></i>
                             </div>
                         </div>
                     </form>
-                    <button onclick="isCpfValid()">Confirmar</button>
+                    <button onclick="changeBorderColor()">Confirmar</button>
                 </div>
-            </div>
+            </section>
             <section id="purchase-type">
                 <form action="" method="post">
                     
@@ -128,5 +125,9 @@
 <!-- ========== Rodapé da página ========== -->
         <footer>    
         </footer>
+<!-- ========== Scripts da página ========== -->
+        <script src="https://kit.fontawesome.com/2ef0937c77.js" crossorigin="anonymous"></script>
+        <script src="../JavaScript/validations.js"></script>
+        <script src="../JavaScript/functions.js"></script>
     </body>
 </html>
