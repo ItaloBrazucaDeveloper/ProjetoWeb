@@ -2,26 +2,26 @@
     {
         "h1": "CrossFit",
         "intensity": ["<i class='fa-solid fa-dumbbell'></i>", 3],
-        "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Est facere non molestiae obcaecati fugiat voluptates a,vitae, id magni itaque laborum optio aliquam nisi dignissimoslibero. Dolore ex sapiente asperiores."
+        "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est facere non molestiae obcaecati fugiat voluptates a, vitae, id magni itaque laborum optio aliquam nisi dignissimos libero. Dolore ex sapiente asperiores."
     },
     {
         "h1": "Cardio",
         "intensity": ["<i class='fa-solid fa-dumbbell'></i>", 4],
-        "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Est facere non molestiae obcaecati fugiat voluptates a,vitae, id magni itaque laborum optio aliquam nisi dignissimoslibero. Dolore ex sapiente asperiores."
+        "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est facere non molestiae obcaecati fugiat voluptates a, vitae, id magni itaque laborum optio aliquam nisi dignissimos libero. Dolore ex sapiente asperiores."
     },
     {
         "h1": "AeroHit",
         "intensity": ["<i class='fa-solid fa-dumbbell'></i>", 3],
-        "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Est facere non molestiae obcaecati fugiat voluptates a,vitae, id magni itaque laborum optio aliquam nisi dignissimoslibero. Dolore ex sapiente asperiores."
+        "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est facere non molestiae obcaecati fugiat voluptates a, vitae, id magni itaque laborum optio aliquam nisi dignissimos libero. Dolore ex sapiente asperiores."
     },
     {
         "h1": "Musculação",
         "intensity": ["<i class='fa-solid fa-dumbbell'></i>", 5],
-        "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Est facere non molestiae obcaecati fugiat voluptates a,vitae, id magni itaque laborum optio aliquam nisi dignissimoslibero. Dolore ex sapiente asperiores."
+        "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est facere non molestiae obcaecati fugiat voluptates a, vitae, id magni itaque laborum optio aliquam nisi dignissimos libero. Dolore ex sapiente asperiores."
     },
     {
         "h1": "Aeróbica",
         "intensity": ["<i class='fa-solid fa-dumbbell'></i>", 3],
-        "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Est facere non molestiae obcaecati fugiat voluptates a,vitae, id magni itaque laborum optio aliquam nisi dignissimoslibero. Dolore ex sapiente asperiores."
+        "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est facere non molestiae obcaecati fugiat voluptates a, vitae, id magni itaque laborum optio aliquam nisi dignissimos libero. Dolore ex sapiente asperiores."
     }
 ]

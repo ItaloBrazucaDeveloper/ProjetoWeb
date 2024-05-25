@@ -6,7 +6,6 @@
         <link rel="stylesheet" href="CSS/style.css">
         <link rel="stylesheet" href="CSS/theme.css">
     </head>
-
     <body>
 <!-- ========== Cabeçalho da página ========== -->
         <header>
@@ -18,14 +17,11 @@
                     <li><a href="#third-section">Serviços
                     <li><a href="#fourth-section">Planos</a>
                 </ul>
-                <span id="nav-bars">
+                <span id="nav-bars"> <!-- Barra de navegação hambúrguer-->
                     <div></div>
                     <div></div>
                     <div></div>
                 </span>
-                <!-- <span id="nav-bars">
-                    <i class="fa-solid fa-bars"></i>
-                </span> -->
             </nav>
         </header>
 <!-- ========== Corpo da página - Convite para ser Elite! ========== -->
@@ -72,30 +68,30 @@
                             libero. Dolore ex sapiente asperiores.
                         </p>
                     </div>
-                    <button>Matricular-se</button>
+                    <button>Matricule-se</button>
                     <div id="choicer-service">
                         <i onclick="changeCheckedRadioArrow('left')" class="fa-solid fa-circle-arrow-left"></i>
 
-                        <input onchange="changeCheckedRadio(0)" type="radio" checked="true" name="slide" id="slide-0">
+                        <input type="radio" name="slide" id="slide-0" checked onchange="changeCheckedRadio(0)">
                             <label id="label-0" for="slide-0"></label>
-                        <input onchange="changeCheckedRadio(1)" type="radio" name="slide" id="slide-1">
+                        <input type="radio" name="slide" id="slide-1" onchange="changeCheckedRadio(1)">
                             <label id="label-1" for="slide-1"></label>
-                        <input onchange="changeCheckedRadio(2)" type="radio" name="slide" id="slide-2">
+                        <input type="radio" name="slide" id="slide-2" onchange="changeCheckedRadio(2)">
                             <label id="label-2" for="slide-2"></label>
-                        <input onchange="changeCheckedRadio(3)" type="radio" name="slide" id="slide-3">
+                        <input type="radio" name="slide" id="slide-3" onchange="changeCheckedRadio(3)">
                             <label id="label-3" for="slide-3"></label>
-                        <input onchange="changeCheckedRadio(4)" type="radio" name="slide" id="slide-4">
+                        <input type="radio" name="slide" id="slide-4" onchange="changeCheckedRadio(4)">
                             <label id="label-4" for="slide-4"></label>
 
                         <i onclick="changeCheckedRadioArrow('right')" class="fa-solid fa-circle-arrow-right"></i>
                     </div>
                 </div>
                 <div id="slider">
-                    <img class="selected" src="img/backgrounds/HomemFlexão.jpg" alt="">
-                    <img src="img/backgrounds/MulherAbdominal.jpg" alt="">
-                    <img src="img/backgrounds/AeroHit.jpg" alt="">
-                    <img src="img/backgrounds/SegurandoBarra.jpg" alt="">
-                    <img src="img/backgrounds/PessoasPrancha.jpg" alt="">
+                    <img class="selected" src="/img/backgrounds/HomemLevantandoPneu.jpg" alt="">
+                    <img src="/img/backgrounds/MulherBicicletaGym.jpg" alt="">
+                    <img src="https://static.standard.co.uk/s3fs-public/thumbnails/image/2016/08/30/17/seenonscreen-shot07-414.jpg" alt="">
+                    <img src="/img/backgrounds/HomemSemCamisa.jpg" alt="">
+                    <img src="/img/backgrounds/Aeróbica.jpg" alt="">
                 </div>
             </section>
 <!-- ========== Mensalidades da Shape de Elite ========== -->
@@ -147,7 +143,7 @@
                 &copy; 2024 | All rights reserved
             </div>
         </footer>
-        
+<!-- ========== Scripts da página ========== -->
         <script src="https://kit.fontawesome.com/2ef0937c77.js" crossorigin="anonymous"></script>
         <script src="JavaScript/functions.js"></script>
     </body>
