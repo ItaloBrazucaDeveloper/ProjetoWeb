@@ -15,8 +15,10 @@
 }
 
 /* ---------- Botão Seja Elite ---------- */
-#first-section button:hover {
+#first-section a {
     background-color: #ffffff;
+}
+#first-section a:hover {
     box-shadow: 0 0 5px #ffc000,
                 0 0 20px #ffc000,
                 0 0 60px #ffc000,
@@ -45,7 +47,7 @@
 }
 /* ---------- Section ---------- */
 #first-section {
-    background-color: #140f05;
+    background-color: #1a161b;
 }
 
 /* ---------- Serviços ---------- */
@@ -69,7 +71,7 @@
     color: #dbe3e3;
 }
 #home-text h2 {
-    color: #f1c811;
+    color: #f3d85e;
 }
 
 /* ---------- Rodapé da página ---------- */
