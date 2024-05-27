@@ -14,14 +14,15 @@ button {
 /* ---------- Conteúdo CSS do HEADER ---------- */
 #navigation {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     padding: 18px 40px;
     height: 2.5rem;
 }
 #navigation ul {
     display: flex;
+    align-items: center;
     column-gap: 2.5em;
-    line-height: 2.5rem;
 }
 #navigation li a {
     font-size: 1.5rem;
@@ -30,6 +31,9 @@ button {
 #logo {
     font-size: 1.7rem;
     font-weight: 600;
+}
+#search-place {
+    font-size: 1.4rem;
 }
 #nav-bars {
     display: none;
@@ -100,14 +104,9 @@ section {
     100% { background-position-x: 400%; }
 }
 #home-text h2 {
+    position: relative;
     font-size: 1.5rem;
 }
-/* #home-text h2::before {
-    content: " ";
-    width: 100px;
-    height: 10px;
-    background-color: currentColor;
-} */
 #home-text p {
     text-align: justify;
     max-width: 40rem;
@@ -200,7 +199,7 @@ section {
     width: 103.25%; height: 100%;
     object-fit: cover;
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: 1s ease;
 }
 #slider img.selected {
     opacity: 1;
@@ -220,16 +219,21 @@ section {
 }
 #service button {
     width: 10em;
-    padding: 0.8em;
+    padding: 15px;
     border: none;
 
     font-size: 1.25rem;
     border-radius: 8px;
-    transition: .4s all ease;
+    transition: .3s ease-out;
+
+    box-shadow: 0 5px 0px #ff8a47;
 }
 #service button:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px #00000051;
+    box-shadow: 0 10px 0px #ff8a47;
+}
+#service button:active {
+    transform: scale(.9);
 }
 #service-info {
     display: flex;
