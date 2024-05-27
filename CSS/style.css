@@ -24,16 +24,13 @@ button {
     align-items: center;
     column-gap: 2.5em;
 }
-#navigation li a {
+#navigation a {
     font-size: 1.5rem;
     transition: 0.1s;
 }
 #logo {
     font-size: 1.7rem;
     font-weight: 600;
-}
-#search-place {
-    font-size: 1.4rem;
 }
 #nav-bars {
     display: none;
@@ -269,14 +266,16 @@ section {
 #choicer-service label {
     display: flex;
     border-radius: 8px;
-
-    width: 3.75em; height: 1.5em;
+    width: 3.75em; 
+    
+    height: 1.5em;
     cursor: pointer;
     transition: .4s ease-in-out;
 }
 #choicer-service i {
     font-size: 2rem;
     line-height: 0.85em;
+    
     margin-inline: 10px;
     cursor: pointer;
     transition: .2s linear;

@@ -13,21 +13,16 @@ function resetScroll() {
 // Funções para o carrosel
 function changeCheckedRadioArrow(direction) {
     for (let i = 0; i <= 4; i++) {
-        if ( document.querySelector('#choicer-service #slide-'+ i).checked ) {
+        if ( document.querySelector('#slide-'+ i).checked ) {
             images[i].classList.remove('selected');
             switch (direction) {
-                case 'right':
-                    i == 4 ? i = -1 : i = i;
-                    document.querySelector('#choicer-service #slide-'+ (i + 1) ).checked = true;
-                    images[i + 1].classList.add('selected');
-                    changeServiceInfo(i + 1);
-                    break;
-                case 'left':
-                    i == 0 ? i = 5 : i = i;
-                    document.querySelector('#choicer-service #slide-'+ (i - 1) ).checked = true;
-                    images[i - 1].classList.add('selected');
-                    changeServiceInfo(i - 1);
-            } break;
+                case 'right': i = (i == 4) ? 0 : i + 1; break;
+                case 'left':  i = (i == 0) ? 4 : i - 1;
+            }
+            document.querySelector('#slide-'+ i ).checked = true;
+            images[i].classList.add('selected');
+            changeServiceInfo(i);
+            break;
         } 
     }
 }
