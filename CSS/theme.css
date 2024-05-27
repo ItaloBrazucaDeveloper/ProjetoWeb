@@ -25,15 +25,10 @@
                 0 0 150px #ffc000;
 }
 
-/* ---------- Botão que sobe a página ---------- */
-.upper-button {
-    background-color: #800080;
-    color: #f6f6f6;
-}
-
 /* ---------- Cabeçalho da página ---------- */
 #navigation {
-    background-color: #fff;
+    background-color: #fefefe;
+    backdrop-filter: opacity(50%);
 }
 #navigation li a:hover {
     border-bottom: solid #000000 3px;

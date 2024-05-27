@@ -1,14 +1,4 @@
-const button_up = document.getElementById('up-button');
 const images = document.querySelectorAll('#slider img');
-
-
-// Funções para o botão que sobe a página inteira
-window.addEventListener('scroll', () => {
-    button_up.classList.toggle('upper-button', window.scrollY > 400);
-});
-function resetScroll() {
-    window.scrollTo(0, 0);
-}
 
 // Funções para o carrosel
 function changeCheckedRadioArrow(direction) {
