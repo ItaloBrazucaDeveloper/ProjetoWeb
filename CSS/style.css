@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
 /* ---------- Conteúdo CSS PRINCIPAL DA PÁGINA ---------- */
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Red Hat Display", sans-serif;
     list-style: none;
 }
 a { text-decoration: none; }
@@ -13,12 +15,13 @@ button {
 
 /* ---------- Conteúdo CSS do HEADER ---------- */
 header {
-    position: sticky;
+    position: absolute;
     top: 0; z-index: 3;
+    width: 100%;
 }
 #navigation {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 
     padding: 18px 40px;
@@ -33,19 +36,28 @@ header {
     font-size: 1.5rem;
     transition: 0.1s;
 }
-#logo {
+#logo i {
     font-size: 2rem;
-    color: darkorchid;
+    text-shadow:  2px 1px 0 #fefefe;
+}
+#logo {
+    display: flex;
+    column-gap: 10px;
+    line-height: 2rem;
+}
+#logo h1 {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+#logo h1 span {
+    font-weight: 300;
 }
 #place-icon {
     font-size: 1.3rem;
-    padding: 8px;
+    padding: 8px 10px;
     border-radius: 5px;
-    border-top: 1px solid grey;
-    border-left: 1px solid grey;
-    box-shadow: 2px 2px 0 tomato,
-                4px 4px 0 purple;
 }
+
 #nav-bars {
     display: none;
 }
@@ -75,24 +87,26 @@ header {
 /* ---------- Conteúdo CSS do MAIN ---------- */
 section {
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 87vh;
 }
 
 /* ---------- Conteúdo CSS da FIRST-SECTION ---------- */
 #first-section {
-    justify-content: space-around;
+    justify-content: space-evenly;
+    column-gap: 50px;
     border-bottom: 7px solid #fefefe;
+    height: 110vh;
 }
 #home-text {
-    max-width: 70em;
-    cursor: default;
+    display: grid;
+    grid-template-rows: repeat(1fr, 4);
+    place-items: center;
+    text-align: center;
+    width: 40%;
 }
 #home-text h1 {
-    font-size: 7rem;
-    margin-bottom: 15px;
-
+    font-size: 5rem;
     background: linear-gradient(45deg, #f6fad1, #b26f1d, #f1e04c, #dbec3e);
     background-size: 400% 100%;
 
@@ -104,21 +118,21 @@ section {
     0% { background-position-x: 0%; }
     100% { background-position-x: 400%; }
 }
-#home-text h2 {
-    position: relative;
-    font-size: 1.5rem;
-}
 #home-text p {
-    text-align: justify;
-    max-width: 40rem;
-    margin-bottom: 2.5em;
+    width: 90%;
+    text-align: left;
 }
 #first-section a {
-    padding: 15px 45px;
+    margin-top: 25px;
+    height: 50px; width: 150px;
+    line-height: 50px;
+
+    text-align: center;
     border-radius: 3px;
     font-size: 1.3rem;
-    transition: .3s ease;
+    transition: .3s ease-out;
 }
+/* Clone do reels */
 #video-promo {
     position: relative;
 }
@@ -166,8 +180,8 @@ section {
     max-height: 630px;
     min-height: 400px;
     border-radius: 10px;
-    box-shadow: 10px 5px 0 white,
-                20px 10px 0 tomato;
+    box-shadow: 5px 5px 0 white,
+                10px 10px 0 tomato;
 }
 #video-interactions li {
     font-size: 18pt;

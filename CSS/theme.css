@@ -7,8 +7,17 @@
 }
 
 /* ---------- Barra de navegação ---------- */
-#navigation {
-    color: #800080;
+#navigation, #place-icon {
+    color: #fefefe;
+}
+#navigation a:not(#place-icon) {
+    color: #acacac;
+}
+#nav-menu a:hover {
+    color: red;
+}
+#place-icon {
+    background-color: tomato;
 }
 
 /* ---------- Botão Seja Elite ---------- */
@@ -22,21 +31,6 @@
                 0 0 150px #ffc000;
 }
 
-/* ---------- Cabeçalho da página ---------- */
-#navigation {
-    background-color: #fefefe;
-    backdrop-filter: opacity(50%);
-}
-#navigation li a:hover {
-    border-bottom: solid #000000 3px;
-}
-
-/* ---------- Cards que mostram os preços ---------- */
-.premium, .standard, .basic {
-    background-color: transparent;
-    backdrop-filter: blur(8px);
-    border: 3px solid black;
-}
 /* ---------- Section ---------- */
 #first-section {
     background-color: #1a161b;
