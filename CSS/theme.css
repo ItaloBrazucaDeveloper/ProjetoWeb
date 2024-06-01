@@ -6,21 +6,27 @@
     background-color: #ea1756;
 }
 
-/* ---------- Barra de navegação ---------- */
+/* ---------- MAIN ---------- */
+main {
+    background-color: #1a161b;
+}
+
+/* ---------- NAVBAR ---------- */
 #navigation, #place-icon {
     color: #fefefe;
 }
-#navigation a:not(#place-icon) {
-    color: #acacac;
+#navigation a:hover {
+    transition: .3s ease;
+    color: white;
 }
-#nav-menu a:hover {
-    color: red;
+#navigation li > a {
+    color: #acacac;
 }
 #place-icon {
     background-color: tomato;
 }
 
-/* ---------- Botão Seja Elite ---------- */
+/* ---------- FIRST SECTION ---------- */
 #first-section a {
     background-color: #ffffff;
 }
@@ -30,13 +36,14 @@
                 0 0 60px #ffc000,
                 0 0 150px #ffc000;
 }
-
-/* ---------- Section ---------- */
-#first-section {
-    background-color: #1a161b;
+#home-text {
+    color: #dbe3e3;
+}
+#home-text h2 {
+    color: #f3d85e;
 }
 
-/* ---------- Serviços ---------- */
+/* ---------- THIRD SECTION ---------- */
 #service {
     background-color: #fefefe;
     box-shadow: 15px 0 0 #ff6c47;
@@ -52,15 +59,7 @@
     background-color: #ffb52b;
 }
 
-/* ---------- Textos da primeira section do site ---------- */
-#home-text {
-    color: #dbe3e3;
-}
-#home-text h2 {
-    color: #f3d85e;
-}
-
-/* ---------- Rodapé da página ---------- */
+/* ---------- FOOTER ---------- */
 footer {
     background-color: #000000;
     color: #ddd;

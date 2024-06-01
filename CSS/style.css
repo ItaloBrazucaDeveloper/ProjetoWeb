@@ -12,6 +12,16 @@ a { text-decoration: none; }
 button {
     cursor: pointer;
 }
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section {
+    display: flex;
+    align-items: center;
+    height: 87vh; width: 90%;
+}
 
 /* ---------- Conteúdo CSS do HEADER ---------- */
 header {
@@ -34,7 +44,6 @@ header {
 }
 #navigation li a {
     font-size: 1.5rem;
-    transition: 0.1s;
 }
 #logo i {
     font-size: 2rem;
@@ -46,7 +55,7 @@ header {
     line-height: 2rem;
 }
 #logo h1 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 #logo h1 span {
@@ -84,26 +93,20 @@ header {
     }
 }
 
-/* ---------- Conteúdo CSS do MAIN ---------- */
-section {
-    display: flex;
-    align-items: center;
-    height: 87vh;
-}
-
-/* ---------- Conteúdo CSS da FIRST-SECTION ---------- */
+/* ---------- Conteúdo CSS da FIRST SECTION ---------- */
 #first-section {
     justify-content: space-evenly;
-    column-gap: 50px;
+    column-gap: 20px;
     border-bottom: 7px solid #fefefe;
-    height: 110vh;
+    padding-top: 40px;
+    height: 100vh;
 }
 #home-text {
     display: grid;
     grid-template-rows: repeat(1fr, 4);
     place-items: center;
     text-align: center;
-    width: 40%;
+    width: 50%;
 }
 #home-text h1 {
     font-size: 5rem;
@@ -119,8 +122,7 @@ section {
     100% { background-position-x: 400%; }
 }
 #home-text p {
-    width: 90%;
-    text-align: left;
+    text-align: center;
 }
 #first-section a {
     margin-top: 25px;
@@ -132,9 +134,9 @@ section {
     font-size: 1.3rem;
     transition: .3s ease-out;
 }
-/* Clone do reels */
 #video-promo {
     position: relative;
+    margin-right: 30px;
 }
 #video-infos { 
     position: absolute;
@@ -200,9 +202,9 @@ section {
     border: 1.75px solid #fefefe;
 }
 
-/* ---------- Conteúdo da SECOND-SECTION ---------- */
+/* ---------- Conteúdo da SECOND SECTION ---------- */
 
-/* ---------- Conteúdo da THIRD-SECTION ---------- */
+/* ---------- Conteúdo da THIRD SECTION ---------- */
 #slider {
     position: relative;
     width: 100%; height: 85vh;
@@ -322,7 +324,7 @@ section {
     transition: .4s ease-in-out;
 }
 
-/* ---------- Conteúdo da FOURTH-SECTION ---------- */
+/* ---------- Conteúdo da FOURTH SECTION ---------- */
 
 
 /* ---------- Conteúdo CSS do FOOTER ---------- */
