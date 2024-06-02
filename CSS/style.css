@@ -1,3 +1,4 @@
+/* ---------- Importação da fonte 'RED HAT DISPLAY' da api do google ---------- */
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 
 /* ---------- Conteúdo CSS PRINCIPAL DA PÁGINA ---------- */
@@ -63,15 +64,17 @@ header {
 }
 #place-icon {
     font-size: 1.3rem;
-    padding: 8px 10px;
+    padding: 6px 10px;
     border-radius: 5px;
 }
-
 #nav-bars {
     display: none;
 }
-@media(max-width: 900px) {
-    #nav-menu li {
+@media(max-width: 1000px) {
+    #navigation {
+        justify-content: space-between;
+    }
+    #nav-menu li, #place-icon {
         display: none;
     }
     #nav-bars {
@@ -89,7 +92,7 @@ header {
         height: 3px;
         width: 30px;
         border-radius: 2px;
-        background-color: black;
+        background-color: #ffffff;
     }
 }
 
@@ -97,8 +100,8 @@ header {
 #first-section {
     justify-content: space-evenly;
     column-gap: 20px;
-    border-bottom: 7px solid #fefefe;
-    padding-top: 40px;
+    padding-top: 50px;
+    flex-wrap: wrap-reverse;
     height: 100vh;
 }
 #home-text {
@@ -109,7 +112,7 @@ header {
     width: 50%;
 }
 #home-text h1 {
-    font-size: 5rem;
+    font-size: 5.5rem;
     background: linear-gradient(45deg, #f6fad1, #b26f1d, #f1e04c, #dbec3e);
     background-size: 400% 100%;
 
@@ -137,6 +140,8 @@ header {
 #video-promo {
     position: relative;
     margin-right: 30px;
+    height: 650px;
+    border-radius: 10px;
 }
 #video-infos { 
     position: absolute;
@@ -145,9 +150,7 @@ header {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
-
     width: 100%; height: 100%;
-    color: #fefefe;
 }
 #video-infos h1 {
     grid-row: 1;
@@ -179,23 +182,16 @@ header {
     margin-right: 15px;
 }
 #video-promo video {
-    max-height: 630px;
-    min-height: 400px;
+    height: 100%;
     border-radius: 10px;
-    box-shadow: 5px 5px 0 white,
-                10px 10px 0 tomato;
 }
 #video-interactions li {
     font-size: 18pt;
     text-align: center;
-    color: #fefefe;
     margin-top: 25px;
 }
 #video-interactions p {
     font-size: 12pt;
-}
-#video-interactions li .fa-heart {
-    color: red;
 }
 #video-interactions img {
     border-radius: 10px;
@@ -303,23 +299,23 @@ header {
 #choicer-service i:active {
     transform: scale(1.07);
 }
-#choicer-service #slide-0:checked ~ #label-0 {
+#choicer-service #slide-0:checked + #label-0 {
     width: 5.65em;
     transition: .4s ease-in-out;
 }
-#choicer-service #slide-1:checked ~ #label-1 {
+#choicer-service #slide-1:checked + #label-1 {
     width: 5.65em;
     transition: .4s ease-in-out;
 }
-#choicer-service #slide-2:checked ~ #label-2 {
+#choicer-service #slide-2:checked + #label-2 {
     width: 5.65em;
     transition: .4s ease-in-out;
 }
-#choicer-service #slide-3:checked ~ #label-3 {
+#choicer-service #slide-3:checked + #label-3 {
     width: 5.65em;
     transition: .4s ease-in-out;
 }
-#choicer-service #slide-4:checked ~ #label-4 {
+#choicer-service #slide-4:checked + #label-4 {
     width: 5.65em;
     transition: .4s ease-in-out;
 }

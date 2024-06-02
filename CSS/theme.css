@@ -17,7 +17,7 @@ main {
 }
 #navigation a:hover {
     transition: .3s ease;
-    color: white;
+    color: #ffffff;
 }
 #navigation li > a {
     color: #acacac;
@@ -36,11 +36,18 @@ main {
                 0 0 60px #ffc000,
                 0 0 150px #ffc000;
 }
-#home-text {
-    color: #dbe3e3;
+#home-text, #video-infos, #video-interactions li {
+    color: #fefefe;
 }
 #home-text h2 {
     color: #f3d85e;
+}
+#video-promo {
+    box-shadow: 5px 5px 0 white,
+                10px 10px 0 tomato;
+}
+#video-interactions li .fa-heart {
+    color: red;
 }
 
 /* ---------- THIRD SECTION ---------- */
