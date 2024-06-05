@@ -109,7 +109,7 @@ header {
     grid-template-rows: repeat(1fr, 4);
     place-items: center;
     text-align: center;
-    width: 50%;
+    width: 60%;
 }
 #home-text h1 {
     font-size: 5.5rem;
