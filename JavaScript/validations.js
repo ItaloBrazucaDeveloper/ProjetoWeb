@@ -10,7 +10,7 @@ let cpf;
 
 
 // Máscara de CPF
-cpf_html_element.addEventListener('keypress', () => {
+cpf_html_element.addEventListener('input', () => {
     cpf_length = cpf_html_element.value.length;
     if (cpf_length == 3 || cpf_length == 7) {
         cpf_html_element.value += '.';
@@ -19,7 +19,7 @@ cpf_html_element.addEventListener('keypress', () => {
     }
 });
 // Máscara de Telefone
-tel_html_element.addEventListener('keypress', () => {
+tel_html_element.addEventListener('input', () => {
     tel_length = tel_html_element.value.length;
     if (tel_length == 0) {
         tel_html_element.value += '(';
