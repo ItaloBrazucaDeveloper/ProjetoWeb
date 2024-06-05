@@ -42,12 +42,12 @@
                     <a href="#">Seja Elite!</a>
                 </div>
                 <div id="video-promo">
-                    <video loop autoplay>
+                    <video muted loop>
                         <!-- <source src="https://videos.pexels.com/video-files/5319434/5319434-sd_540_960_25fps.mp4"> -->
                         <source src="promoVideo.mp4">
                     </video>
                     <div id="video-infos">
-                        <h1>Reels</h1>
+                        <h1><i class="fa-solid fa-volume-xmark"></i></h1>
                         <ul id="video-description">
                             <li id="user-video"><i class="fa-solid fa-dumbbell"></i> Shape_de_Elite
                             <li>Aquecendo pro crossfit :p
@@ -72,49 +72,25 @@
             </section>
 <!-- ========== Serviços da Shape de Elite - Carrosel ========== -->
             <section id="third-section">
-                <div id="service">
-                    <div id="service-info">
-                        <h1>CrossFit</h1>
-                        <div id="icons-service">
-                            <h6>
-                                Intensidade:
-                                <i class="fa-solid fa-dumbbell"></i>
-                                <i class="fa-solid fa-dumbbell"></i>
-                                <i class="fa-solid fa-dumbbell"></i>
-                            </h6>
-                        </div>
-                        <hr>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Est facere non molestiae obcaecati fugiat voluptates a, 
-                            vitae, id magni itaque laborum optio aliquam nisi dignissimos 
-                            libero. Dolore ex sapiente asperiores.
-                        </p>
-                    </div>
-                    <button>Matricule-se</button>
-                    <div id="choicer-service">
-                        <i onclick="changeCheckedRadioArrow('left')" class="fa-solid fa-circle-arrow-left"></i>
-
-                        <input type="radio" name="slide" id="slide-0" checked onchange="changeCheckedRadio(0)">
-                            <label id="label-0" for="slide-0"></label>
-                        <input type="radio" name="slide" id="slide-1" onchange="changeCheckedRadio(1)">
-                            <label id="label-1" for="slide-1"></label>
-                        <input type="radio" name="slide" id="slide-2" onchange="changeCheckedRadio(2)">
-                            <label id="label-2" for="slide-2"></label>
-                        <input type="radio" name="slide" id="slide-3" onchange="changeCheckedRadio(3)">
-                            <label id="label-3" for="slide-3"></label>
-                        <input type="radio" name="slide" id="slide-4" onchange="changeCheckedRadio(4)">
-                            <label id="label-4" for="slide-4"></label>
-
-                        <i onclick="changeCheckedRadioArrow('right')" class="fa-solid fa-circle-arrow-right"></i>
-                    </div>
-                </div>
+                <h1 id="service-title">Crossfit</h1>
                 <div id="slider">
                     <img class="selected" src="/img/backgrounds/HomemLevantandoPneu.jpg" alt="">
                     <img src="/img/backgrounds/MulherBicicletaGym.jpg" alt="">
                     <img src="https://static.standard.co.uk/s3fs-public/thumbnails/image/2016/08/30/17/seenonscreen-shot07-414.jpg" alt="">
                     <img src="/img/backgrounds/HomemSemCamisa.jpg" alt="">
                     <img src="/img/backgrounds/Aeróbica.jpg" alt="">
+                </div>
+                <div id="choicer-service">
+                    <input type="radio" name="slide" id="slide-0" checked onchange="changeCheckedRadio(0)">
+                        <label id="label-0" for="slide-0"></label>
+                    <input type="radio" name="slide" id="slide-1" onchange="changeCheckedRadio(1)">
+                        <label id="label-1" for="slide-1"></label>
+                    <input type="radio" name="slide" id="slide-2" onchange="changeCheckedRadio(2)">
+                        <label id="label-2" for="slide-2"></label>
+                    <input type="radio" name="slide" id="slide-3" onchange="changeCheckedRadio(3)">
+                        <label id="label-3" for="slide-3"></label>
+                    <input type="radio" name="slide" id="slide-4" onchange="changeCheckedRadio(4)">
+                        <label id="label-4" for="slide-4"></label>
                 </div>
             </section>
 <!-- ========== Mensalidades da Shape de Elite ========== -->
@@ -164,6 +140,7 @@
         </footer>
 <!-- ========== Scripts da página ========== -->
         <script src="https://kit.fontawesome.com/2ef0937c77.js" crossorigin="anonymous"></script>
-        <script src="JavaScript/functions.js"></script>
+        <script src="JavaScript/videoControls.js"></script>
+        <script src="JavaScript/Slide.js"></script>
     </body>
 </html>

@@ -43,27 +43,48 @@ main {
     color: #f3d85e;
 }
 #video-promo {
-    box-shadow: 5px 5px 0 white,
-                10px 10px 0 tomato;
+    border: 2px solid white;
+    box-shadow: 7px 7px 0 tomato;
 }
 #video-interactions li .fa-heart {
     color: red;
 }
 
 /* ---------- THIRD SECTION ---------- */
-#service {
-    background-color: #fefefe;
-    box-shadow: 15px 0 0 #ff6c47;
-}
-#service-info h1 {
-    color: #f0ffff;
-    background: linear-gradient(90deg, #e1563d ,#f4b033);
+#slider {
+    border: 3px solid white;
+    box-shadow: 7px 7px 0 tomato;
 }
 #icons-service i {
     color: #ec7737;
 }
 #choicer-service label {
     background-color: #ffb52b;
+}
+#service-title::before {
+    content: "";
+    position: absolute;
+    right: -2%; top: -5%;
+
+    display: block;
+    height: 10px; width: 5px;
+    background-color: #1a161b;
+}
+#service-title {
+    background-color: #fefefe;
+    color: black;
+    outline: 3px solid white;
+    border-right: 5px solid #1a161b;
+    border-bottom: 5px solid #1a161b;
+}
+#service-title::after {
+    content: "";
+    position: absolute;
+    left: -1%; bottom: -5%;
+
+    display: block;
+    height: 4.6px; width: 10px;
+    background-color: #1a161b;
 }
 
 /* ---------- FOOTER ---------- */
