@@ -103,14 +103,10 @@ header {
     padding-top: 70px;
     height: 90vh;
 }
-#home-text {
-    display: grid;
-    width: 650px;
-    justify-items: center;
-    text-align: center;
-}
 #home-text h1 {
-    font-size: 5.5rem;
+    font-size: 5.4rem;
+    font-weight: 500;
+    
     background: linear-gradient(45deg, #f6fad1, #b26f1d, #f1e04c, #dbec3e);
     background-size: 400% 100%;
 
@@ -122,10 +118,15 @@ header {
     0% { background-position-x: 0%; }
     100% { background-position-x: 400%; }
 }
+#home-text #sub-text {
+    font-size: 3rem;
+    font-weight: 400;
+}
 #home-text p {
-    text-align: center;
+    opacity: 50%;
 }
 #home-text a {
+    display: block;
     margin-top: 25px;
     height: 50px; width: 150px;
     line-height: 50px;
@@ -135,10 +136,16 @@ header {
     font-size: 1.3rem;
     transition: .3s ease-out;
 }
+/* .user {
+    height: 50px;
+    width: 50px;
+    background-color: #b26f1d;
+} */
+
 #video-promo {
     cursor: pointer;
     position: relative;
-    height: 650px;
+    height: 620px;
     border-radius: 10px;
 }
 .fa-volume-xmark, .fa-volume-high {
@@ -207,7 +214,7 @@ header {
 #third-section {
     position: relative;
     flex-direction: column;
-    height: 80vh;
+    height: 500px;
     margin: 20px 0;
 }
 #service-title {
