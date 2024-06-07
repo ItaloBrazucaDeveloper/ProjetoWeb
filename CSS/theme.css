@@ -14,6 +14,7 @@ main {
 /* ---------- NAVBAR ---------- */
 #navigation, #place-icon {
     color: #fefefe;
+    border-bottom: .5px solid #eeeeee51;
 }
 #navigation a:hover {
     transition: .3s ease;
