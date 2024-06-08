@@ -100,17 +100,24 @@ header {
 /* ---------- Conteúdo CSS da FIRST SECTION ---------- */
 #first-section {
     justify-content: space-evenly;
-    margin-top: 50px;
+    margin-top: 65px;
     height: 90vh;
 }
-#container-left_side {
-
+#users-slide_show::after {
+    content: "...+10K";
+    color: #eee;
+    font-size: 1.2rem;
+}
+#home-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #home-text h1 {
-    font-size: 5.4rem;
+    font-size: 6rem;
     font-weight: 500;
     
-    background: linear-gradient(45deg, #f6fad1, #b26f1d, #f1e04c, #dbec3e);
+    background: linear-gradient(45deg, #f6fad1, #e29a41, #f1e04c, #dbec3e);
     background-size: 400% 100%;
 
     background-clip: text;
@@ -122,31 +129,27 @@ header {
     100% { background-position-x: 400%; }
 }
 #home-text #sub-text {
+    color: #eee;
     font-size: 3rem;
     font-weight: 400;
 }
-#home-text p {
-    opacity: 50%;
-}
-#home-text a {
+#to_be-elite {
     display: block;
     margin-top: 25px;
-    height: 50px; width: 150px;
-    line-height: 50px;
+    height: 65px; width: 200px;
 
     text-align: center;
+    line-height: 65px;
+
     border-radius: 3px;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     transition: .3s ease-out;
-}
-#users-slide_show {
-    
 }
 .user {
     display: inline-block;
     border-radius: 50%;
-    height: 56px;
-    width: 56px;
+    height: 60px;
+    width: 60px;
     background-color: #f8f8f8;
 }
 #video-promo {
@@ -221,7 +224,7 @@ header {
 #third-section {
     position: relative;
     flex-direction: column;
-    height: 500px;
+    height: 540px;
     margin: 20px 0;
 }
 #service-title {
