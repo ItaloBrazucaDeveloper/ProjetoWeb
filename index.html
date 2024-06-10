@@ -5,26 +5,39 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="CSS/style.css">
         <link rel="stylesheet" href="CSS/theme.css">
-        <script src="https://kit.fontawesome.com/2ef0937c77.js" crossorigin="anonymous"></script>
-        <script src="JavaScript/functions.js"></script>
     </head>
-
     <body>
 <!-- ========== Cabeçalho da página ========== -->
         <header>
             <nav id="navigation">
-                <h1 id="logo">Shape de Elite</h1>
+                <div id="logo">
+                    <i class="fa-solid fa-dumbbell"></i>
+                    <h1>Shape de Elite | <span>The best gym</span></h1>
+                </div>
                 <ul id="nav-menu">
                     <li><a href="#first-section">Home
                     <li><a href="#second-section">Vantagens
                     <li><a href="#third-section">Serviços
-                    <li><a href="#fourth-section">Planos
-                    <li><a id="account" href="/pages/login.html"><i class="fa-solid fa-user"></i></a>
+                    <li><a href="#fourth-section">Planos</a>
                 </ul>
+                <a href="#" id="place-icon">Locais <i class="fa-solid fa-location-dot"></i></a>
+                <span id="nav-bars"> <!-- Barra de navegação hambúrguer-->
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </span>
             </nav>
         </header>
-<!-- ========== Corpo da página ========== -->
+<!-- ========== Corpo da página - Convite para ser Elite! ========== -->
         <main>
+            <section id="first-section">
+                <div id="container-left_side">
+                    <div id="users-slide_show">
+                        <img src="img/profilePhotos/MusculosoDeOculos_formatoQuadrado.jpg" class="user">
+                        <img src="img/profilePhotos/MarombaFlexao.jpg" class="user">
+                        <img src="img/profilePhotos/AeroHit.jpg" class="user">
+                        <img src="img/profilePhotos/MorenoDescamisado.jpg" class="user">
+                        <img src="img/profilePhotos/MulherMorena.jpg" class="user">
             <section id="first-section"> <!-- Convite para ser elite -->
                 <div id="home-text">
                     <h2>Conquite sua força agora!!</h2>
@@ -112,45 +125,80 @@
                     </div>
                 </div>
             </section>
+<!-- ========== Vantagens da shape de Elite ========== -->
+            <section id="second-section">
+            </section>
 <!-- ========== Serviços da Shape de Elite - Carrosel ========== -->
-            <section id="third-section"> 
-                <h1>Serviços</h1>
+            <section id="third-section">
+                <h2 id="service-title">Crossfit</h1>
+                <div id="slider">
+                    <img class="selected" src="/img/backgrounds/HomemLevantandoPneu.jpg" alt="">
+                    <img src="/img/backgrounds/MulherBicicletaGym.jpg" alt="">
+                    <img src="https://static.standard.co.uk/s3fs-public/thumbnails/image/2016/08/30/17/seenonscreen-shot07-414.jpg" alt="">
+                    <img src="/img/backgrounds/HomemSemCamisa.jpg" alt="">
+                    <img src="/img/backgrounds/Aeróbica.jpg" alt="">
+                </div>
+                <div id="choicer-service">
+                    <input type="radio" name="slide" id="slide-0" checked onchange="changeCheckedRadio(0)">
+                        <label id="label-0" for="slide-0"></label>
+                    <input type="radio" name="slide" id="slide-1" onchange="changeCheckedRadio(1)">
+                        <label id="label-1" for="slide-1"></label>
+                    <input type="radio" name="slide" id="slide-2" onchange="changeCheckedRadio(2)">
+                        <label id="label-2" for="slide-2"></label>
+                    <input type="radio" name="slide" id="slide-3" onchange="changeCheckedRadio(3)">
+                        <label id="label-3" for="slide-3"></label>
+                    <input type="radio" name="slide" id="slide-4" onchange="changeCheckedRadio(4)">
+                        <label id="label-4" for="slide-4"></label>
+                </div>
             </section>
 <!-- ========== Mensalidades da Shape de Elite ========== -->
             <section id="fourth-section">
-                <!-- Modelo:
+                <!--Modelo:
                     Nome do plano(h1) -> class="plan-name"
                     7 benéficios(lista) -> class="benefits"
                     Preço total(h3) -> class="plan-price"
                     Preço com desconto (h2) -> class="offer-plan-price"
                     Botão para se matricular -> class="subscribe-button"
                 -->
-                <h1 id="title">Mensalidades</h1>
-                <div class="plans">
-                    <div class="basic"> <!-- Plano básico -->
-                    </div>
-                    <div class="premium"> <!-- Plano premium -->
-                    </div>
-                    <div class="standard"> <!-- Plano padrão -->
-                    </div>
-                </div>
             </section>
-<!-- ========== Botão que sobe a página inteira ========== -->
-            <button onclick="resetScroll()" id="up-button">
-                <i class="fa-solid fa-arrow-up-from-bracket"></i>
-            </button>
         </main>
-
 <!-- ========== Rodapé da página ========== -->
         <footer>
-            <div id="social-network">
-                <h4>Redes sociais</h4>
-                    <li><a href=""><i class="fa-brands fa-facebook-f"></i>
-                    <li><a href="https://www.instagram.com/benicio_swk"><i class="fa-brands fa-instagram"></i>
-                    <li><a href=""><i class="fa-brands fa-youtube"></i>
-                    <li><a href=""><i class="fa-brands fa-whatsapp"></i></a>
+            <div id="footer-content">
+                <div id="footer-contacts">
+                    <h3>Nossas redes</h3>
+                    <div id="social-media">
+                        <a href="https://www.instagram.com/benicio_swk" class="footer-link" id="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="footer-link" id="facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="#" class="footer-link" id="whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <ul>
+                    <h3>Nossa empresa</h3>
+                    <li><a href="" class="footer-link">Metodologias</a></li>
+                    <li><a href="" class="footer-link">Nossa empresa</a></li>
+                    <li><a href="" class="footer-link">Trabalhe conosco</a></li>
+                </ul>
+                <ul>
+                    <h3>Suporte</h3>
+                    <li><a href="" class="footer-link">0800 000 000</a></li>
+                    <li><a href="" class="footer-link">Suporte online</a></li>
+                    <li><a href="" class="footer-link">Dúvidas frequentes</a></li>
+                </ul>
             </div>
-            <p>&copy;Todos os direitos reservados</p>
+            <div id="footer-copyright">
+                &copy; 1987~2024 | All rights reserved
+            </div>
         </footer>
+<!-- ========== Scripts da página ========== -->
+        <script src="https://kit.fontawesome.com/2ef0937c77.js" crossorigin="anonymous"></script>
+        <script src="JavaScript/videoControls.js"></script>
+        <script src="JavaScript/Slide.js"></script>
     </body>
 </html>

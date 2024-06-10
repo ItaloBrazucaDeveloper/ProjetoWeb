@@ -9,4 +9,3 @@ Página HOME:
 
 > [!NOTE]
 > Autoria: Benício, Daniel e Ítalo
-

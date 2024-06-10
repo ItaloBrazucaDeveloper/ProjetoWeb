@@ -1,77 +1,97 @@
 /* ---------- ⬇️⬇️⬇️ Temporário!!!! ---------- */
-#third-section {
-    background-color: #057aff;
-}
 #fourth-section {
     background-color: #ffd500;
-}
-
-
-/* ---------- Barra de navegação ---------- */
-#navigation {
-    color: #7c17a3;
-}
-#navigation a:link {
-    color: #270734;
-}
-
-
-/* ---------- Botão Seja Elite ---------- */
-#first-section button:hover {
-    background-color: #ffffff;
-}
-
-
-/* ---------- Botão que sobe a página ---------- */
-.upper-button {
-    background-color: #000000;
-    color: #f0ffff;
-}
-.upper-button:hover {
-    background-color: #ffffff;
-}
-
-
-/* ---------- Cabeçalho da página ---------- */
-#navigation {
-    background-color: #fff;
-}
-#navigation li a:hover:not(#account) {
-    border-bottom: solid #000000 3px;
-}
-
-
-/* ---------- Section ---------- */
-#first-section {
-    background-color: #0D0D0D;
 }
 #second-section {
     background-color: #ea1756;
 }
 
-/* ---------- Cards que mostram os preços ---------- */
-.premium, .standard, .basic {
-    background-color: transparent;
-    backdrop-filter: blur(8px);
-    border: 3px solid black;
-}
-.subscribe-button {
-    background-color: #f1c811;
+/* ---------- MAIN ---------- */
+main {
+    background-color: #1a161b;
 }
 
-/* ---------- Textos da primeira section do site ---------- */
-#home-text {
-    color: #dbe3e3;
+/* ---------- NAVBAR ---------- */
+#navigation, #place-icon {
+    color: #fefefe;
+    border-bottom: .5px solid #eeeeee51;
+}
+#navigation a:hover {
+    transition: .3s ease;
+    color: #ffffff;
+}
+#navigation li > a {
+    color: #acacac;
+}
+#place-icon {
+    background-color: tomato;
+}
+
+/* ---------- FIRST SECTION ---------- */
+#first-section a {
+    background-color: #ffffff;
+}
+#first-section a:hover {
+    box-shadow: 0 0 5px #ffc000,
+                0 0 20px #ffc000,
+                0 0 60px #ffc000,
+                0 0 150px #ffc000;
+}
+#home-text, #video-infos, #video-interactions li {
+    color: #fefefe;
 }
 #home-text h2 {
-    color: #f1c811;
+    color: #f3d85e;
+}
+#video-promo {
+    border: 2px solid white;
+    box-shadow: 7px 7px 0 tomato;
+}
+#video-interactions li .fa-heart {
+    color: red;
 }
 
+/* ---------- THIRD SECTION ---------- */
+#slider {
+    border: 3px solid white;
+    box-shadow: 7px 7px 0 tomato;
+}
+#icons-service i {
+    color: #ec7737;
+}
+#choicer-service label {
+    background-color: #ffb52b;
+}
+#service-title::before {
+    content: "";
+    position: absolute;
+    right: -2%; top: -5%;
 
-/* ---------- Rodapé da página ---------- */
+    display: block;
+    height: 10px; width: 5px;
+    background-color: #1a161b;
+}
+#service-title {
+    background-color: #fefefe;
+    color: black;
+    outline: 3px solid white;
+    border-right: 5px solid #1a161b;
+    border-bottom: 5px solid #1a161b;
+}
+#service-title::after {
+    content: "";
+    position: absolute;
+    left: -1%; bottom: -5%;
+
+    display: block;
+    height: 4.6px; width: 10px;
+    background-color: #1a161b;
+}
+
+/* ---------- FOOTER ---------- */
 footer {
     background-color: #000000;
-    color: #f0ffff;
+    color: #ddd;
 }
 footer li a {
     color: #727272;
@@ -79,6 +99,18 @@ footer li a {
 footer li a:hover {
     color: #e2e0e0;
 }
-#social-network i {
-    color: #ffffff;
+#social-media .footer-link {
+    color: #f5f5f5;
+}
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+#facebook {
+    background-color: #4267b3;
+}
+#whatsapp {
+    background-color: #20b757;
+}
+#footer-content {
+    background: linear-gradient(45deg, #1e003c, #2d0b00, #1d0000);
 }

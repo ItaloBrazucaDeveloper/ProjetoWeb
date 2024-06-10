@@ -1,254 +1,332 @@
+/* ---------- Importação da fonte 'RED HAT DISPLAY' da api do google ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
 /* ---------- Conteúdo CSS PRINCIPAL DA PÁGINA ---------- */
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Red Hat Display", sans-serif;
     list-style: none;
 }
 a { text-decoration: none; }
 
-
-/* ---------- Conteúdo CSS do HEADER ---------- */
-#navigation {
+button {
+    cursor: pointer;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section {
     display: flex;
     align-items: center;
+    justify-content: center;
+    height: 87vh; width: 90%;
+}
+
+/* ---------- Conteúdo CSS do HEADER ---------- */
+header {
+    position: absolute;
+    top: 0; z-index: 3;
+    width: 100%;
+}
+#navigation {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
 
     padding: 18px 40px;
-    box-shadow: 0 0.1rem 0.5rem #00000051;
     height: 2rem;
 }
 #navigation ul {
     display: flex;
     align-items: center;
-    gap: 4rem;
+    column-gap: 2.5em;
 }
 #navigation li a {
     font-size: 1.5rem;
-    transition: 0.1s;
+}
+#logo i {
+    font-size: 2rem;
+    text-shadow:  2px 1px 0 #fefefe;
 }
 #logo {
-    font-size: 1.7rem;
-    font-weight: 600;
-}
-
-
-/* ---------- Conteúdo CSS do MAIN ---------- */
-.upper-button {
-    position: fixed;
-    top: 95%; right: 0%;
-    transform: translate(-50%, -50%);
-
-    z-index: 0;
-    border: 0px;
-    font-size: 1.2rem;
-
-    border-radius: 25%;
-    height: 2.3em; width: 2.3em;
-}
-
-section {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; width: 100%;
+    column-gap: 10px;
+    line-height: 2rem;
 }
-
-
-/* ---------- Conteúdo CSS da FIRST-SECTION ---------- */
-#first-section {
-    justify-content: flex-start;
+#logo h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
 }
-#first-section {
-    background-image: url(../img/backgrounds/HomemNegroMusculoso.jpeg);
-    background-size: contain; 
-    background-repeat: no-repeat;
-    background-position: right;
+#logo h1 span {
+    font-weight: 300;
 }
-#first-section button {
-    box-shadow: 3px 3px 10px #00000070;
-    padding: 15px 45px;
-    border: none;
-
-    border-radius: 3px;
-    margin-top: 2.5em;
-    cursor: pointer;
-}
-#first-section button a {
+#place-icon {
     font-size: 1.3rem;
-    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+#nav-bars {
+    display: none;
+}
+@media(max-width: 1100px) {
+    #navigation {
+        justify-content: space-between;
+    }
+    #nav-menu li, #place-icon {
+        display: none;
+    }
+    #nav-bars {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        align-items: center;
+        justify-content: center;
+    }
+    #nav-bars div {
+        height: 3px;
+        width: 30px;
+        border-radius: 2px;
+        background-color: #ffffff;
+    }
 }
 
+/* ---------- Conteúdo CSS da FIRST SECTION ---------- */
+#first-section {
+    justify-content: space-evenly;
+    margin-top: 65px;
+    height: 90vh;
+}
+#users-slide_show::after {
+    content: "...+10K";
+    color: #eee;
+    font-size: 1.2rem;
+}
 #home-text {
-    max-width: 70em;
-    margin: 5% 10%;
-    cursor: default;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #home-text h1 {
-    position: relative;
-    font-size: 7rem;
-    margin-bottom: 15px;
-
-    background: linear-gradient(45deg, #f6fad1, #8e4e00, #ffe600, #e5ff00);
+    font-size: 6rem;
+    font-weight: 500;
+    
+    background: linear-gradient(45deg, #f6fad1, #e29a41, #f1e04c, #dbec3e);
     background-size: 400% 100%;
 
     background-clip: text;
     color: transparent;
-
     animation: degrade 10s linear infinite alternate;
 }
 @keyframes degrade {
     0% { background-position-x: 0%; }
     100% { background-position-x: 400%; }
 }
-#home-text h2 {
-    font-size: 1.5rem;
+#home-text #sub-text {
+    color: #eee;
+    font-size: 3rem;
+    font-weight: 400;
 }
-#home-text p {
-    text-align: justify;
-    max-width: 40rem;
-}
+#to_be-elite {
+    display: block;
+    margin-top: 25px;
+    height: 65px; width: 200px;
 
-
-/* ---------- Conteúdo da SECOND-SECTION ---------- */
-.second-section {
-    align-items: center;
-    justify-content: end;
-    /* background-image: url(../img/backgrounds/MulherMusculosaDePerfil.jpg);
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: contain; */
-}
-/* ---------- Conteúdo CSS das avaliações dos clientes ---------- */
-
-
-/* ---------- Conteúdo CSS dos depoimentos de clientes ---------- */
-#container {
-    display: flex;
-    align-items: flex-end;
-    gap: 1.2em;
-    margin-right: 5em;
-}
-.review {
-    background-color: azure;
-    padding: 1.5em;
-    border-radius: 10px;
-    width: 35%;
-}
-.header-review, .client-review-info {
-    display: flex;
-}
-.header-review {
-    justify-content: flex-start;
-}
-.client-review-info {
-    margin-bottom: 1em;
-}
-.header-review img {
-    width: 3rem; height: 3rem;
-    border-radius: 50%;
-    margin-right: 0.7em;
-}
-#container, .client-review-info {
-    flex-direction: column;
-}
-.stars {
-    margin-left: auto;
-    margin-top: 2%;
-}
-
-
-/* ---------- Conteúdo da THIRD-SECTION ---------- */
-
-
-
-/* ---------- Conteúdo da FOURTH-SECTION ---------- */
-#title {
-    font-size: 1.7rem;
-    margin-top: -2%;
-    margin-bottom: 3%;
-}
-
-#fourth-section {
-    flex-direction: column;
-    background-image: url();
-}
-.plans {
-    display: flex;
-    flex-direction: row;
-}
-
-#fourth-section h2, h1, h3 {
     text-align: center;
-}
-#fourth-section button {
-    width: 70%; height: 10%;
-    font-size: 18pt;
-    font-weight: bold;
-    
-    border-radius: 8px;
-    border: none;
-    box-shadow: 0.5rem 0.5rem 8px #00000051;
-    
-    margin-top: 5px;
-    position: absolute;
-    left: 50%;
+    line-height: 65px;
 
-    transform: translateX(-50%);
+    border-radius: 3px;
+    font-size: 1.5rem;
+    transition: .3s ease-out;
+}
+.user {
+    display: inline-block;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    background-color: #f8f8f8;
+}
+#video-promo {
+    cursor: pointer;
+    position: relative;
+    height: 620px;
+    border-radius: 10px;
+}
+.fa-volume-xmark, .fa-volume-high {
     cursor: pointer;
 }
+#video-infos { 
+    position: absolute;
+    top: 0; left: 0;
 
-.plan-name {
-    font-size: 1.8rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%; height: 100%;
 }
-.plan-price {
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    font-weight: 500;
+#video-infos h1 {
+    grid-row: 1;
+    grid-column: 1;
+    margin-left: 20px;
+    margin-top: 20px;
 }
-.offer-plan-price {
-    font-size: 2.5rem;
+#video-description {
+    cursor: default;
+    grid-row: 2;
+    grid-column: 1;
+    margin-top: 90%;
+    margin-left: 20px;
 }
-.benefits {
-    margin: 5% 0;
+#video-description li {
+    font-size: 10pt;
+    margin-top: 10px;
 }
-.benefits li {
-    font-size: 1.3rem;
-    margin: 15px 10px;
+#video-description #user-video {
+    font-size: 12pt;
+}
+#user-video i {
+    background-color: #fefefe;
+    padding: 4px 2px;
+    border-radius: 50%;
+}
+#video-interactions {
+    cursor: default;
+    grid-row: 2;
+    grid-column: 3;
+    margin-right: 15px;
+}
+#video-promo video {
+    height: 100%;
+    border-radius: 10px;
+}
+#video-interactions li {
+    font-size: 18pt;
+    text-align: center;
+    margin-top: 25px;
+}
+#video-interactions p {
+    font-size: 12pt;
+}
+#video-interactions img {
+    border-radius: 10px;
+    border: 1.75px solid #fefefe;
 }
 
-.premium, .standard, .basic {
+/* ---------- Conteúdo da SECOND SECTION ---------- */
+
+/* ---------- Conteúdo da THIRD SECTION ---------- */
+#third-section {
     position: relative;
-    padding: 20px;
+    flex-direction: column;
+    height: 540px;
+    margin: 20px 0;
+}
+#service-title {
+    position: absolute;
+    left: 2.5%; top: .4%;
+    font-size: 3rem;
+
+    border-radius: 6px 0 10px 0;
+    padding: 10px 20px;
+    z-index: 1;
+}
+#choicer-service {
+    position: absolute;
+    bottom: 5%;
+    width: 90%;
+
+    display: flex;
+    justify-content: center;
+    column-gap: 0.2em;
+}
+#slider {
+    position: relative;
+    height: 100%;
+    width: 95%;
+    border-radius: 10px;
+}
+#slider img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    opacity: 0;
+    object-fit: cover;
+    transition: 1s ease;
+    border-radius: 10px;
+}
+#slider img.selected {
+    opacity: 1;
+}
+#choicer-service input[type='radio'] {
+    display: none;
+}
+#choicer-service label {
+    display: flex;
     border-radius: 8px;
+    width: 3.75em; 
+    
+    height: 1.5em;
+    cursor: pointer;
+    transition: .4s ease-in-out;
 }
-.standard, .basic {
-    top: 3%;
-    height: 60vh; width: 20vw;
+#choicer-service #slide-0:checked + #label-0 {
+    width: 5.65em;
+    transition: .4s ease-in-out;
 }
-.premium {
-    margin: 0 2.5em;
-    height: 65vh; width: 25vw;
+#choicer-service #slide-1:checked + #label-1 {
+    width: 5.65em;
+    transition: .4s ease-in-out;
 }
+#choicer-service #slide-2:checked + #label-2 {
+    width: 5.65em;
+    transition: .4s ease-in-out;
+}
+#choicer-service #slide-3:checked + #label-3 {
+    width: 5.65em;
+    transition: .4s ease-in-out;
+}
+#choicer-service #slide-4:checked + #label-4 {
+    width: 5.65em;
+    transition: .4s ease-in-out;
+}
+
+/* ---------- Conteúdo da FOURTH SECTION ---------- */
 
 
 /* ---------- Conteúdo CSS do FOOTER ---------- */
-footer {
+#footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 3.5rem;
+}
+#social-media {
+    display: flex;
+    column-gap: 1.2rem;
+    margin-top: 0.6rem;
+}
+#social-media .footer-link {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 
-    flex-direction: row;
-    height: 30vh;
-    padding-top: 20px;
+    border-radius: 50%;
+    height: 2.5rem; width: 2.5rem;
 }
-#social-network h4 {
-    margin-bottom: 1.5rem;
-    text-align: center;
-    font-size: 1.2rem;
+#social-media .footer-link i {
+    font-size: 1.4rem;
 }
-#social-network li {
-    display: inline;
-    font-size: 1.8rem;
-    margin: 0 0.5em;
+#footer-copyright {
+    display: flex;
+    justify-content: center;
+    font-size: 0.9rem;
+
+    padding: 1.5rem;
+    font-weight: 100;
 }
