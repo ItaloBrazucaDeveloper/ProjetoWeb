@@ -3,8 +3,8 @@
     <head>
         <title>Shape Elite</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="CSS/homePage/style.css">
-        <link rel="stylesheet" href="CSS/homePage/theme.css">
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/theme.css">
         <script src="https://kit.fontawesome.com/2ef0937c77.js" crossorigin="anonymous"></script>
         <script src="JavaScript/functions.js"></script>
     </head>
@@ -15,63 +15,142 @@
             <nav id="navigation">
                 <h1 id="logo">Shape de Elite</h1>
                 <ul id="nav-menu">
-                    <li><a href="">Home
-                    <li><a href="">Vantagens
-                    <li><a href="">Serviços
-                    <li><a href="">Planos</a>
+                    <li><a href="#first-section">Home
+                    <li><a href="#second-section">Vantagens
+                    <li><a href="#third-section">Serviços
+                    <li><a href="#fourth-section">Planos
+                    <li><a id="account" href="/pages/login.html"><i class="fa-solid fa-user"></i></a>
                 </ul>
             </nav>
         </header>
 <!-- ========== Corpo da página ========== -->
         <main>
-            <section> <!-- Convite para ser elite -->
+            <section id="first-section"> <!-- Convite para ser elite -->
                 <div id="home-text">
-                    <h2>Conquiste sua força agora!!</h2>
-                    <h1>Shape de Elite</h1>
+                    <h2>Conquite sua força agora!!</h2>
+                    <h1>Shape de elite</h1>
                     <p>
                         Nossa academia é especialmente feita para você! 
-                        Damos toda a infraestrutura para conseguir
-                        o shape desejado, da forma Elite.
+                        Damos toda a infraestrutura para você conseguir 
+                        o shape desejado, do jeito Elite.
                     </p>
-                    <button onclick="">
-                        Seja Elite!
+                    <button>
+                        <a href="">Seja Elite!</a>
                     </button>
                 </div>
             </section>
-        </main>
-<!-- ========== Rodapé da página ========== -->
-        <footer>
-            <div id="footer-content">
-                <div id="footer-contacts">
-                    <h3>Nossas redes</h3>
-                    <div id="social-media">
-                        <a href="https://www.instagram.com/benicio_swk" class="footer-link" id="instagram">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="#" class="footer-link" id="facebook">
-                            <i class="fa-brands fa-facebook"></i>
-                        </a>
-                        <a href="#" class="footer-link" id="whatsapp">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
+<!-- ========== Vantagens da shape de Elite ========== -->
+            <section id="second-section" class="second-section">
+                <div> <!-- Gráfico dos sobre aprovação, permanencia, etc -->
+                    <h1>Nossos números!</h1>
+                </div>
+                
+                <div id="container"> <!-- Depoimentos de clientes-->
+                    <div class="review">
+                        <header class="header-review">
+                            <img class="photo-profile" src="img/profilePhotos/FotoPerfilHomemOculos.jpg" 
+                                alt="Foto de perfil de um homem com óculos escuro">
+                            <div class="client-review-info">
+                                <h2>Nome</h2>
+                                <p>@Nome_usuário</p>
+                            </div>
+                            <h3 class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </h3>
+                        </header>
+                        <p> 
+                            Não é a RedBull, mas me deu Asas!! </br>
+                            A Shape de Elite te faz chegar até os céus.
+                        </p>
+                    </div>
+                    <div class="review">
+                        <header class="header-review">
+                            <img class="photo-profile" src="/img/profilePhotos/Hoia.png" 
+                                alt="Homem fazendo pose de calistenia">
+                            <div class="client-review-info">
+                                <h2>Dev-Benício</h2>
+                                <p>@benicio_swk</p>
+                            </div>
+                            <h3 class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </h3>
+                        </header>
+                        <p> 
+                            Me ajudou bastante, atendeu todas as minhas expectativas!!
+                            Sou incrivelmente grato aos fundadores dessa academia, possui profissionais 
+                            capacitados para todos tipos de necessidades!! Atendendo todas pessoas, que possui dificuldades motoras
+                            ou mesmo pessoas que querem consquistar um Shape de Elite!!
+                        </p>
+                    </div>
+                    
+                    <div class="review">
+                        <header class="header-review">
+                            <img class="photo-profile" src="img/profilePhotos/" alt="">
+                            <div class="client-review-info">
+                                <h2>Nome</h2>
+                                <p>@Nome_usuário</p>
+                            </div>
+                            <h3 class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </h3>
+                        </header>
+                        <p> 
+                            Gostei muito não, é 1Km da minha casa
+                        </p>
                     </div>
                 </div>
-                <ul class="footer-list">
-                    <li><h3>Nossa empresa</h3></li>
-                    <li><a href="" class="footer-link">Métodos</a></li>
-                    <li><a href="" class="footer-link">Sobre nós</a></li>
-                    <li><a href="" class="footer-link">Trabalhe conosco</a></li>
-                </ul>
-                <ul class="footer-list">
-                    <li><h3>Suporte</h3></li>
-                    <li><a href="" class="footer-link">0800 654 340</a></li>
-                    <li><a href="" class="footer-link">Dúvidas frequentes</a></li>
-                    <li><a href="" class="footer-link">lorem ipsum</a></li>
-                </ul>
+            </section>
+<!-- ========== Serviços da Shape de Elite - Carrosel ========== -->
+            <section id="third-section"> 
+                <h1>Serviços</h1>
+            </section>
+<!-- ========== Mensalidades da Shape de Elite ========== -->
+            <section id="fourth-section">
+                <!-- Modelo:
+                    Nome do plano(h1) -> class="plan-name"
+                    7 benéficios(lista) -> class="benefits"
+                    Preço total(h3) -> class="plan-price"
+                    Preço com desconto (h2) -> class="offer-plan-price"
+                    Botão para se matricular -> class="subscribe-button"
+                -->
+                <h1 id="title">Mensalidades</h1>
+                <div class="plans">
+                    <div class="basic"> <!-- Plano básico -->
+                    </div>
+                    <div class="premium"> <!-- Plano premium -->
+                    </div>
+                    <div class="standard"> <!-- Plano padrão -->
+                    </div>
+                </div>
+            </section>
+<!-- ========== Botão que sobe a página inteira ========== -->
+            <button onclick="resetScroll()" id="up-button">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </button>
+        </main>
+
+<!-- ========== Rodapé da página ========== -->
+        <footer>
+            <div id="social-network">
+                <h4>Redes sociais</h4>
+                    <li><a href=""><i class="fa-brands fa-facebook-f"></i>
+                    <li><a href="https://www.instagram.com/benicio_swk"><i class="fa-brands fa-instagram"></i>
+                    <li><a href=""><i class="fa-brands fa-youtube"></i>
+                    <li><a href=""><i class="fa-brands fa-whatsapp"></i></a>
             </div>
-            <div id="footer-copyright">
-                &copy; 2024 | All rights reserved
-            </div>
+            <p>&copy;Todos os direitos reservados</p>
         </footer>
     </body>
 </html>
