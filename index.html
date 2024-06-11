@@ -38,45 +38,58 @@
                         <img src="img/profilePhotos/AeroHit.jpg" class="user">
                         <img src="img/profilePhotos/MorenoDescamisado.jpg" class="user">
                         <img src="img/profilePhotos/MulherMorena.jpg" class="user">
-            <section id="first-section"> <!-- Convite para ser elite -->
-                <div id="home-text">
-                    <h2>Conquite sua força agora!!</h2>
-                    <h1>Shape de elite</h1>
-                    <p>
-                        Nossa academia é especialmente feita para você! 
-                        Damos toda a infraestrutura para você conseguir 
-                        o shape desejado, do jeito Elite.
-                    </p>
-                    <button>
-                        <a href="">Seja Elite!</a>
-                    </button>
+                    </div>
+                    <div id="home-text">
+                        <h1>
+                            Venha ser <span id="sub-text">nosso aluno,<br>
+                            seja</span> Shape de Elite!
+                        </h1>
+                        <a href="#" id="to_be-elite">Matricule-se</a>
+                    </div>
+                </div>
+                <div id="video-promo"> <!-- Testar pegar o código incorporado de redes socias -->
+                    <video muted loop>
+                        <source src="promoVideo.mp4">
+                    </video>
+                    <div id="video-infos">
+                        <h1><i class="fa-solid fa-volume-xmark"></i></h1>
+                        <ul id="video-description">
+                            <li id="user-video"><i class="fa-solid fa-dumbbell"></i> Shape_de_Elite
+                            <li>Aquecendo pro crossfit :p
+                            <li><i class="fa-solid fa-music"></i> Original Audio
+                        </ul>
+                        <ul id="video-interactions">
+                            <li><i class="fa-solid fa-heart"></i><p>1M</p>
+                            <li><i class="fa-regular fa-comment"></i>
+                            <li><i class="fa-regular fa-paper-plane"></i>
+                            <li><i class="fa-solid fa-ellipsis-vertical"></i>
+                            <li><img height="35px" src="/img/profilePhotos/MusculosoDeOculos_formatoQuadrado.jpg" alt="">
+                        </ul>
+                    </div>
                 </div>
             </section>
 <!-- ========== Vantagens da shape de Elite ========== -->
-            <section id="second-section" class="second-section">
-                <div> <!-- Gráfico dos sobre aprovação, permanencia, etc -->
-                    <h1>Nossos números!</h1>
-                </div>
-                
-                <div id="container"> <!-- Depoimentos de clientes-->
+            <section id="second-section">
+                <div id="container-reviews"> <!-- Depoimentos de clientes-->
                     <div class="review">
                         <header class="header-review">
-                            <img class="photo-profile" src="img/profilePhotos/FotoPerfilHomemOculos.jpg" 
-                                alt="Foto de perfil de um homem com óculos escuro">
                             <div class="client-review-info">
-                                <h2>Nome</h2>
-                                <p>@Nome_usuário</p>
+                                <img class="photo-profile" src="img/profilePhotos/FotoPerfilHomemOculos.jpg" alt="Foto de perfil de um homem com óculos escuro">
+                                <div id="user-name">
+                                    <h2>Nome</h2>
+                                    <p>@Nome_usuário</p>
+                                </div>
                             </div>
-                            <h3 class="stars">
+                            <div class="stars">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
-                            </h3>
+                            </div>
                         </header>
                         <p> 
-                            Não é a RedBull, mas me deu Asas!! </br>
+                            Não é a RedBull, mas me deu Asas!!
                             A Shape de Elite fazendo chegar até os céus.
                         </p>
                     </div>
@@ -125,31 +138,28 @@
                     </div>
                 </div>
             </section>
-<!-- ========== Vantagens da shape de Elite ========== -->
-            <section id="second-section">
-            </section>
 <!-- ========== Serviços da Shape de Elite - Carrosel ========== -->
             <section id="third-section">
                 <h2 id="service-title">Crossfit</h1>
-                <div id="slider">
-                    <img class="selected" src="/img/backgrounds/HomemLevantandoPneu.jpg" alt="">
-                    <img src="/img/backgrounds/MulherBicicletaGym.jpg" alt="">
-                    <img src="https://static.standard.co.uk/s3fs-public/thumbnails/image/2016/08/30/17/seenonscreen-shot07-414.jpg" alt="">
-                    <img src="/img/backgrounds/HomemSemCamisa.jpg" alt="">
-                    <img src="/img/backgrounds/Aeróbica.jpg" alt="">
-                </div>
-                <div id="choicer-service">
-                    <input type="radio" name="slide" id="slide-0" checked onchange="changeCheckedRadio(0)">
-                        <label id="label-0" for="slide-0"></label>
-                    <input type="radio" name="slide" id="slide-1" onchange="changeCheckedRadio(1)">
-                        <label id="label-1" for="slide-1"></label>
-                    <input type="radio" name="slide" id="slide-2" onchange="changeCheckedRadio(2)">
-                        <label id="label-2" for="slide-2"></label>
-                    <input type="radio" name="slide" id="slide-3" onchange="changeCheckedRadio(3)">
-                        <label id="label-3" for="slide-3"></label>
-                    <input type="radio" name="slide" id="slide-4" onchange="changeCheckedRadio(4)">
-                        <label id="label-4" for="slide-4"></label>
-                </div>
+                    <div id="slider">
+                        <img class="selected" src="/img/backgrounds/HomemLevantandoPneu.jpg" alt="">
+                        <img src="/img/backgrounds/MulherBicicletaGym.jpg" alt="">
+                        <img src="https://static.standard.co.uk/s3fs-public/thumbnails/image/2016/08/30/17/seenonscreen-shot07-414.jpg" alt="">
+                        <img src="/img/backgrounds/HomemSemCamisa.jpg" alt="">
+                        <img src="/img/backgrounds/Aeróbica.jpg" alt="">
+                    </div>
+                    <div id="choicer-service">
+                        <input type="radio" name="slide" id="slide-0" checked onchange="changeCheckedRadio(0)">
+                            <label id="label-0" for="slide-0"></label>
+                        <input type="radio" name="slide" id="slide-1" onchange="changeCheckedRadio(1)">
+                            <label id="label-1" for="slide-1"></label>
+                        <input type="radio" name="slide" id="slide-2" onchange="changeCheckedRadio(2)">
+                            <label id="label-2" for="slide-2"></label>
+                        <input type="radio" name="slide" id="slide-3" onchange="changeCheckedRadio(3)">
+                            <label id="label-3" for="slide-3"></label>
+                        <input type="radio" name="slide" id="slide-4" onchange="changeCheckedRadio(4)">
+                            <label id="label-4" for="slide-4"></label>
+                    </div>
             </section>
 <!-- ========== Mensalidades da Shape de Elite ========== -->
             <section id="fourth-section">
