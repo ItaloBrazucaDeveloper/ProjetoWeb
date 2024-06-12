@@ -25,6 +25,35 @@ section {
     height: 87vh; width: 90%;
 }
 
+#pop_up button {
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+}
+#pop_up {
+    border: none;
+    border-radius: 0 0 10px 10px;
+    padding: 10px;
+    margin: 0 auto;
+}
+#pop_up::backdrop {
+    background-color: #00000050;
+}
+#pop_up-content {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+#pop_up-content div {
+    width: 50%;
+}
+#pop_up-content #technologies li {
+    display: inline;
+    margin-right: 7px;
+    font-size: 1.7rem;
+}
+
 /* ---------- Conteúdo CSS do HEADER ---------- */
 header {
     position: absolute;
@@ -53,6 +82,7 @@ header {
 }
 #logo {
     display: flex;
+    align-items: center;
     column-gap: 10px;
     line-height: 2rem;
 }
@@ -86,6 +116,7 @@ header {
         display: flex;
         flex-direction: column;
         row-gap: 5px;
+
         align-items: center;
         justify-content: center;
     }
@@ -100,8 +131,9 @@ header {
 /* ---------- Conteúdo CSS da FIRST SECTION ---------- */
 #first-section {
     justify-content: space-evenly;
-    margin-top: 65px;
-    height: 90vh;
+    flex-wrap: wrap;
+    height: auto;
+    margin-top: 7em;
 }
 #users-slide_show::after {
     content: "...+10K";

@@ -88,6 +88,20 @@ main {
     background-color: #1a161b;
 }
 
+/* ---------- DIALOG ---------- */
+#html {
+    color: tomato;
+}
+#css {
+    color: blue;
+}
+#js {
+    color: orange;
+}
+#github {
+    color: darkblue;
+}
+
 /* ---------- FOOTER ---------- */
 footer {
     background-color: #000000;

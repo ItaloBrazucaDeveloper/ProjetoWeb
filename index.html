@@ -82,15 +82,15 @@
                     <img src="/img/backgrounds/Aeróbica.jpg" alt="">
                 </div>
                 <div id="choicer-service">
-                    <input type="radio" name="slide" id="slide-0" checked onchange="changeCheckedRadio(0)">
+                    <input type="radio" name="slide" id="slide-0" checked onchange="changeImageSlideShow(0)">
                         <label id="label-0" for="slide-0"></label>
-                    <input type="radio" name="slide" id="slide-1" onchange="changeCheckedRadio(1)">
+                    <input type="radio" name="slide" id="slide-1" onchange="changeImageSlideShow(1)">
                         <label id="label-1" for="slide-1"></label>
-                    <input type="radio" name="slide" id="slide-2" onchange="changeCheckedRadio(2)">
+                    <input type="radio" name="slide" id="slide-2" onchange="changeImageSlideShow(2)">
                         <label id="label-2" for="slide-2"></label>
-                    <input type="radio" name="slide" id="slide-3" onchange="changeCheckedRadio(3)">
+                    <input type="radio" name="slide" id="slide-3" onchange="changeImageSlideShow(3)">
                         <label id="label-3" for="slide-3"></label>
-                    <input type="radio" name="slide" id="slide-4" onchange="changeCheckedRadio(4)">
+                    <input type="radio" name="slide" id="slide-4" onchange="changeImageSlideShow(4)">
                         <label id="label-4" for="slide-4"></label>
                 </div>
             </section>
@@ -104,6 +104,31 @@
                     Botão para se matricular -> class="subscribe-button"
                 -->
             </section>
+<!-- ========== Pop up - Quando abre a página ========== -->
+            <dialog id="pop_up">
+                <div id="pop_up-content">
+                    <div id="project-info">
+                        <h2>Projeto Web - Shape de Elite</h2>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto odit eaque minima earum sint corrupti eos doloribus nemo temporibus quis. Illo, modi ea pariatur maiores ipsa necessitatibus dolorum veniam nobis.
+                        </p>
+                    </div>
+                    <ul id="authors">
+                        <h2>Autores</h2>
+                        <li>Ítalo</li>
+                        <li>Bénicio</li>
+                        <li>Daniel</li>
+                    </ul>
+                    <ul id="technologies">
+                        <h2>Tecnologias</h2>
+                        <li><i id="html" class="fa-brands fa-html5"></i>
+                        <li><i id="css" class="fa-brands fa-css3-alt"></i>
+                        <li><i id="js" class="fa-brands fa-js"></i>
+                        <li><i id="github" class="fa-brands fa-square-github"></i>
+                    </ul>
+                </div>
+                <button id="close-pop_up"><i class="fa-solid fa-chevron-up"></i></button>
+            </dialog>
         </main>
 <!-- ========== Rodapé da página ========== -->
         <footer>
@@ -141,7 +166,8 @@
         </footer>
 <!-- ========== Scripts da página ========== -->
         <script src="https://kit.fontawesome.com/2ef0937c77.js" crossorigin="anonymous"></script>
+        <script src="JavaScript/modal.js"></script>
         <script src="JavaScript/videoControls.js"></script>
-        <script src="JavaScript/Slide.js"></script>
+        <script src="JavaScript/slide.js"></script>
     </body>
 </html>
