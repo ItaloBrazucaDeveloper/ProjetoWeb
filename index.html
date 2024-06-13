@@ -49,22 +49,28 @@
                 </div>
                 <div id="video-promo"> <!-- Testar pegar o código incorporado de redes socias -->
                     <video muted loop>
+                        <source src="https://videos.pexels.com/video-files/6740279/6740279-sd_540_960_25fps.mp4">
                         <source src="promoVideo.mp4">
                     </video>
                     <div id="video-infos">
                         <h1><i class="fa-solid fa-volume-xmark"></i></h1>
-                        <ul id="video-description">
-                            <li id="user-video"><i class="fa-solid fa-dumbbell"></i> Shape_de_Elite
-                            <li>Aquecendo pro crossfit :p
-                            <li><i class="fa-solid fa-music"></i> Original Audio
-                        </ul>
-                        <ul id="video-interactions">
-                            <li><i class="fa-solid fa-heart"></i><p>1M</p>
-                            <li><i class="fa-regular fa-comment"></i>
-                            <li><i class="fa-regular fa-paper-plane"></i>
-                            <li><i class="fa-solid fa-ellipsis-vertical"></i>
-                            <li><img height="35px" src="/img/profilePhotos/MusculosoDeOculos_formatoQuadrado.jpg" alt="">
-                        </ul>
+                        <div id="container-user_info_interaction">
+                            <div id="video-user-infos">
+                                <h4>
+                                    <i class="fa-solid fa-dumbbell"></i> Shape_de_Elite
+                                </h4>
+                                <p id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptates dolores magni accusantium, nobis sapiente voluptatum cum accusamus pariatur autem quas, ratione voluptatem nam, sint distinctio dicta architecto. Pariatur, numquam?
+                                <p>
+                                    <i class="fa-solid fa-music"></i> Original Audio
+                            </div>
+                            <ul id="video-interactions">
+                                <li><i class="fa-solid fa-heart"></i><p>1M</p>
+                                <li><i class="fa-regular fa-comment"></i>
+                                <li><i class="fa-regular fa-paper-plane"></i>
+                                <li><i class="fa-solid fa-ellipsis-vertical"></i>
+                                <li><img height="35px" src="/img/profilePhotos/MusculosoDeOculos_formatoQuadrado.jpg" alt="">
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -105,29 +111,27 @@
                 -->
             </section>
 <!-- ========== Pop up - Quando abre a página ========== -->
-            <dialog id="pop_up">
+            <dialog id="cookies-pop_up">
+                <button id="close-pop_up"><i class="fa-solid fa-xmark"></i></button>
                 <div id="pop_up-content">
+                    <i class="fa-solid fa-cookie-bite"></i>
                     <div id="project-info">
                         <h2>Projeto Web - Shape de Elite</h2>
                         <p>
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto odit eaque minima earum sint corrupti eos doloribus nemo temporibus quis. Illo, modi ea pariatur maiores ipsa necessitatibus dolorum veniam nobis.
                         </p>
                     </div>
-                    <ul id="authors">
-                        <h2>Autores</h2>
-                        <li>Ítalo</li>
-                        <li>Bénicio</li>
-                        <li>Daniel</li>
-                    </ul>
                     <ul id="technologies">
-                        <h2>Tecnologias</h2>
+                        <h3>Tecnologias usadas no projeto</h3>
                         <li><i id="html" class="fa-brands fa-html5"></i>
                         <li><i id="css" class="fa-brands fa-css3-alt"></i>
                         <li><i id="js" class="fa-brands fa-js"></i>
                         <li><i id="github" class="fa-brands fa-square-github"></i>
                     </ul>
+                    <form method="dialog">
+                        <button id="accept-cookies_button">Aceitar</button>
+                    </form>
                 </div>
-                <button id="close-pop_up"><i class="fa-solid fa-chevron-up"></i></button>
             </dialog>
         </main>
 <!-- ========== Rodapé da página ========== -->
