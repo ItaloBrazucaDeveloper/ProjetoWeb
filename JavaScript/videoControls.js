@@ -6,7 +6,7 @@ screen.addEventListener('mouseenter', () => {
     video.play();
 });
 
-screen.addEventListener('click', e => {
+screen.onclick = (e) => {
     let html_element = e.target;
     let class_name = html_element.classList.value;
     if (class_name == 'fa-solid fa-volume-xmark' || class_name == 'fa-solid fa-volume-high') {
@@ -14,7 +14,7 @@ screen.addEventListener('click', e => {
     } else {
         video.paused ? video.play() : video.pause();
     }
-});
+}
 
 function changeAudio() {
     if (video.muted) {

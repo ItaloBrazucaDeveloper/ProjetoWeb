@@ -4,6 +4,7 @@ let service_title = document.querySelector('#service-title');
 let position = 0;
 
 function changeImageSlideShow(index) {
+    position = index;
     images[index].classList.add('selected');
     for (let i = 0; i < images.length; i++) {
         if (index != i) {
