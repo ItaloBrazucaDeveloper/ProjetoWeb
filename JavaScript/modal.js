@@ -9,7 +9,7 @@ body.onload = () => {
     }
 }
 button_close.onclick = () => {
-    modal.close()
+    modal.close();
 };
 
 button_accept.onclick = () => {
