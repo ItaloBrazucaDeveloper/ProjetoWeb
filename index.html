@@ -8,26 +8,36 @@
     </head>
     <body>
 <!-- ========== Cabeçalho da página ========== -->
-        <header>
+        <header> <!-- Barra de navegação superior -->
             <nav id="navigation">
                 <div id="logo">
                     <i class="fa-solid fa-dumbbell"></i>
                     <h1>Shape de Elite | <span>The best gym</span></h1>
                 </div>
                 <ul id="nav-menu">
-                    <li><a href="#first-section">Home
-                    <li><a href="#second-section">Vantagens
-                    <li><a href="#third-section">Serviços
+                    <li><a href="#first-section">Home</a>
+                    <li><a href="#second-section">Vantagens</a>
+                    <li><a href="#third-section">Serviços</a>
                     <li><a href="#fourth-section">Planos</a>
                 </ul>
                 <a href="#" id="place-icon">Locais <i class="fa-solid fa-location-dot"></i></a>
-                <span id="nav-bars"> <!-- Barra de navegação hambúrguer-->
+                <span id="nav-bars"> <!-- Ícone de navegação hambúrguer-->
                     <div></div>
                     <div></div>
                     <div></div>
                 </span>
             </nav>
         </header>
+
+        <aside class="nav-aside"> <!-- Barra de navegação lateral -->                  
+            <ul>
+                <li><a href="#first-section"><i class="fa-solid fa-house"></i></a>
+                <li><a href="#second-section"><i class="fa-solid fa-thumbs-up"></i></a>
+                <li><a href="#third-section"><i class="fa-solid fa-person-walking"></i></a>
+                <li><a href="#fourth-section"><i class="fa-solid fa-bag-shopping"></i></a>
+                <li><a href="#"><i class="fa-solid fa-map-location-dot"></i></a>
+            </ul>
+        </aside>
 <!-- ========== Corpo da página - Convite para ser Elite! ========== -->
         <main>
             <section id="first-section">
@@ -47,7 +57,7 @@
                         <a href="#" id="to_be-elite">Matricule-se</a>
                     </div>
                 </div>
-                <div id="video-promo"> <!-- Testar pegar o código incorporado de redes socias -->
+                <div id="video-promo">
                     <video muted loop>
                         <source src="https://videos.pexels.com/video-files/6740279/6740279-sd_540_960_25fps.mp4">
                         <source src="promoVideo.mp4">
@@ -79,7 +89,7 @@
             </section>
 <!-- ========== Serviços da Shape de Elite - Carrosel ========== -->
             <section id="third-section">
-                <h2 id="service-title">Crossfit</h1>
+                <h2 id="service-title">Crossfit</h2>
                 <div id="slider">
                     <img class="selected" src="/img/backgrounds/HomemLevantandoPneu.jpg" alt="">
                     <img src="/img/backgrounds/MulherBicicletaGym.jpg" alt="">
@@ -172,6 +182,7 @@
         <script src="https://kit.fontawesome.com/2ef0937c77.js" crossorigin="anonymous"></script>
         <script src="JavaScript/modal.js"></script>
         <script src="JavaScript/videoControls.js"></script>
+        <script src="JavaScript/openSideBar.js"></script>
         <script src="JavaScript/slide.js"></script>
     </body>
 </html>

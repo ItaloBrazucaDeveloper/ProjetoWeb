@@ -1,18 +1,20 @@
 /* ---------- Importação da fonte 'RED HAT DISPLAY' da api do google ---------- */
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 
-/* ---------- Conteúdo CSS PRINCIPAL DA PÁGINA ---------- */
-html {
-    scroll-behavior: smooth;
-}
-body::-webkit-scrollbar {
+/* ---------- Conteúdo CSS do SCROLL ---------- */
+::-webkit-scrollbar {
     width: 0;
 }
+
+/* ---------- Conteúdo CSS PRINCIPAL DA PÁGINA ---------- */
 * {
     margin: 0;
     padding: 0;
     font-family: "Red Hat Display", sans-serif;
     list-style: none;
+}
+html {
+    scroll-behavior: smooth;
 }
 a {
     text-decoration: none;
@@ -89,7 +91,7 @@ section {
 
 /* ---------- Conteúdo CSS do HEADER ---------- */
 header {
-    position: absolute;
+    position: fixed;
     top: 0; z-index: 3;
     width: 100%;
 }
@@ -131,9 +133,11 @@ header {
     padding: 6px 10px;
     border-radius: 5px;
 }
-#nav-bars {
+.nav-aside, #nav-bars {
     display: none;
 }
+
+/* ---------- Conteúdo CSS do HEADER - Telas pequenas ---------- */
 @media(max-width: 1100px) {
     #navigation {
         justify-content: space-between;
@@ -141,36 +145,66 @@ header {
     #nav-menu li, #place-icon {
         display: none;
     }
+    #show-nav-aside {
+        background: transparent;
+        outline: none;
+        border: none;
+    }
     #nav-bars {
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-
         display: flex;
         flex-direction: column;
-        row-gap: 5px;
-
         align-items: center;
+        
         justify-content: center;
+        row-gap: 5px;
+        cursor: pointer;
     }
     #nav-bars div {
-        height: 3px;
-        width: 30px;
         border-radius: 2px;
+        height: 3px; width: 30px;
         background-color: #ffffff;
+    }
+    .nav-aside.active {
+        right: 0;
+    }
+    .nav-aside {
+        position: fixed;
+        right: -100%; top: 15%;
+        z-index: 3;
+
+        display: flex;
+        align-items: end;
+        margin-right: 42px;
+        
+        font-size: 1.5rem;
+        text-align: center;
+        transition: right .3s ease-in-out;
+    }
+    .nav-aside ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 100px;
+    }
+    .nav-aside ul li a {
+        color: #ccc;
+        transition: color .3s ease-in-out;
+    }
+    .nav-aside ul li a:hover {
+        color: #fff;
     }
 }
 
 /* ---------- Conteúdo CSS da FIRST SECTION ---------- */
 #first-section {
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 80px;
     flex-wrap: wrap;
     height: auto;
     margin-top: 7em;
 }
 
 #users-slide_show::after {
-    content: "...+10K";
+    content: "...+10mil matrículas";
     color: #eee;
     font-size: 1.2rem;
 }
@@ -197,7 +231,7 @@ header {
 #home-text #sub-text {
     color: #eee;
     font-size: 3rem;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 #to_be-elite { /* Botão de matricula */
@@ -207,6 +241,7 @@ header {
 
     text-align: center;
     line-height: 65px;
+    font-weight: 400;
 
     border-radius: 3px;
     font-size: 1.5rem;
