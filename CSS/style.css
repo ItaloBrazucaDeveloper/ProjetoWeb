@@ -8,10 +8,10 @@
 
 /* ---------- Conteúdo CSS PRINCIPAL DA PÁGINA ---------- */
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "Red Hat Display", sans-serif;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Red Hat Display", sans-serif;
+  list-style: none;
 }
 html {
     scroll-behavior: smooth;
@@ -20,7 +20,7 @@ a {
     text-decoration: none;
 }
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 main {
     display: flex;
@@ -92,30 +92,31 @@ section {
 }
 
 /* ---------- Conteúdo CSS do HEADER ---------- */
-header {
-    position: fixed;
-    top: 0; z-index: 3;
-    width: 100%;
+#nav-header {
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  width: 100%;
 }
 #navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    padding: 18px 40px;
-    height: 2rem;
+  padding: 18px 40px;
+  height: 2rem;
 }
 #navigation ul {
-    display: flex;
-    align-items: center;
-    column-gap: 2.5em;
+  display: flex;
+  align-items: center;
+  column-gap: 2.5em;
 }
 #navigation li a {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 #logo i {
-    font-size: 2rem;
-    text-shadow:  2px 1px 0 #fefefe;
+  font-size: 2rem;
+  text-shadow: 2px 1px 0 #fefefe;
 }
 #logo {
     display: flex;
@@ -124,16 +125,16 @@ header {
     line-height: 2rem;
 }
 #logo h1 {
-    font-size: 1.5rem;
-    font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 #logo h1 span {
-    font-weight: 300;
+  font-weight: 300;
 }
 #place-icon {
-    font-size: 1.3rem;
-    padding: 6px 10px;
-    border-radius: 5px;
+  font-size: 1.3rem;
+  padding: 6px 10px;
+  border-radius: 5px;
 }
 .nav-aside, #nav-bars {
     display: none;
@@ -210,9 +211,9 @@ header {
     font-size: 1.2rem;
 }
 #home-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #home-text h1 {
     font-size: clamp(3rem, 10vw, 5.4rem);
@@ -221,13 +222,17 @@ header {
     background: linear-gradient(45deg, #f6fad1, #e29a41, #f1e04c, #dbec3e);
     background-size: 400% 100%;
 
-    background-clip: text;
-    color: transparent;
-    animation: degrade 10s linear infinite alternate;
+  background-clip: text;
+  color: transparent;
+  animation: degrade 10s linear infinite alternate;
 }
 @keyframes degrade {
-    0% { background-position-x: 0%; }
-    100% { background-position-x: 400%; }
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 400%;
+  }
 }
 #home-text #sub-text {
     color: #eee;
@@ -239,9 +244,9 @@ header {
     font-weight: 400;
     padding: 15px 20px;
 
-    border-radius: 3px;
-    font-size: 1.5rem;
-    transition: .3s ease-out;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  transition: 0.3s ease-out;
 }
 .user { /* Cículos com foto de usuários */
     display: inline-block;
@@ -289,124 +294,180 @@ header {
     width: 250px;
 }
 #video-interactions li {
-    font-size: 18pt;
-    text-align: center;
-    margin-top: 25px;
+  font-size: 18pt;
+  text-align: center;
+  margin-top: 25px;
 }
 #video-interactions img {
-    border-radius: 10px;
-    border: 1.75px solid #fefefe;
+  border-radius: 10px;
+  border: 1.75px solid #fefefe;
 }
 
 /* ---------- Conteúdo da SECOND SECTION ---------- */
+#second-section {
+  flex-direction: column;
+}
+#grafico h1 {
+  font-weight: 500;
+}
+#grafico {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 70px;
+  scale: 1.3;
+}
+#star_graf {
+  font-size: 1.9rem;
+}
+#logo_google {
+  font-style: normal;
+  font-size: 3rem;
+  padding: 2px 10px;
+
+  font-weight: 650;
+  margin-top: 10px;
+}
+#container-reviews {
+  display: flex;
+  gap: 1.2em;
+}
+.review {
+  border-radius: 10px;
+  padding: 1.5em;
+  width: 35%;
+}
+.header-review {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+.client-review-info {
+  display: flex;
+  align-items: center;
+}
+.header-review img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin-right: 0.7em;
+}
+.stars {
+  font-size: 1.35rem;
+}
 
 /* ---------- Conteúdo da THIRD SECTION ---------- */
 #third-section {
-    position: relative;
-    flex-direction: column;
-    height: 540px;
-    margin: 20px 0;
+  position: relative;
+  flex-direction: column;
+  height: 540px;
+  margin: 20px 0;
 }
 #service-title {
-    position: absolute;
-    left: 2.5%; top: .4%;
-    font-size: 3rem;
+  position: absolute;
+  left: 2.5%;
+  top: 0.4%;
+  font-size: 3rem;
 
-    border-radius: 6px 0 10px 0;
-    padding: 10px 20px;
-    z-index: 1;
+  border-radius: 6px 0 10px 0;
+  padding: 10px 20px;
+  z-index: 1;
 }
 #choicer-service {
-    position: absolute;
-    bottom: 5%;
-    width: 90%;
+  position: absolute;
+  bottom: 5%;
+  width: 90%;
 
-    display: flex;
-    justify-content: center;
-    column-gap: 0.2em;
+  display: flex;
+  justify-content: center;
+  column-gap: 0.2em;
 }
 #slider {
-    position: relative;
-    height: 100%;
-    width: 95%;
-    border-radius: 10px;
+  position: relative;
+  height: 100%;
+  width: 95%;
+  border-radius: 10px;
 }
 #slider img {
-    position: absolute;
-    height: 100%;
-    width: 100%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 
-    opacity: 0;
-    object-fit: cover;
-    transition: 1s ease;
-    border-radius: 10px;
+  opacity: 0;
+  object-fit: cover;
+  transition: 1s ease;
+  border-radius: 10px;
 }
 #slider img.selected {
-    opacity: 1;
+  opacity: 1;
 }
-#choicer-service input[type='radio'] {
-    display: none;
+#choicer-service input[type="radio"] {
+  display: none;
 }
 #choicer-service label {
-    display: flex;
-    border-radius: 8px;
-    width: 3.75em; 
-    
-    height: 1.5em;
-    cursor: pointer;
-    transition: .4s ease-in-out;
+  display: flex;
+  border-radius: 8px;
+  width: 3.75em;
+
+  height: 1.5em;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
 }
 #choicer-service #slide-0:checked + #label-0 {
-    width: 5.65em;
-    transition: .4s ease-in-out;
+  width: 5.65em;
+  transition: 0.4s ease-in-out;
 }
 #choicer-service #slide-1:checked + #label-1 {
-    width: 5.65em;
-    transition: .4s ease-in-out;
+  width: 5.65em;
+  transition: 0.4s ease-in-out;
 }
 #choicer-service #slide-2:checked + #label-2 {
-    width: 5.65em;
-    transition: .4s ease-in-out;
+  width: 5.65em;
+  transition: 0.4s ease-in-out;
 }
 #choicer-service #slide-3:checked + #label-3 {
-    width: 5.65em;
-    transition: .4s ease-in-out;
+  width: 5.65em;
+  transition: 0.4s ease-in-out;
 }
 #choicer-service #slide-4:checked + #label-4 {
-    width: 5.65em;
-    transition: .4s ease-in-out;
+  width: 5.65em;
+  transition: 0.4s ease-in-out;
 }
 
 /* ---------- Conteúdo da FOURTH SECTION ---------- */
 
-
 /* ---------- Conteúdo CSS do FOOTER ---------- */
 #footer-content {
-    display: flex;
-    justify-content: space-around;
-    padding: 3rem 3.5rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 3.5rem;
 }
 #social-media {
-    display: flex;
-    column-gap: 1.2rem;
-    margin-top: 0.6rem;
+  display: flex;
+  column-gap: 1.2rem;
+  margin-top: 0.6rem;
 }
 #social-media .footer-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    border-radius: 50%;
-    height: 2.5rem; width: 2.5rem;
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
 }
 #social-media .footer-link i {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
 }
 #footer-copyright {
-    display: flex;
-    justify-content: center;
-    font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  font-size: 0.9rem;
 
-    padding: 1.5rem;
-    font-weight: 100;
+  padding: 1.5rem;
+  font-weight: 100;
 }
