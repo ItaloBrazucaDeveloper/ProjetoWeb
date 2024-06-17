@@ -220,10 +220,37 @@ header {
 }
 
 /* ---------- Conteúdo da SECOND SECTION ---------- */
+#second-section{
+    flex-direction: column;
+
+}
+
+.grafico{
+    padding: 0.9em;
+    border-radius: 10px;
+    scale: 1.3;
+    margin-bottom: 9%;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#star_graf{
+    font-size: 1.9rem;
+}
+
+#logo_google{
+    padding: 0.5em 0.3em;
+    scale: 0.8;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
 #container-reviews {
     display: flex;
-    flex-direction: column;
     gap: 1.2em;
+
 }
 .review {
     background-color: azure;
