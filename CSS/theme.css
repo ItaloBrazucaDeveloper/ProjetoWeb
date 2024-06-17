@@ -1,121 +1,152 @@
 /* ---------- ⬇️⬇️⬇️ Temporário!!!! ---------- */
 #fourth-section {
-    background-color: #ffd500;
+  background-color: #ffd500;
 }
 
 /* ---------- MAIN ---------- */
 main {
-    background-color: #1a161b;
+  background-color: #1a161b;
 }
 
 /* ---------- NAVBAR ---------- */
-#navigation, #place-icon {
-    color: #fefefe;
-    border-bottom: .5px solid #eeeeee51;
+#navigation,
+#place-icon {
+  color: #fefefe;
+  border-bottom: 0.5px solid #eeeeee51;
 }
 #navigation a:hover {
-    transition: .3s ease;
-    color: #ffffff;
+  transition: 0.3s ease;
+  color: #ffffff;
 }
 #navigation li > a {
-    color: #acacac;
+  color: #acacac;
 }
 #place-icon {
-    background-color: tomato;
+  background-color: #ff6347;
 }
 
 /* ---------- FIRST SECTION ---------- */
 #first-section a {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 #first-section a:hover {
-    box-shadow: 0 0 5px #ffc000,
-                0 0 20px #ffc000,
-                0 0 60px #ffc000,
-                0 0 150px #ffc000;
+  box-shadow: 0 0 5px #ffc000, 0 0 20px #ffc000, 0 0 60px #ffc000,
+    0 0 150px #ffc000;
 }
-#home-text, #video-infos, #video-interactions li {
-    color: #fefefe;
+#home-text,
+#video-infos,
+#video-interactions li {
+  color: #fefefe;
 }
 #home-text h2 {
-    color: #f3d85e;
+  color: #f3d85e;
 }
 #video-promo {
-    border: 2px solid white;
-    box-shadow: 7px 7px 0 tomato;
+  border: 2px solid #fff;
+  box-shadow: 7px 7px 0 #ff6347;
 }
 #video-interactions li .fa-heart {
-    color: red;
+  color: #ff0000;
 }
-.grafico{
-    color: #fff;
+
+/* ---------- SECOND SECTION ---------- */
+#grafico {
+  color: #fff;
 }
-#star_graf{
-    color: #daa520;
+#grafico p {
+  color: #eee;
 }
-.stars{
-    color: #daa520;
+#logo_google {
+  color: #000;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 3px 3px 0 #ff6347;
+}
+#logo_google span:nth-child(1),
+#logo_google span:nth-child(4) {
+  color: #3e7bed;
+}
+#logo_google span:nth-child(2),
+#logo_google span:nth-child(6) {
+  color: #f42929;
+}
+#logo_google span:nth-child(3) {
+  color: #f3ab26;
+}
+#logo_google span:nth-child(5) {
+  color: #27b427;
+}
+.stars {
+  color: #f3ab26;
+}
+.review {
+  background-color: #fcfcfc;
+  box-shadow: 5px 5px 0 #ff6347;
 }
 /* ---------- THIRD SECTION ---------- */
 #slider {
-    border: 3px solid white;
-    box-shadow: 7px 7px 0 tomato;
+  border: 3px solid white;
+  box-shadow: 7px 7px 0 #ff6347;
 }
 #icons-service i {
-    color: #ec7737;
+  color: #ec7737;
 }
 #choicer-service label {
-    background-color: #ffb52b;
+  background-color: #ffb52b;
 }
 #service-title::before {
-    content: "";
-    position: absolute;
-    right: -2%; top: -5%;
+  content: "";
+  position: absolute;
+  right: -2%;
+  top: -5%;
 
-    display: block;
-    height: 10px; width: 5px;
-    background-color: #1a161b;
+  display: block;
+  height: 10px;
+  width: 5px;
+  background-color: #1a161b;
 }
 #service-title {
-    background-color: #fefefe;
-    color: black;
-    outline: 3px solid white;
-    border-right: 5px solid #1a161b;
-    border-bottom: 5px solid #1a161b;
+  background-color: #fefefe;
+  color: black;
+  outline: 3px solid white;
+  border-right: 5px solid #1a161b;
+  border-bottom: 5px solid #1a161b;
 }
 #service-title::after {
-    content: "";
-    position: absolute;
-    left: -1%; bottom: -5%;
+  content: "";
+  position: absolute;
+  left: -1%;
+  bottom: -5%;
 
-    display: block;
-    height: 4.6px; width: 10px;
-    background-color: #1a161b;
+  display: block;
+  height: 4.6px;
+  width: 10px;
+  background-color: #1a161b;
 }
 
 /* ---------- FOOTER ---------- */
 footer {
-    background-color: #000000;
-    color: #ddd;
+  background-color: #000000;
+  color: #ddd;
 }
 footer li a {
-    color: #727272;
+  color: #727272;
 }
 footer li a:hover {
-    color: #e2e0e0;
+  color: #e2e0e0;
 }
 #social-media .footer-link {
-    color: #f5f5f5;
+  color: #f5f5f5;
 }
 #instagram {
-    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+  background: linear-gradient(#7f37c9, #ff2992, #ff9807);
 }
 #facebook {
-    background-color: #4267b3;
+  background-color: #4267b3;
 }
 #whatsapp {
-    background-color: #20b757;
+  background-color: #20b757;
 }
 #footer-content {
-    background: linear-gradient(45deg, #1e003c, #2d0b00, #1d0000);
+  background: linear-gradient(45deg, #1e003c, #2d0b00, #1d0000);
 }
