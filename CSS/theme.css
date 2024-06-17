@@ -2,9 +2,6 @@
 #fourth-section {
     background-color: #ffd500;
 }
-#second-section {
-    background-color: #ea1756;
-}
 
 /* ---------- MAIN ---------- */
 main {
@@ -50,7 +47,15 @@ main {
 #video-interactions li .fa-heart {
     color: red;
 }
-
+.grafico{
+    color: #fff;
+}
+#star_graf{
+    color: #daa520;
+}
+.stars{
+    color: #daa520;
+}
 /* ---------- THIRD SECTION ---------- */
 #slider {
     border: 3px solid white;
