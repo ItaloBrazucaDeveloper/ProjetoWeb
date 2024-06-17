@@ -26,12 +26,14 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    scroll-snap-align: end;
 }
 section {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 87vh; width: 90%;
+    scroll-margin-top: 90px;
 }
 
 /* ---------- Conteúdo CSS do DIALOG - COOKIES ---------- */
@@ -137,8 +139,8 @@ header {
     display: none;
 }
 
-/* ---------- Conteúdo CSS do HEADER - Telas pequenas ---------- */
-@media(max-width: 1100px) {
+/* ---------- Conteúdo MediaQuery do HEADER - Telas pequenas ---------- */
+@media (width < 1100px) {
     #navigation {
         justify-content: space-between;
     }
@@ -196,13 +198,12 @@ header {
 
 /* ---------- Conteúdo CSS da FIRST SECTION ---------- */
 #first-section {
-    justify-content: center;
-    gap: 80px;
-    flex-wrap: wrap;
     height: auto;
     margin-top: 7em;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px;
 }
-
 #users-slide_show::after {
     content: "...+10mil matrículas";
     color: #eee;
@@ -214,7 +215,7 @@ header {
     align-items: center;
 }
 #home-text h1 {
-    font-size: 6rem;
+    font-size: clamp(3rem, 10vw, 5.4rem);
     font-weight: 500;
     
     background: linear-gradient(45deg, #f6fad1, #e29a41, #f1e04c, #dbec3e);
@@ -233,15 +234,10 @@ header {
     font-size: 3rem;
     font-weight: 300;
 }
-
 #to_be-elite { /* Botão de matricula */
-    display: block;
     margin-top: 25px;
-    height: 65px; width: 200px;
-
-    text-align: center;
-    line-height: 65px;
     font-weight: 400;
+    padding: 15px 20px;
 
     border-radius: 3px;
     font-size: 1.5rem;
@@ -284,15 +280,13 @@ header {
     justify-content: space-between;
     align-items: end;
 }
-#video-user-infos { /* foto do cliente, descrição do vídeo e nome da música/som */
-    margin-bottom: 10px;
-
+#video-user-infos { /* foto de perfil da gym, descrição do vídeo e nome da música/som */
+    display: grid;
+    row-gap: 3px;
+    margin-bottom: 7px;
 }
 #video-user-infos #description {
     width: 250px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
 }
 #video-interactions li {
     font-size: 18pt;

@@ -12,6 +12,9 @@ main {
 }
 
 /* ---------- NAVBAR ---------- */
+#navigation {
+    background-color: #1a161b;
+}
 #navigation, #place-icon {
     color: #fefefe;
     border-bottom: .5px solid #eeeeee51;
