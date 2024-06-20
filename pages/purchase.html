@@ -4,8 +4,8 @@
         <title>Assinatura - Shape de Elite</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../CSS/purchasePage/style.css">
-    </head> 
-    <body class="scroll"> <!-- blocked -->
+    </head>
+    <body class="scroll blocked">
 <!-- ========== Cabeçalho da página ========== -->
         <header id="top-content">
             <ul id="steps-list">
@@ -28,7 +28,7 @@
             </ul>
         </header>
 <!-- ========== Corpo da página ========== -->
-        <main>            
+        <main>
             <section id="plan-choice">
                 <div id="plans">
                     <div class="plan_card" id="basic">
@@ -36,27 +36,27 @@
                         <ul class="benefits-plan">
                             <li class="selected-benefit">
                                 <i class="fa-solid fa-dumbbell"></i>
-                                Fisioterapia
+                                <span>Fisioterapia</span>
                             </li>
                             <li class="selected-benefit">
                                 <i class="fa-solid fa-dumbbell"></i>
-                                Convide até 7 amigos
+                                <span>Convide até 7 amigos</span>
                             </li>
                             <li class="unselected-benefit">
                                 <i class="fa-solid fa-dumbbell"></i>
-                                Acesso a ducha
+                                <span>Acesso a ducha</span>
                             </li>
                             <li class="unselected-benefit">
                                 <i class="fa-solid fa-dumbbell"></i>
-                                Treinador particular
+                                <span>Treinador particular</span>
                             </li>
                             <li class="unselected-benefit">
                                 <i class="fa-solid fa-dumbbell"></i>
-                                20%OFF na lanchonete
+                                <span>20%OFF na lanchonete</span>
                             </li>
                             <li class="unselected-benefit">
                                 <i class="fa-solid fa-dumbbell"></i>
-                                1 açaí grátis por mês
+                                <span>1 açaí grátis/mês</span>
                             </li>
                         </ul>
                         <div class="plan_price">
@@ -70,27 +70,27 @@
                         <ul class="benefits-plan">
                             <li class="selected-benefit">
                                 <i class="fa-solid fa-dumbbell"></i>
-                                Fisioterapia
+                                <span>Fisioterapia</span>
                             </li>
                             <li class="selected-benefit">
                                 <i class="fa-solid fa-dumbbell"></i>
-                                Convide até 7 amigos
+                                <span>Convide até 7 amigos</span>
                             </li>
                             <li class="selected-benefit">
                                 <i class="fa-solid fa-dumbbell"></i>
-                                Acesso a ducha
+                                <span>Acesso a ducha</span>
                             </li>
                             <li class="selected-benefit">
                                 <i class="fa-solid fa-dumbbell"></i>
-                                Treinador particular
+                                <span>Treinador particular</span>
                             </li>
                             <li class="selected-benefit">
                                 <i class="fa-solid fa-dumbbell"></i>
-                                20%OFF na lanchonete
+                                <span>20%OFF na lanchonete</span>
                             </li>
                             <li class="selected-benefit">
                                 <i class="fa-solid fa-dumbbell"></i>
-                                1 açaí grátis por mês
+                                <span>1 açaí grátis/mês</span>
                             </li>
                         </ul>
                         <div class="plan_price">
@@ -104,27 +104,27 @@
                         <ul class="benefits-plan">
                             <li class="selected-benefit">
                                 <i class="fa-solid fa-dumbbell"></i>
-                                Fisioterapia
+                                <span>Fisioterapia</span>
                             </li>
                             <li class="selected-benefit">
                                 <i class="fa-solid fa-dumbbell"></i>
-                                Convide até 7 amigos
+                                <span>Convide até 7 amigos</span>
+                            </li>
+                            <li class="selected-benefit">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                <span>Acesso a ducha</span>
+                            </li>
+                            <li class="selected-benefit">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                <span>Treinador particular</span>
                             </li>
                             <li class="unselected-benefit">
                                 <i class="fa-solid fa-dumbbell"></i>
-                                Acesso a ducha
+                                <span>20%OFF na lanchonete</span>
                             </li>
                             <li class="unselected-benefit">
                                 <i class="fa-solid fa-dumbbell"></i>
-                                Treinador particular
-                            </li>
-                            <li class="unselected-benefit">
-                                <i class="fa-solid fa-dumbbell"></i>
-                                20%OFF na lanchonete
-                            </li>
-                            <li class="unselected-benefit">
-                                <i class="fa-solid fa-dumbbell"></i>
-                                1 açaí grátis por mês
+                                <span>1 açaí grátis/mês</span>
                             </li>
                         </ul>
                         <div class="plan_price">
@@ -161,25 +161,26 @@
             </section>
             <section id="purchase">
                 <div id="choice-purchase_form">
+                    <h1>Escolha um forma de pagamento</h1>
                     <ul>
                         <li class="choice-purchase_radio">
-                            <input type="radio" name="purchase-form" id="card-purchase">
-                            <label for="card-purchase">Cartão</label>
+                            <input class="pay_type_radio" checked type="radio" name="purchase-form" id="card-payment">
+                            <label for="card-payment">Cartão</label>
                         </li>
                         <li class="choice-purchase_radio">
-                            <input type="radio" name="purchase-form" id="pix-purchase">
-                            <label for="pix-purchase">Pix 15%OFF</label>
+                            <input class="pay_type_radio" type="radio" name="purchase-form" id="pix-payment">
+                            <label for="pix-payment">Pix 15%OFF</label>
                         </li>
                         <li class="choice-purchase_radio">
-                            <input type="radio" name="purchase-form" id="boleto-purchase">
-                            <label for="boleto-purchase">Boleto 10%OFF</label>
+                            <input class="pay_type_radio" type="radio" name="purchase-form" id="boleto-payment">
+                            <label for="boleto-payment">Boleto 10%OFF</label>
                         </li>
                     </ul>
                 </div>
                 <div id="purchase-card">
                     <h1>Informe os dados do seu cartão</h1>
-                    <form method="post" id="card_purchase-form">
-                        <h2> <!-- Tipos de cartões aceitos -->
+                    <form method="POST" id="card_purchase-form">
+                        <h2 id="cards_icons"> <!-- Tipos de cartões aceitos -->
                             <img height="25px" src="../img/elo_card_icon.png" alt="bandeira de cartão elo">
                             <img height="25px" src="../img/american-express_card_icon.png" alt="bandeira de cartão america express">
                             <img height="25px" src="../img/visa_card_icon.png" alt="bandeira de cartão visa">
@@ -224,12 +225,15 @@
                             </div>
                         </div>
                         <div id="buttons-next_step"> <!-- Confirmar informações ou cancelar --> 
-                            <a href="#terms" class="button a">Confirmar</a>
-                            <a href="#" class="button a">Alterar plano</a>
+                            <a href="#terms" class="button a" id="confirm_info-card">Confirmar</a>
+                            <a href="#plan-choice" class="button a">Alterar plano</a>
                         </div>
-                        <p id="terms">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla cupiditate necessitatibus consequatur reprehenderit a natus deserunt? Sapiente ad sit id hic commodi doloribus inventore, delectus consectetur veniam praesentium pariatur harum.
-                        </p>
+                        <details id="terms">
+                            <summary>Termos e condições</summary>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla cupiditate necessitatibus consequatur reprehenderit a natus deserunt? Sapiente ad sit id hic commodi doloribus inventore, delectus consectetur veniam praesentium pariatur harum.
+                            </p>
+                        </details>
                     </form>
                 </div>
             </section>

@@ -4,7 +4,6 @@
 * {
   margin: 0;
   padding: 0;
-  list-style: none;
   font-family: "Red Hat Display", sans-serif;
 }
 a {
@@ -21,7 +20,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1a161b;
+  background: #1a161b;
 }
 ::-webkit-scrollbar {
   width: 0;
@@ -42,6 +41,12 @@ section {
   padding: 7px 0;
   cursor: pointer;
 }
+.button.a {
+  text-align: center;
+  font-weight: 500;
+  color: #fcfcfc;
+  background-color: #ff6347;
+}
 .input-box {
   display: flex;
   position: relative;
@@ -58,8 +63,7 @@ section {
 }
 .input-box .icon {
   position: absolute;
-  top: 50%;
-  left: 20px;
+  top: 50%; left: 20px;
   translate: -50% -50%;
 }
 
@@ -121,6 +125,7 @@ section {
   transition: 1s background ease-in, 1s border-color 1s ease-out;
 }
 .progress-count.done::before {
+  /* ícone de check */
   content: "✔️";
   color: transparent;
   text-shadow: 0 0 0 #fcfcfc;
@@ -130,8 +135,7 @@ section {
   border-radius: 50%;
 
   position: absolute;
-  bottom: 30%;
-  left: 47%;
+  bottom: 27%; left: 50%;
   translate: -50%;
 }
 #steps-list {
@@ -143,7 +147,7 @@ section {
   top: 50%;
   left: 100%;
 
-  width: 400%;
+  width: 350%;
   height: 2px;
   background-color: #fcfcfc;
 }
@@ -151,7 +155,8 @@ section {
 /* ---------- Conteúdo CSS da FIRST-SECTION ---------- */
 #plans {
   display: flex;
-  column-gap: 20px;
+  column-gap: 30px;
+  margin-top: 80px;
 }
 #plans:hover .plan_card {
   opacity: 0.5;
@@ -168,49 +173,62 @@ section {
   align-items: center;
 
   row-gap: 15px;
-  padding: 10px 20px;
+  padding: 20px 60px;
   border-radius: 5px;
 
   cursor: pointer;
   background-color: #fcfcfc;
+  box-shadow: 5px 5px 0 tomato;
   transition: 0.2s opacity ease-in, 0.3s scale ease-out;
 }
 .plan-name {
-  font-size: 2.4rem;
+  font-size: 2.3rem;
 }
 .benefits-plan {
   display: grid;
-  row-gap: 6px;
-  font-size: 1.5rem;
-  color: #4f4f4f;
+  row-gap: 12px;
+  font-size: 1.2rem;
+  list-style: none;
+}
+.benefits-plan li {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+
+  border-radius: 20px;
+  background-color: #ff6347;
+  box-shadow: 0px 1px 0 tomato;
+}
+.benefits-plan li span {
+  margin-left: 10px;
+  width: 100%;
+  padding: 5px 10px;
+
+  text-indent: 5px;
+  border-radius: 20px;
+  background-color: #eee;
 }
 .selected-benefit i,
 .unselected-benefit i {
-  color: #ff7e47;
-  text-shadow: 1px 1px 0 #ff7e47;
-}
-.selected-benefit {
-  font-weight: 450;
+  color: #fcfcfc;
+  text-shadow: 1px 1px 0 #fcfcfc;
 }
 .unselected-benefit {
   opacity: 0.3;
   font-weight: 350;
 }
-.button.a {
-  text-align: center;
-  font-weight: 500;
-  color: #fff;
-  background-color: #ff6347;
+.plan_card .button.a {
+  margin-top: -5px;
+  margin-bottom: 30px;
 }
 .plan_price {
-  margin-top: 10px;
   text-align: center;
 }
 .original_price {
   font-weight: 450;
 }
 .offer-plan_price {
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 /* ---------- Conteúdo CSS da SECOND-SECTION ---------- */
@@ -262,20 +280,27 @@ section {
   border-radius: 0 5px 0 5px;
   box-shadow: 5px 5px 0 #ff6347;
   background-color: #fff;
+  cursor: pointer;
 }
 .choice-purchase_radio label {
   width: 100%;
   padding: 10px;
   font-size: 2rem;
+  cursor: pointer;
 }
 .choice-purchase_radio input[type="radio"] {
   appearance: none;
-  border: 2px solid black;
+  border: 3px dotted black;
   padding: 1rem;
   border-radius: 50%;
+  cursor: pointer;
 }
 .choice-purchase_radio input[type="radio"]:checked {
-  background-image: radial-gradient(transparent 40%, #222 50%);
+  border: 5px solid black;
+  transition: .1s border linear;
+}
+.choice-purchase_radio:not(:has(input[type="radio"]:checked)) {
+  opacity: .6;
 }
 
 /* ---------- Formulário de pagamento - Cartão ---------- */
@@ -287,6 +312,9 @@ section {
   border-radius: 10px;
   background-color: #fcfcfc;
   box-shadow: 5px 5px 0 #ff6347;
+}
+#cards_icons {
+  margin-bottom: -13px;
 }
 #card_purchase-form .input-box input {
   background-color: #eaeaea;
@@ -309,9 +337,9 @@ section {
 }
 #container-card_type,
 #card-type {
+  position: relative;
   display: grid;
   row-gap: 4px;
-  position: relative;
   width: 100%;
   cursor: pointer;
 }
@@ -349,19 +377,27 @@ section {
   column-gap: 20px;
 }
 #terms {
-  font-size: 0.85rem;
+  min-width: 430px;
+  font-size: 0.9rem;
   opacity: 0.8;
+}
+#terms > summary {
+  cursor: pointer;
 }
 
 /* ---------- Mensagem de confirmação ---------- */
 #finish_message {
   display: grid;
   place-items: center;
-  row-gap: 15px;
+  row-gap: 20px;
 
   border-radius: 8px;
   padding: 20px;
   background-color: #fcfcfc;
+}
+#finish_message ul {
+  display: grid;
+  row-gap: 6px;
 }
 #finish_message ul li {
   list-style: square;
