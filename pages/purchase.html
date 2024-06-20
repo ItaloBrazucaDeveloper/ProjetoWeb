@@ -5,129 +5,249 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../CSS/purchasePage/style.css">
     </head> 
-    <body>
+    <body class="scroll"> <!-- blocked -->
 <!-- ========== Cabeçalho da página ========== -->
-        <header>
-            <nav id="navigation">
-                <h1 id="logo"><a href="../index.html">Shape de Elite</a></h1>
-                <ul class="nav-menu">
-                    <li>Assinatura
-                    <li>Identificação
-                    <li>Pagamento
-                    <li>Checkout
-                </ul>
-            </nav>
+        <header id="top-content">
+            <ul id="steps-list">
+                <li class="steps">
+                    <div class="progress-count" id="step1">1</div>
+                    <span>Assinatura</span>
+                </li>
+                <li class="steps">
+                    <div class="progress-count close" id="step2">2</div>
+                    <span>Identificação</span>
+                </li>
+                <li class="steps">
+                    <div class="progress-count close" id="step3">3</div>
+                    <span>Pagamento</span>
+                </li>
+                <li class="steps">
+                    <div class="progress-count close" id="step4">4</div>
+                    <span>Finalizado!</span>
+                </li>
+            </ul>
         </header>
 <!-- ========== Corpo da página ========== -->
         <main>            
             <section id="plan-choice">
-                <div id="basic">
-                    <h1 id="plan-name">Básico</h1>
-                    <hr>
-                    <ul id="benefits">
-                        <li class="selected-benefit">
-                            <i class="fa-solid fa-dumbbell"></i> Fisioterapia
-                        <li class="selected-benefit">
-                            <i class="fa-solid fa-dumbbell"></i> Convide até 7 amigos 
-                        <li class="unselected-benefit">
-                            <i class="fa-solid fa-dumbbell"></i> Acesso a ducha
-                        <li class="unselected-benefit">
-                            <i class="fa-solid fa-dumbbell"></i> Treinador particular
-                        <li class="unselected-benefit">
-                            <i class="fa-solid fa-dumbbell"></i> 20%OFF na lanchonete
-                        <li class="unselected-benefit">
-                            <i class="fa-solid fa-dumbbell"></i> 1 açaí grátis por mês
-                    </ul>
-                    <h6 id="plan-price">De <s>R$140,90,56</s> por</h6>
-                    <h2 id="offer-plan-price">R$89,90</h2>
-                    <button>Escolher plano</button>
-                </div>
-                <div id="premium">
-                    <h1 id="plan-name">Premium</h1>
-                    <hr>
-                    <ul id="benefits">
-                        <li class="selected-benefit">
-                            <i class="fa-solid fa-dumbbell"></i> Fisioterapia
-                        <li class="selected-benefit">
-                            <i class="fa-solid fa-dumbbell"></i> Convide até 7 amigos 
-                        <li class="selected-benefit">
-                            <i class="fa-solid fa-dumbbell"></i> Acesso a ducha
-                        <li class="selected-benefit">
-                            <i class="fa-solid fa-dumbbell"></i> Treinador particular
-                        <li class="selected-benefit">
-                            <i class="fa-solid fa-dumbbell"></i> 20%OFF na lanchonete
-                        <li class="selected-benefit">
-                            <i class="fa-solid fa-dumbbell"></i> 1 açaí grátis por mês
-                    </ul>
-                    <h6 id="plan-price">De <s>R$250,56</s> por</h6>
-                    <h2 id="offer-plan-price">R$180,90</h2>
-                    <button>Escolher plano</button>
-                </div>
-                <div id="standard">
-                    <h1 id="plan-name">Padrão</h1>
-                    <hr>
-                    <ul id="benefits">
-                        <li class="selected-benefit">
-                            <i class="fa-solid fa-dumbbell"></i> Fisioterapia
-                        <li class="selected-benefit">
-                            <i class="fa-solid fa-dumbbell"></i> Convide até 7 amigos 
-                        <li class="selected-benefit">
-                            <i class="fa-solid fa-dumbbell"></i> Acesso a ducha
-                        <li class="unselected-benefit">
-                            <i class="fa-solid fa-dumbbell"></i> Treinador particular
-                        <li class="unselected-benefit">
-                            <i class="fa-solid fa-dumbbell"></i> 20%OFF na lanchonete
-                        <li class="unselected-benefit">
-                            <i class="fa-solid fa-dumbbell"></i> 1 açaí grátis por mês
-                    </ul>
-                    <h6 id="plan-price">De <s>R$190,90</s> por</h6>
-                    <h2 id="offer-plan-price">R$100,90</h2>
-                    <button>Escolher plano</button>
+                <div id="plans">
+                    <div class="plan_card" id="basic">
+                        <h1 class="plan-name">Básico</h1>
+                        <ul class="benefits-plan">
+                            <li class="selected-benefit">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                Fisioterapia
+                            </li>
+                            <li class="selected-benefit">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                Convide até 7 amigos
+                            </li>
+                            <li class="unselected-benefit">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                Acesso a ducha
+                            </li>
+                            <li class="unselected-benefit">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                Treinador particular
+                            </li>
+                            <li class="unselected-benefit">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                20%OFF na lanchonete
+                            </li>
+                            <li class="unselected-benefit">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                1 açaí grátis por mês
+                            </li>
+                        </ul>
+                        <div class="plan_price">
+                            <h3 class="original_price">De <s>R$140,90,56</s> por</h6>
+                            <h2 class="offer-plan_price">R$89,90</h2>
+                        </div>
+                        <a class="button a" href="#identification">Escolher plano</a>
+                    </div>
+                    <div class="plan_card" id="premium">
+                        <h1 class="plan-name">Premium</h1>
+                        <ul class="benefits-plan">
+                            <li class="selected-benefit">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                Fisioterapia
+                            </li>
+                            <li class="selected-benefit">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                Convide até 7 amigos
+                            </li>
+                            <li class="selected-benefit">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                Acesso a ducha
+                            </li>
+                            <li class="selected-benefit">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                Treinador particular
+                            </li>
+                            <li class="selected-benefit">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                20%OFF na lanchonete
+                            </li>
+                            <li class="selected-benefit">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                1 açaí grátis por mês
+                            </li>
+                        </ul>
+                        <div class="plan_price">
+                            <h4 class="original_price">De <s>R$340,90,56</s> por</h4>
+                            <h2 class="offer-plan_price">R$219,90</h2>
+                        </div>
+                        <a class="button a" href="#identification">Escolher plano</a>
+                    </div>
+                    <div class="plan_card" id="standard">
+                        <h1 class="plan-name">Padrão</h1>
+                        <ul class="benefits-plan">
+                            <li class="selected-benefit">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                Fisioterapia
+                            </li>
+                            <li class="selected-benefit">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                Convide até 7 amigos
+                            </li>
+                            <li class="unselected-benefit">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                Acesso a ducha
+                            </li>
+                            <li class="unselected-benefit">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                Treinador particular
+                            </li>
+                            <li class="unselected-benefit">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                20%OFF na lanchonete
+                            </li>
+                            <li class="unselected-benefit">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                1 açaí grátis por mês
+                            </li>
+                        </ul>
+                        <div class="plan_price">
+                            <h4 class="original_price">De <s>R$140,90,56</s> por</h4>
+                            <h2 class="offer-plan_price">R$89,90</h2>
+                        </div>
+                        <a class="button a" href="#identification">Escolher plano</a>
+                    </div>
                 </div>
             </section>
-            <section id="client-identification">
-                <div id="id-container">
-                    <form action="" method="post">
-                        <div class="input-box">
-                            <input required type="text" minlength="15" maxlength="30" placeholder="Nome completo" id="client-name">
-                            <div class="icon">
-                                <i class="fa-solid fa-user-pen"></i>
-                            </div>
+            <section id="identification">
+                <h1>Identifique-se</h1>
+                <form method="post" id="client-id">
+                    <div class="input-box"> <!-- Email -->
+                        <input required type="email" placeholder="Email" id="client-email">
+                        <div class="icon">
+                            <i class="fa-solid fa-envelope"></i>
                         </div>
-                        <div class="input-box">
-                            <input required type="email" placeholder="Email" id="client-email">
-                            <div class="icon">
-                                <i class="fa-solid fa-envelope"></i>
-                            </div>
+                    </div>
+                    <div class="input-box"> <!-- CPF -->
+                        <input required type="text" maxlength="14" placeholder="CPF" id="cpf-client">
+                        <div class="icon">
+                            <i class="fa-solid fa-address-card"></i>
                         </div>
-                        <div class="input-box">
-                            <input required type="text" maxlength="14" placeholder="CPF" id="cpf-client">
-                            <div class="icon">
-                                <i class="fa-solid fa-address-card"></i>
-                            </div>
+                    </div>
+                    <div class="input-box"> <!-- N° de telefone -->
+                        <input required type="tel" maxlength="16" placeholder="Telefone" id="client-phone-number">
+                        <div class="icon">
+                            <i class="fa-solid fa-square-phone"></i>
                         </div>
-                        <div class="input-box">
-                            <input required type="tel" maxlength="16" placeholder="Telefone" id="client-phone-number">
-                            <div class="icon">
-                                <i class="fa-solid fa-square-phone"></i>
-                            </div>
-                        </div>
-                    </form>
-                    <button onclick="changeBorderColor()">Confirmar</button>
-                </div>
-            </section>
-            <section id="purchase-type">
-                <form action="" method="post">
-                    
+                    </div>
+                    <a class="button a" href="#purchase">Confirmar</a>
                 </form>
             </section>
+            <section id="purchase">
+                <div id="choice-purchase_form">
+                    <ul>
+                        <li class="choice-purchase_radio">
+                            <input type="radio" name="purchase-form" id="card-purchase">
+                            <label for="card-purchase">Cartão</label>
+                        </li>
+                        <li class="choice-purchase_radio">
+                            <input type="radio" name="purchase-form" id="pix-purchase">
+                            <label for="pix-purchase">Pix 15%OFF</label>
+                        </li>
+                        <li class="choice-purchase_radio">
+                            <input type="radio" name="purchase-form" id="boleto-purchase">
+                            <label for="boleto-purchase">Boleto 10%OFF</label>
+                        </li>
+                    </ul>
+                </div>
+                <div id="purchase-card">
+                    <h1>Informe os dados do seu cartão</h1>
+                    <form method="post" id="card_purchase-form">
+                        <h2> <!-- Tipos de cartões aceitos -->
+                            <img height="25px" src="../img/elo_card_icon.png" alt="bandeira de cartão elo">
+                            <img height="25px" src="../img/american-express_card_icon.png" alt="bandeira de cartão america express">
+                            <img height="25px" src="../img/visa_card_icon.png" alt="bandeira de cartão visa">
+                            <img height="25px" src="../img/mastercard_icon.png" alt="bandeira de cartão mastercard">
+                        </h2>
+                        <div id="plan_choice-info"> <!-- Informações do plano escolhido -->
+                            <h4>Preço do plano escolhido</h4>
+                            <p>Plano escolhido</p>
+                        </div>
+                        <div class="input-box"> <!-- Nome titular -->
+                            <input required type="text" name="" id="" placeholder="Nome titular">
+                            <div class="icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="input-box"> <!-- Número do cartão -->
+                            <input required type="text" name="" id="" placeholder="Número do cartão">
+                            <div class="icon">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </div>
+                        </div>
+                        <div class="input-box"> <!-- Data de vencimento -->
+                            <input required type="text" name="" id="" placeholder="Data vencimento (MM/AA)">
+                            <div class="icon">
+                                <i class="fa-solid fa-calendar-days"></i>
+                            </div>
+                        </div>
+                        <div class="input-box"> <!-- Código de verificação -->
+                            <input required type="text" name="" id="" placeholder="Código de verificação (CVV)">
+                            <div class="icon">
+                                <i class="fa-regular fa-credit-card"></i>
+                            </div>
+                        </div>
+                        <div id="container-card_type">
+                            <h4>Tipo do cartão</h4>
+                            <select name="card-type" class="input-box" id="card-type">
+                                <option value="credit">Crédito</option>
+                                <option value="debit">Débito</option>
+                            </select>
+                            <div class="arrow_icon">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div id="buttons-next_step"> <!-- Confirmar informações ou cancelar --> 
+                            <a href="#terms" class="button a">Confirmar</a>
+                            <a href="#" class="button a">Alterar plano</a>
+                        </div>
+                        <p id="terms">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla cupiditate necessitatibus consequatur reprehenderit a natus deserunt? Sapiente ad sit id hic commodi doloribus inventore, delectus consectetur veniam praesentium pariatur harum.
+                        </p>
+                    </form>
+                </div>
+            </section>
+            <section id="finish">
+                <div id="finish_message">
+                    <h1>Agradecemos sua escolha :)</h1>
+                    <ul>
+                        <li>Confira o comprovante enviado para o seu email</li>
+                        <li>Sua chave de acesso à academia é o seu CPF</li>
+                        <li>Qualquer problema faça uma chamada no <a href="#">suporte</a></li>
+                    </ul>
+                    <a href="../index.html" class="button a">Página Home</a>
+                </div>
+            </section>
         </main>
-<!-- ========== Rodapé da página ========== -->
-        <footer>    
-        </footer>
 <!-- ========== Scripts da página ========== -->
         <script src="https://kit.fontawesome.com/2ef0937c77.js" crossorigin="anonymous"></script>
-        <script src="../JavaScript/validations.js"></script>
-        <script src="../JavaScript/functions.js"></script>
+        <script src="../javaScript/purchasePage/validations.js"></script>
+        <script src="../javaScript/purchasePage/callSections.js"></script>
     </body>
 </html>

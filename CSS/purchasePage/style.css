@@ -1,159 +1,372 @@
-/* ---------- Conteúdo CSS PRINCIPAL DA PÁGINA ---------- */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* ---------- Conteúdo CSS GLOBAL da página ---------- */
 * {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Red Hat Display", sans-serif;
 }
-a { text-decoration: none; }
+a {
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+main,
+section {
+  height: 100vh;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a161b;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+.blocked {
+  /* bloqueia o scroll da página */
+  overflow: hidden;
+}
+.button {
+  border: none;
+  outline: none;
+  width: 100%;
 
-/* ---------- Conteúdo CSS do HEADER ---------- */
-#navigation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  font-size: 1.3rem;
+  font-weight: 400;
+  border-radius: 3px;
 
-    padding: 18px 40px;
-    box-shadow: 0 0.1rem 0.5rem #00000051;
-    height: 2rem;
-}
-#navigation ul {
-    display: flex;
-    align-items: center;
-    gap: 4rem;
-}
-#navigation li a {
-    font-size: 1.5rem;
-    transition: 0.1s;
-}
-#logo {
-    font-size: 1.7rem;
-    font-weight: 600;
-}
-
-/* ---------- Conteúdo CSS de todas as SECTIONs ---------- */
-#plan-choice, #client-identification {
-    position: absolute;
-    display: flex;
-    width: 100%;
-    height: 89vh;
-}
-
-/* ---------- Conteúdo CSS - Escolha de preços ---------- */
-#plan-choice {
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    
-    column-gap: 1em;
-    flex-wrap: wrap;
-}
-#benefits li {
-    font-size: 1.3em;
-    margin: 15px 10px;
-}
-#plan-name {
-    font-size: 1.8em;
-    text-align: center;
-}
-#plan-price {
-    font-size: 1.2em;
-    font-weight: 500;
-    text-align: center;
-}
-#offer-plan-price {
-    font-size: 2.5em;
-    text-align: center;
-}
-#premium, #standard, #basic {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-
-    border-radius: 8px;
-    min-width: 20em; 
-    width: 20em;
-
-    background-color: grey;
-    transition: .2s ease-out;
-}
-#premium:hover, #standard:hover, #basic:hover {
-    transform: scale(1.05);
-}
-.selected-benefit i {
-    color: gold;
-    /* color: #2b2b2b; */
-}
-.unselected-benefit {
-    color: #363636;
-}
-#plan-choice button {
-    margin-top: 10px;
-    height: 2em;
-    font-size: 1.2em;
-
-    font-weight: bold;
-    border-radius: 8px;
-    border: none;
-
-    cursor: pointer;
-}
-
-/* ---------- Conteúdo CSS - identificação do usuário ---------- */
-#client-identification {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: grey;
-    position: absolute;
-    top: 9%;
-    left: 95%;
-    border-radius: 50px 0 0 50px;
-    /* animation: push 2s 1 ease-out backwards; */
-    transition: all .1s;
-}
-@keyframes push {
-    to { left: 0%; }
-    from { left: 100%; }
-}
-#id-container {
-    display: flex;
-    flex-direction: column;
-    width: 25%;
-    transform: scale(1.5);
+  padding: 7px 0;
+  cursor: pointer;
 }
 .input-box {
-    position: relative;
-    display: flex;
-    margin-bottom: 10px;
-    box-shadow: 0 5px 5px #00000030;
+  display: flex;
+  position: relative;
 }
 .input-box input {
-    position: relative;
-    padding-left: 42px;
-    border: none;
-    width: 100%;
-    height: 2.5em;
-    border-radius: 0 7px 7px 0;
-}
-.input-box input:focus::placeholder {
-    color: #000;
-}
-.input-box input:focus {
-    background-color: #00ff00;
+  border: none;
+  outline: none;
+  height: 50px;
+
+  font-size: 1.3rem;
+  width: 100%;
+  padding-left: 40px;
+  border-radius: 0 8px 0 8px;
 }
 .input-box .icon {
-    position: absolute;
-    width: 40px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  translate: -50% -50%;
 }
-#id-container button {
-    height: 2.5em;
-    border: none;
-    border-radius: 8px;
-    font-weight: 500;
-    font-size: 1rem;
+
+/* ---------- Conteúdo CSS do HEADER ---------- */
+#top-content {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+
+  padding: 15px 0;
+  background-color: #201823;
+  border-bottom: 2px solid #80808024;
+}
+#top-content #steps-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  column-gap: 70px;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+#top-content #steps-list > .steps {
+  display: inline;
+}
+.steps span {
+  color: #fcfcfc;
+}
+.progress-count {
+  margin: auto;
+  text-align: center;
+  line-height: 40px;
+
+  width: fit-content;
+  font-weight: 400;
+  height: 40px;
+  width: 40px;
+
+  border-radius: 50%;
+  border: 2px solid #fcfcfc;
+  position: relative;
+  z-index: 2;
+
+  color: #fcfcfc;
+  background-color: #1a161b;
+  transition: 0.3s scale ease-in-out;
+}
+.progress-count.close {
+  color: #fff;
+  scale: 0.3;
+  background-color: #fcfcfc;
+}
+.progress-count.done {
+  position: relative;
+  background-color: #16de1c;
+  border-color: transparent;
+
+  color: transparent;
+  transition: 1s background ease-in, 1s border-color 1s ease-out;
+}
+.progress-count.done::before {
+  content: "✔️";
+  color: transparent;
+  text-shadow: 0 0 0 #fcfcfc;
+
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+
+  position: absolute;
+  bottom: 30%;
+  left: 47%;
+  translate: -50%;
+}
+#steps-list {
+  position: relative;
+}
+.progress-count.done:not(.close)::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+
+  width: 400%;
+  height: 2px;
+  background-color: #fcfcfc;
+}
+
+/* ---------- Conteúdo CSS da FIRST-SECTION ---------- */
+#plans {
+  display: flex;
+  column-gap: 20px;
+}
+#plans:hover .plan_card {
+  opacity: 0.5;
+  filter: blur(2px);
+}
+#plans .plan_card:hover {
+  opacity: 1;
+  scale: 1.1;
+  filter: blur(0);
+}
+.plan_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  row-gap: 15px;
+  padding: 10px 20px;
+  border-radius: 5px;
+
+  cursor: pointer;
+  background-color: #fcfcfc;
+  transition: 0.2s opacity ease-in, 0.3s scale ease-out;
+}
+.plan-name {
+  font-size: 2.4rem;
+}
+.benefits-plan {
+  display: grid;
+  row-gap: 6px;
+  font-size: 1.5rem;
+  color: #4f4f4f;
+}
+.selected-benefit i,
+.unselected-benefit i {
+  color: #ff7e47;
+  text-shadow: 1px 1px 0 #ff7e47;
+}
+.selected-benefit {
+  font-weight: 450;
+}
+.unselected-benefit {
+  opacity: 0.3;
+  font-weight: 350;
+}
+.button.a {
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  background-color: #ff6347;
+}
+.plan_price {
+  margin-top: 10px;
+  text-align: center;
+}
+.original_price {
+  font-weight: 450;
+}
+.offer-plan_price {
+  font-size: 3.5rem;
+}
+
+/* ---------- Conteúdo CSS da SECOND-SECTION ---------- */
+#identification {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#identification h1 {
+  color: #fcfcfc;
+}
+#client-id {
+  display: grid;
+  row-gap: 20px;
+  width: 40%;
+
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 1.4rem;
+}
+#client-id .input-box input {
+  box-shadow: 3px 5px 0 tomato;
+}
+#client-id .input-box input:focus {
+  outline: 3px solid tomato;
+}
+
+/* ---------- Conteúdo CSS do THIRD-SECTION ---------- */
+#purchase {
+  justify-content: space-around;
+}
+/* Seletor de forma de pagamento */
+#choice-purchase_form h1 {
+  color: #fcfcfc;
+}
+#choice-purchase_form {
+  width: 40%;
+  padding: 10px;
+}
+.choice-purchase_radio {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  margin-top: 20px;
+  padding: 10px;
+  height: 50px;
+
+  border-radius: 0 5px 0 5px;
+  box-shadow: 5px 5px 0 #ff6347;
+  background-color: #fff;
+}
+.choice-purchase_radio label {
+  width: 100%;
+  padding: 10px;
+  font-size: 2rem;
+}
+.choice-purchase_radio input[type="radio"] {
+  appearance: none;
+  border: 2px solid black;
+  padding: 1rem;
+  border-radius: 50%;
+}
+.choice-purchase_radio input[type="radio"]:checked {
+  background-image: radial-gradient(transparent 40%, #222 50%);
+}
+
+/* ---------- Formulário de pagamento - Cartão ---------- */
+#card_purchase-form {
+  display: grid;
+  row-gap: 15px;
+  padding: 15px;
+
+  border-radius: 10px;
+  background-color: #fcfcfc;
+  box-shadow: 5px 5px 0 #ff6347;
+}
+#card_purchase-form .input-box input {
+  background-color: #eaeaea;
+}
+#card_purchase-form .input-box input:focus {
+  border: 2px solid tomato;
+}
+#purchase-card h1 {
+  color: #fcfcfc;
+}
+#purchase-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  row-gap: 10px;
+  width: 30%;
+  padding: 10px;
+  margin-top: 75px;
+}
+#container-card_type,
+#card-type {
+  display: grid;
+  row-gap: 4px;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+#card-type {
+  display: flex;
+  justify-content: center;
+  column-gap: 15px;
+
+  font-size: 1.3rem;
+  height: 47px;
+  border: none;
+
+  outline: none;
+  color: #222222c7;
+  font-weight: 450;
+  border-radius: 0 8px 0 8px;
+
+  padding-left: 40px;
+  appearance: none;
+  background-color: #eaeaea;
+}
+.arrow_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  bottom: 21%;
+  left: 4.7%;
+  translate: -50%;
+}
+#buttons-next_step {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+#terms {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* ---------- Mensagem de confirmação ---------- */
+#finish_message {
+  display: grid;
+  place-items: center;
+  row-gap: 15px;
+
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #fcfcfc;
+}
+#finish_message ul li {
+  list-style: square;
+  list-style-position: inside;
+}
+#finish_message ul li a {
+  text-decoration: underline;
 }
