@@ -3,7 +3,11 @@
 /* ---------- Seção de inicialização das variáveis ---------- */
 const regex_num = /[0-9]/g; // Expressão regular para números
 const regex_char = /[a-z|A-Z]/g; // Expressão regular para letras
-
+const card_purchase_form = document.querySelector("#card_purchase_form");
+const nome_char = document.querySelector("#nome_char");
+const num_cartao = document.querySelector("#num_cartao");
+const dt_venc = document.querySelector("#dt_venc");
+const CVV = document.querySelector("#CVV");
 
 // Daniel
 /* ---------- Validação de CPF ---------- */
