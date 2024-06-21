@@ -1,9 +1,11 @@
-const screen = document.getElementById("video-promo");
-const video = document.querySelector("#video-promo video");
-const sound_icon = document.querySelector("#video-infos h1 i");
+const screen = document.getElementById("video-promo"),
+  video = document.querySelector("#video-promo video"),
+  sound_icon = document.querySelector("#video-infos h1 i");
 
-screen.addEventListener("mouseenter", () => {
+screen.onmouseenter = () => {
   video.play();
-});
+}
 
-screen.onclick = () => (video.paused ? video.play() : video.pause());
+screen.onclick = () => {
+  video.paused ? video.play() : video.pause()
+};

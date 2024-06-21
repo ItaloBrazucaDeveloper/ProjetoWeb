@@ -3,8 +3,8 @@
    <head>
       <title>Shape Elite</title>
       <meta charset="UTF-8">
-      <link rel="stylesheet" href="CSS/style.css">
-      <link rel="stylesheet" href="CSS/theme.css">
+      <link rel="stylesheet" href="CSS/homePage/style.css">
+      <link rel="stylesheet" href="CSS/homePage/theme.css">
    </head>
    <body>
 <!-- ========== Cabeçalho da página ========== -->
@@ -14,44 +14,30 @@
                   <i class="fa-solid fa-dumbbell"></i>
                   <h1>Shape de Elite | <span>The best gym</span></h1>
                </div>
-               <ul id="nav-menu">
+               <ul>
                   <li><a href="#first-section">Home</a>
                   <li><a href="#second-section">Vantagens</a>
                   <li><a href="#third-section">Serviços</a>
                   <li><a href="#fourth-section">Planos</a>
                </ul>
                <a href="#" id="place-icon">Locais <i class="fa-solid fa-location-dot"></i></a>
-               <span id="nav-bars"> <!-- Ícone de navegação hambúrguer-->
-                  <div></div>
-                  <div></div>
-                  <div></div>
-               </span>
          </nav>
       </header>
-      <aside class="nav-aside"> <!-- Barra de navegação lateral -->
-         <ul>
-            <li><a href="#first-section"><i class="fa-solid fa-house"></i></a>
-            <li><a href="#second-section"><i class="fa-solid fa-thumbs-up"></i></a>
-            <li><a href="#third-section"><i class="fa-solid fa-person-walking"></i></a>
-            <li><a href="#fourth-section"><i class="fa-solid fa-bag-shopping"></i></a>
-            <li><a href="#"><i class="fa-solid fa-map-location-dot"></i></a>
-         </ul>
-      </aside>
 <!-- ========== Corpo da página - Convite para ser Elite! ========== -->
       <main>
          <section id="first-section">
                <div id="container-left_side">
                   <div id="users-slide_show">
-                     <img src="img/profilePhotos/MusculosoDeOculos_formatoQuadrado.jpg" class="user">
-                     <img src="img/profilePhotos/MarombaFlexao.jpg" class="user">
-                     <img src="img/profilePhotos/AeroHit.jpg" class="user">
-                     <img src="img/profilePhotos/MorenoDescamisado.jpg" class="user">
-                     <img src="img/profilePhotos/MulherMorena.jpg" class="user">
+                     <img class="user" src="img/profilePhotos/MusculosoDeOculos_formatoQuadrado.jpg">
+                     <img class="user" src="img/profilePhotos/MarombaFlexao.jpg">
+                     <img class="user" src="img/profilePhotos/AeroHit.jpg">
+                     <img class="user" src="img/profilePhotos/MorenoDescamisado.jpg">
+                     <img class="user" src="img/profilePhotos/MulherMorena.jpg">
                   </div>
                   <div id="home-text">
                      <h1>
-                           Venha ser <span id="sub-text">nosso aluno,<br>
-                           seja</span> Shape de Elite!
+                        Venha ser <span id="sub-text">nosso aluno,<br>
+                        seja</span> Shape de Elite!
                      </h1>
                      <a href="#" id="to_be-elite">Matricule-se</a>
                   </div>
@@ -61,7 +47,7 @@
                      <source src="promoVideo.mp4">
                   </video>
                   <div id="video-infos">
-                     <h1>Geels</h1>
+                     <h1>Reels</h1>
                      <div id="container-user_info_interaction">
                            <div id="video-user-infos">
                               <h4>
@@ -81,7 +67,10 @@
                               <li><i class="fa-regular fa-comment"></i>
                               <li><i class="fa-regular fa-paper-plane"></i>
                               <li><i class="fa-solid fa-ellipsis-vertical"></i>
-                              <li><img height="35px" src="/img/profilePhotos/MusculosoDeOculos_formatoQuadrado.jpg" alt="">
+                              <li>
+                                 <img height="35px" src="img/profilePhotos/MusculosoDeOculos_formatoQuadrado.jpg"
+                                    alt="Foto do albúm da música tocando no vídeo">
+                              </li>
                            </ul>
                      </div>
                   </div>
@@ -89,16 +78,16 @@
          </section>
 <!-- ========== Testemundos de clientes da shape de Elite ========== -->
          <section id="second-section"> 
-               <div id="grafico">
+               <div id="google_avaliations">
                   <h1>EXECELENTE</h1>
-                  <div id="star_graf" class="stars">
+                  <div id="stars_google" class="stars">
                      <i class="fa-solid fa-star"></i>
                      <i class="fa-solid fa-star"></i>
                      <i class="fa-solid fa-star"></i>
                      <i class="fa-solid fa-star"></i>
                      <i class="fa-regular fa-star-half-stroke"></i>
                   </div>
-                  <p>Avaliado por +10K de alunos inscritos em 2024</p>
+                  <p>Academia avaliada por +10K de usuários google</p>
                   <i id="logo_google">
                      <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
                   </i>
@@ -122,8 +111,8 @@
                            </div>
                      </header>
                      <p> 
-                           Não é a RedBull, mas me deu Asas!!
-                           A Shape de Elite fazendo chegar até os céus.
+                        Não é a RedBull, mas me deu Asas!!
+                        A Shape de Elite fazendo chegar até os céus.
                      </p>
                   </div>
                   <div class="review">
@@ -145,8 +134,8 @@
                            </div>
                      </header>
                      <p> 
-                           Me ajudou bastante, atendeu todas as minhas expectativas!!
-                           venha consquistar um Shape de Elite!!
+                        Me ajudou bastante, atendeu todas as minhas expectativas!!
+                        venha consquistar um Shape de Elite!!
                      </p>
                   </div>
                   <div class="review">
@@ -167,7 +156,7 @@
                            </div>
                      </header>
                      <p> 
-                           Gostei muito não, é 1Km da minha casa
+                        Gostei muito não, é 1Km da minha casa
                      </p>
                   </div>
                </div>
@@ -176,11 +165,11 @@
          <section id="third-section">
                <h2 id="service-title">Crossfit</h2>
                <div id="slider">
-                  <img class="selected" src="/img/backgrounds/HomemLevantandoPneu.jpg" alt="">
-                  <img src="/img/backgrounds/MulherBicicletaGym.jpg" alt="">
-                  <img src="https://images.unsplash.com/photo-1588286840104-8957b019727f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                  <img src="/img/backgrounds/HomemSemCamisa.jpg" alt="">
-                  <img src="/img/backgrounds/Aeróbica.jpg" alt="">
+                  <img class="selected" src="img/backgrounds/HomemLevantandoPneu.jpg" alt="Homen levantando peso">
+                  <img src="img/backgrounds/MulherBicicletaGym.jpg" alt="Mulher fazendo cardio na bicicleta">
+                  <img src="img/backgrounds/pilatesArLivre.jpg" alt="Mulheres fazendo pilates">
+                  <img src="img/backgrounds/HomemSemCamisa.jpg" alt="Homem fazendo musculação apoiado em elásticos">
+                  <img src="img/backgrounds/Aeróbica.jpg" alt="Pessoas praticando aeróbica">
                </div>
                <div id="choicer-service">
                   <input type="radio" name="slide" id="slide-0" checked onchange="changeImageSlideShow(0)">
@@ -261,7 +250,7 @@
                </ul>
          </div>
          <div id="footer-copyright">
-            &copy; 1987~2024 | All rights reserved
+            &copy; 2024 | All rights reserved
          </div>
       </footer>
 <!-- ========== Scripts da página ========== -->

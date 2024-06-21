@@ -9,17 +9,20 @@ main {
 }
 
 /* ---------- NAVBAR ---------- */
+#navigation {
+  background-color: #1a161b;
+}
 #navigation,
 #place-icon {
   color: #fefefe;
   border-bottom: 0.5px solid #eeeeee51;
 }
-#navigation a:hover {
-  transition: 0.3s ease;
-  color: #ffffff;
+#navigation li a {
+  color: #ddd;
 }
-#navigation li > a {
-  color: #acacac;
+#navigation a:hover {
+  transition: 0.2s ease;
+  color: #fff;
 }
 #place-icon {
   background-color: #ff6347;
@@ -30,8 +33,10 @@ main {
   background-color: #ffffff;
 }
 #first-section a:hover {
-  box-shadow: 0 0 5px #ffc000, 0 0 20px #ffc000, 0 0 60px #ffc000,
-    0 0 150px #ffc000;
+  box-shadow: 0 0 5px #ffc000,
+              0 0 20px #ffc000,
+              0 0 60px #ffc000,
+              0 0 150px #ffc000;
 }
 #home-text,
 #video-infos,
@@ -50,14 +55,14 @@ main {
 }
 
 /* ---------- SECOND SECTION ---------- */
-#grafico {
+#google_avaliations {
   color: #fff;
 }
-#grafico p {
+#google_avaliations p {
   color: #eee;
 }
 #logo_google {
-  color: #000;
+  color: #333;
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 3px 3px 0 #ff6347;
@@ -83,9 +88,10 @@ main {
   background-color: #fcfcfc;
   box-shadow: 5px 5px 0 #ff6347;
 }
+
 /* ---------- THIRD SECTION ---------- */
 #slider {
-  border: 3px solid white;
+  border: 3px solid #fff;
   box-shadow: 7px 7px 0 #ff6347;
 }
 #icons-service i {
@@ -97,45 +103,42 @@ main {
 #service-title::before {
   content: "";
   position: absolute;
-  right: -2%;
-  top: -5%;
+  right: -2%; top: -5%;
 
   display: block;
-  height: 10px;
-  width: 5px;
+  height: 10px; width: 5px;
   background-color: #1a161b;
 }
 #service-title {
-  background-color: #fefefe;
   color: black;
-  outline: 3px solid white;
+  background-color: #fefefe;
+  outline: 3px solid #fff;
+
   border-right: 5px solid #1a161b;
   border-bottom: 5px solid #1a161b;
 }
 #service-title::after {
   content: "";
   position: absolute;
-  left: -1%;
-  bottom: -5%;
+  left: -1%; bottom: -5%;
 
   display: block;
-  height: 4.6px;
-  width: 10px;
+  height: 4.6px; width: 10px;
   background-color: #1a161b;
 }
 
 /* ---------- DIALOG ---------- */
 #html {
-    color: tomato;
+  color: tomato;
 }
 #css {
-    color: blue;
+  color: blue;
 }
 #js {
-    color: orange;
+  color: orange;
 }
 #github {
-    color: darkblue;
+  color: darkblue;
 }
 
 /* ---------- FOOTER ---------- */

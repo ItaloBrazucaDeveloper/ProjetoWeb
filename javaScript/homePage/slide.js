@@ -1,10 +1,8 @@
-const images = document.querySelectorAll("#slider img");
-const inputs_radio = document.querySelectorAll(
-  '#choicer-service input[type="radio"]'
-);
-let service_title = document.querySelector("#service-title");
-const services = ["CrossFit", "Cardio", "AeroHit", "Musculação", "Aeróbica"];
-let position = 0;
+const images = document.querySelectorAll("#slider img"),
+  inputs_radio = document.querySelectorAll('#choicer-service input[type="radio"]'),
+  services = ["CrossFit", "Cardio", "Pilates", "Musculação", "Aeróbica"];
+let service_title = document.querySelector("#service-title"),
+  position = 0;
 
 function changeImageSlideShow(index) {
   position = index;
@@ -12,9 +10,7 @@ function changeImageSlideShow(index) {
   service_title.innerText = services[index];
 
   for (let i = 0; i < images.length; i++) {
-    if (index != i) {
-      images[i].classList.remove("selected");
-    }
+    if (index != i) images[i].classList.remove("selected");
   }
 }
 
@@ -29,4 +25,5 @@ function automaticSliderShow() {
   inputs_radio[position].checked = true;
   service_title.innerText = services[position];
 }
+
 setInterval(automaticSliderShow, 7000);
