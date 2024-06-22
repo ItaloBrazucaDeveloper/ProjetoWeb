@@ -1,156 +1,853 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <title>Shape Elite</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="CSS/style.css">
-        <link rel="stylesheet" href="CSS/theme.css">
-        <script src="https://kit.fontawesome.com/2ef0937c77.js" crossorigin="anonymous"></script>
-        <script src="JavaScript/functions.js"></script>
-    </head>
-
-    <body>
-<!-- ========== Cabeçalho da página ========== -->
-        <header>
-            <nav id="navigation">
-                <h1 id="logo">Shape de Elite</h1>
-                <ul id="nav-menu">
-                    <li><a href="#first-section">Home
-                    <li><a href="#second-section">Vantagens
-                    <li><a href="#third-section">Serviços
-                    <li><a href="#fourth-section">Planos
-                    <li><a id="account" href="/pages/login.html"><i class="fa-solid fa-user"></i></a>
-                </ul>
-            </nav>
-        </header>
-<!-- ========== Corpo da página ========== -->
-        <main>
-            <section id="first-section"> <!-- Convite para ser elite -->
-                <div id="home-text">
-                    <h2>Conquite sua força agora!!</h2>
-                    <h1>Shape de elite</h1>
-                    <p>
-                        Nossa academia é especialmente feita para você! 
-                        Damos toda a infraestrutura para você conseguir 
-                        o shape desejado, do jeito Elite.
+  <head>
+    <title>Shape Elite</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="CSS/homePage/style.css" />
+    <link rel="stylesheet" href="CSS/homePage/theme.css" />
+  </head>
+  <body>
+    <!-- ========== Cabeçalho da página ========== -->
+    <header id="nav-header">
+      <nav id="navigation">
+        <div id="logo">
+          <i class="fa-solid fa-dumbbell"></i>
+          <h1>Shape de Elite | <span>The best gym</span></h1>
+        </div>
+        <ul>
+          <li><a href="#first-section">Home</a></li>
+          <li><a href="#second-section">Avaliações</a></li>
+          <li><a href="#third-section">Serviços</a></li>
+          <li><a href="#fourth-section">Planos</a></li>
+        </ul>
+        <a href="pages/placePage.html" id="place-icon"> Seja elite! </a>
+      </nav>
+    </header>
+    <main>
+      <video id="background-video" autoplay muted plays-inline loop>
+        <source
+          src="https://videos.pexels.com/video-files/5319855/5319855-uhd_2560_1440_25fps.mp4"
+        />
+        <source src="" />
+      </video>
+      <!-- ========== Convite para ser Elite! ========== -->
+      <section id="first-section">
+        <div id="home-text"> <!-- Texto principal -->
+          <div id="reels-popover"> <!-- Todos os reels como popover -->
+            <div class="reels" id="client_reels_1" popover>
+              <video loop>
+                <source src="promoVideo.mp4" />
+                <source src="" />
+              </video>
+              <div class="video-infos">
+                <h2>Reels</h2>
+                <div class="container-user_info_interaction">
+                  <div class="video-user-infos">
+                    <h4>
+                      <i
+                        class="profile_photo-gym"
+                        class="fa-solid fa-dumbbell"
+                      ></i>
+                      Shape_de_elite_
+                    </h4>
+                    <p class="description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Modi beatae repellat tempora, aliquam, sit repudiandae
+                      nulla aliquid nam esse earum eius labore. Cum error
+                      consequatur, sunt deserunt est saepe corrupti.
                     </p>
-                    <button>
-                        <a href="">Seja Elite!</a>
-                    </button>
+                    <p><i class="fa-solid fa-music"></i> Original Audio</p>
+                  </div>
+                  <ul class="video-interactions">
+                    <li>
+                      <i class="fa-solid fa-heart"></i>
+                      <p>1M</p>
+                    </li>
+                    <li><i class="fa-regular fa-comment"></i></li>
+                    <li><i class="fa-regular fa-paper-plane"></i></li>
+                    <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                    <li>
+                      <img
+                        height="35px"
+                        src="img/profilePhotos/MusculosoDeOculos_formatoQuadrado.jpg"
+                        alt="Foto do albúm da música tocada no vídeo"
+                      />
+                    </li>
+                  </ul>
                 </div>
-            </section>
-<!-- ========== Vantagens da shape de Elite ========== -->
-            <section id="second-section" class="second-section">
-                <div> <!-- Gráfico dos sobre aprovação, permanencia, etc -->
-                    <h1>Nossos números!</h1>
-                </div>
-                
-                <div id="container"> <!-- Depoimentos de clientes-->
-                    <div class="review">
-                        <header class="header-review">
-                            <img class="photo-profile" src="img/profilePhotos/FotoPerfilHomemOculos.jpg" 
-                                alt="Foto de perfil de um homem com óculos escuro">
-                            <div class="client-review-info">
-                                <h2>Nome</h2>
-                                <p>@Nome_usuário</p>
-                            </div>
-                            <h3 class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </h3>
-                        </header>
-                        <p> 
-                            Não é a RedBull, mas me deu Asas!! </br>
-                            A Shape de Elite te faz chegar até os céus.
-                        </p>
-                    </div>
-                    <div class="review">
-                        <header class="header-review">
-                            <img class="photo-profile" src="/img/profilePhotos/Hoia.png" 
-                                alt="Homem fazendo pose de calistenia">
-                            <div class="client-review-info">
-                                <h2>Dev-Benício</h2>
-                                <p>@benicio_swk</p>
-                            </div>
-                            <h3 class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </h3>
-                        </header>
-                        <p> 
-                            Me ajudou bastante, atendeu todas as minhas expectativas!!
-                            Sou incrivelmente grato aos fundadores dessa academia, possui profissionais 
-                            capacitados para todos tipos de necessidades!! Atendendo todas pessoas, que possui dificuldades motoras
-                            ou mesmo pessoas que querem consquistar um Shape de Elite!!
-                        </p>
-                    </div>
-                    
-                    <div class="review">
-                        <header class="header-review">
-                            <img class="photo-profile" src="img/profilePhotos/" alt="">
-                            <div class="client-review-info">
-                                <h2>Nome</h2>
-                                <p>@Nome_usuário</p>
-                            </div>
-                            <h3 class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </h3>
-                        </header>
-                        <p> 
-                            Gostei muito não, é 1Km da minha casa
-                        </p>
-                    </div>
-                </div>
-            </section>
-<!-- ========== Serviços da Shape de Elite - Carrosel ========== -->
-            <section id="third-section"> 
-                <h1>Serviços</h1>
-            </section>
-<!-- ========== Mensalidades da Shape de Elite ========== -->
-            <section id="fourth-section">
-                <!-- Modelo:
-                    Nome do plano(h1) -> class="plan-name"
-                    7 benéficios(lista) -> class="benefits"
-                    Preço total(h3) -> class="plan-price"
-                    Preço com desconto (h2) -> class="offer-plan-price"
-                    Botão para se matricular -> class="subscribe-button"
-                -->
-                <h1 id="title">Mensalidades</h1>
-                <div class="plans">
-                    <div class="basic"> <!-- Plano básico -->
-                    </div>
-                    <div class="premium"> <!-- Plano premium -->
-                    </div>
-                    <div class="standard"> <!-- Plano padrão -->
-                    </div>
-                </div>
-            </section>
-<!-- ========== Botão que sobe a página inteira ========== -->
-            <button onclick="resetScroll()" id="up-button">
-                <i class="fa-solid fa-arrow-up-from-bracket"></i>
-            </button>
-        </main>
-
-<!-- ========== Rodapé da página ========== -->
-        <footer>
-            <div id="social-network">
-                <h4>Redes sociais</h4>
-                    <li><a href=""><i class="fa-brands fa-facebook-f"></i>
-                    <li><a href="https://www.instagram.com/benicio_swk"><i class="fa-brands fa-instagram"></i>
-                    <li><a href=""><i class="fa-brands fa-youtube"></i>
-                    <li><a href=""><i class="fa-brands fa-whatsapp"></i></a>
+              </div>
             </div>
-            <p>&copy;Todos os direitos reservados</p>
-        </footer>
-    </body>
+            <div class="reels" id="client_reels_2" popover>
+              <video loop>
+                <source
+                  src="https://videos.pexels.com/video-files/7187466/7187466-hd_1080_1920_24fps.mp4"
+                />
+                <source src="" />
+              </video>
+              <div class="video-infos">
+                <h2>Reels</h2>
+                <div class="container-user_info_interaction">
+                  <div class="video-user-infos">
+                    <h4>
+                      <i
+                        class="profile_photo-gym"
+                        class="fa-solid fa-dumbbell"
+                      ></i>
+                      Shape_de_elite_
+                    </h4>
+                    <p class="description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Modi beatae repellat tempora, aliquam, sit repudiandae
+                      nulla aliquid nam esse earum eius labore. Cum error
+                      consequatur, sunt deserunt est saepe corrupti.
+                    </p>
+                    <p><i class="fa-solid fa-music"></i> Original Audio</p>
+                  </div>
+                  <ul class="video-interactions">
+                    <li>
+                      <i class="fa-solid fa-heart"></i>
+                      <p>1M</p>
+                    </li>
+                    <li><i class="fa-regular fa-comment"></i></li>
+                    <li><i class="fa-regular fa-paper-plane"></i></li>
+                    <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                    <li>
+                      <img
+                        height="35px"
+                        src="img/profilePhotos/MusculosoDeOculos_formatoQuadrado.jpg"
+                        alt="Foto do albúm da música tocada no vídeo"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="reels" id="client_reels_3" popover>
+              <video loop>
+                <source
+                  src="https://videos.pexels.com/video-files/6326798/6326798-hd_1080_1920_25fps.mp4"
+                />
+                <source src="" />
+              </video>
+              <div class="video-infos">
+                <h2>Reels</h2>
+                <div class="container-user_info_interaction">
+                  <div class="video-user-infos">
+                    <h4>
+                      <i
+                        class="profile_photo-gym"
+                        class="fa-solid fa-dumbbell"
+                      ></i>
+                      Shape_de_elite_
+                    </h4>
+                    <p class="description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Modi beatae repellat tempora, aliquam, sit repudiandae
+                      nulla aliquid nam esse earum eius labore. Cum error
+                      consequatur, sunt deserunt est saepe corrupti.
+                    </p>
+                    <p><i class="fa-solid fa-music"></i> Original Audio</p>
+                  </div>
+                  <ul class="video-interactions">
+                    <li>
+                      <i class="fa-solid fa-heart"></i>
+                      <p>1M</p>
+                    </li>
+                    <li><i class="fa-regular fa-comment"></i></li>
+                    <li><i class="fa-regular fa-paper-plane"></i></li>
+                    <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                    <li>
+                      <img
+                        height="35px"
+                        src="img/profilePhotos/MusculosoDeOculos_formatoQuadrado.jpg"
+                        alt="Foto do albúm da música tocada no vídeo"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="reels" id="client_reels_4" popover>
+              <video loop>
+                <source src="promoVideo.mp4" />
+                <source src="" />
+              </video>
+              <div class="video-infos">
+                <h2>Reels</h2>
+                <div class="container-user_info_interaction">
+                  <div class="video-user-infos">
+                    <h4>
+                      <i
+                        class="profile_photo-gym"
+                        class="fa-solid fa-dumbbell"
+                      ></i>
+                      Shape_de_elite_
+                    </h4>
+                    <p class="description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Modi beatae repellat tempora, aliquam, sit repudiandae
+                      nulla aliquid nam esse earum eius labore. Cum error
+                      consequatur, sunt deserunt est saepe corrupti.
+                    </p>
+                    <p><i class="fa-solid fa-music"></i> Original Audio</p>
+                  </div>
+                  <ul class="video-interactions">
+                    <li>
+                      <i class="fa-solid fa-heart"></i>
+                      <p>1M</p>
+                    </li>
+                    <li><i class="fa-regular fa-comment"></i></li>
+                    <li><i class="fa-regular fa-paper-plane"></i></li>
+                    <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                    <li>
+                      <img
+                        height="35px"
+                        src="img/profilePhotos/MusculosoDeOculos_formatoQuadrado.jpg"
+                        alt="Foto do albúm da música tocada no vídeo"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="reels" id="client_reels_5" popover>
+              <video loop>
+                <source src="promoVideo.mp4" />
+                <source src="" />
+              </video>
+              <div class="video-infos">
+                <h2>Reels</h2>
+                <div class="container-user_info_interaction">
+                  <div class="video-user-infos">
+                    <h4>
+                      <i
+                        class="profile_photo-gym"
+                        class="fa-solid fa-dumbbell"
+                      ></i>
+                      Shape_de_elite_
+                    </h4>
+                    <p class="description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Modi beatae repellat tempora, aliquam, sit repudiandae
+                      nulla aliquid nam esse earum eius labore. Cum error
+                      consequatur, sunt deserunt est saepe corrupti.
+                    </p>
+                    <p><i class="fa-solid fa-music"></i> Original Audio</p>
+                  </div>
+                  <ul class="video-interactions">
+                    <li>
+                      <i class="fa-solid fa-heart"></i>
+                      <p>1M</p>
+                    </li>
+                    <li><i class="fa-regular fa-comment"></i></li>
+                    <li><i class="fa-regular fa-paper-plane"></i></li>
+                    <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                    <li>
+                      <img
+                        height="35px"
+                        src="img/profilePhotos/MusculosoDeOculos_formatoQuadrado.jpg"
+                        alt="Foto do albúm da música tocada no vídeo"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="reels" id="client_reels_6" popover>
+              <video loop>
+                <source src="promoVideo.mp4" />
+                <source src="" />
+              </video>
+              <div class="video-infos">
+                <h2>Reels</h2>
+                <div class="container-user_info_interaction">
+                  <div class="video-user-infos">
+                    <h4>
+                      <i
+                        class="profile_photo-gym"
+                        class="fa-solid fa-dumbbell"
+                      ></i>
+                      Shape_de_elite_
+                    </h4>
+                    <p class="description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Modi beatae repellat tempora, aliquam, sit repudiandae
+                      nulla aliquid nam esse earum eius labore. Cum error
+                      consequatur, sunt deserunt est saepe corrupti.
+                    </p>
+                    <p><i class="fa-solid fa-music"></i> Original Audio</p>
+                  </div>
+                  <ul class="video-interactions">
+                    <li>
+                      <i class="fa-solid fa-heart"></i>
+                      <p>1M</p>
+                    </li>
+                    <li><i class="fa-regular fa-comment"></i></li>
+                    <li><i class="fa-regular fa-paper-plane"></i></li>
+                    <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                    <li>
+                      <img
+                        height="35px"
+                        src="img/profilePhotos/MusculosoDeOculos_formatoQuadrado.jpg"
+                        alt="Foto do albúm da música tocada no vídeo"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="reels" id="client_reels_7" popover>
+              <video loop>
+                <source src="promoVideo.mp4" />
+                <source src="" />
+              </video>
+              <div class="video-infos">
+                <h2>Reels</h2>
+                <div class="container-user_info_interaction">
+                  <div class="video-user-infos">
+                    <h4>
+                      <i
+                        class="profile_photo-gym"
+                        class="fa-solid fa-dumbbell"
+                      ></i>
+                      Shape_de_elite_
+                    </h4>
+                    <p class="description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Modi beatae repellat tempora, aliquam, sit repudiandae
+                      nulla aliquid nam esse earum eius labore. Cum error
+                      consequatur, sunt deserunt est saepe corrupti.
+                    </p>
+                    <p><i class="fa-solid fa-music"></i> Original Audio</p>
+                  </div>
+                  <ul class="video-interactions">
+                    <li>
+                      <i class="fa-solid fa-heart"></i>
+                      <p>1M</p>
+                    </li>
+                    <li><i class="fa-regular fa-comment"></i></li>
+                    <li><i class="fa-regular fa-paper-plane"></i></li>
+                    <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                    <li>
+                      <img
+                        height="35px"
+                        src="img/profilePhotos/MusculosoDeOculos_formatoQuadrado.jpg"
+                        alt="Foto do albúm da música tocada no vídeo"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="users-slide_show">
+            <div class="image_user">
+              <input
+                popovertarget="client_reels_1"
+                popovertargetaction="toggle"
+                type="button"
+                name="user-image"
+                id="user-image_1"
+              />
+              <img
+                class="user selected"
+                src="img/profilePhotos/MusculosoDeOculos_formatoQuadrado.jpg"
+                alt=""
+              />
+            </div>
+            <div class="image_user">
+              <input
+                popovertarget="client_reels_2"
+                popovertargetaction="toggle"
+                type="button"
+                name="user-image"
+                id="user-image_1"
+              />
+              <img
+                class="user"
+                src="img/profilePhotos/MarombaFlexao.jpg"
+                alt=""
+              />
+            </div>
+            <div class="image_user">
+              <input
+                popovertarget="client_reels_3"
+                popovertargetaction="toggle"
+                type="button"
+                name="user-image"
+                id="user-image_1"
+              />
+              <img class="user" src="img/profilePhotos/AeroHit.jpg" alt="" />
+            </div>
+            <div class="image_user">
+              <input
+                popovertarget="client_reels_4"
+                popovertargetaction="toggle"
+                type="button"
+                name="user-image"
+                id="user-image_1"
+              />
+              <img
+                class="user"
+                src="img/profilePhotos/MorenoDescamisado.jpg"
+                alt=""
+              />
+            </div>
+            <div class="image_user">
+              <input
+                popovertarget="client_reels_5"
+                popovertargetaction="toggle"
+                type="button"
+                name="user-image"
+                id="user-image_1"
+              />
+              <img
+                class="user"
+                src="img/profilePhotos/MarombaFlexao.jpg"
+                alt=""
+              />
+            </div>
+            <div class="image_user">
+              <input
+                popovertarget="client_reels_6"
+                popovertargetaction="toggle"
+                type="button"
+                name="user-image"
+                id="user-image_1"
+              />
+              <img class="user" src="img/profilePhotos/AeroHit.jpg" alt="" />
+            </div>
+            <div class="image_user">
+              <input
+                popovertarget="client_reels_7"
+                popovertargetaction="toggle"
+                type="button"
+                name="user-image"
+                id="user-image_1"
+              />
+              <img
+                class="user"
+                src="img/profilePhotos/MorenoDescamisado.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <h1>
+            Venha ser <span id="sub-text">nosso aluno, <br />seja</span> Shape
+            de Elite!
+          </h1>
+        </div>
+        <div id="select_places">
+          <label for="places">Ver no mapa a unidade de...</label>
+          <select name="places" id="places">
+            <optgroup label="Distrito Federal">
+              <option value="DF">Asa Norte</option>
+              <option value="DF">Asa Sul</option>
+              <option value="DF">Bandeirante</option>
+              <option value="DF">Ceilândia</option>
+              <option value="DF">Samambaia</option>
+              <option value="DF">Taguatinga</option>
+            </optgroup>
+            <optgroup label="Bahia">
+              <option value="BH">Barreiras</option>
+              <option value="BH">Porto Seguro</option>
+              <option value="BH">Salvador</option>
+            </optgroup>
+            <optgroup label="Rio de Janeiro">
+              <option value="RJ">Copacabana</option>
+              <option value="RJ">Ipanema</option>
+              <option value="RJ">Literoi</option>
+              <option value="RJ">Rocinha</option>
+            </optgroup>
+            <optgroup label="São Paulo">
+              <option value="SP">Cesário Lange</option>
+              <option value="SP">Congonhas</option>
+              <option value="SP">Guarulhos</option>
+              <option value="SP">Santos</option>
+              <option value="SP">Tatuí</option>
+            </optgroup>
+            <optgroup label="Ceará">
+              <option value="CE">Fortaleza</option>
+              <option value="CE">Crateús</option>
+              <option value="CE">Independência</option>
+              <option value="CE">Tianguá</option>
+            </optgroup>
+          </select>
+        </div>
+      </section>
+      <!-- ========== Avaliações dos clientes Shape de Elite ========== -->
+      <section id="second-section">
+        <div id="google_avaliations">
+          <h1>EXECELENTE</h1>
+          <div id="stars_google" class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star-half-stroke"></i>
+          </div>
+          <p>Academia avaliada por +10K de usuários google</p>
+          <i id="logo_google">
+            <span>G</span><span>o</span><span>o</span><span>g</span
+            ><span>l</span><span>e</span>
+          </i>
+        </div>
+        <div id="container-reviews">
+          <!-- Depoimentos de clientes-->
+          <div class="review">
+            <header class="header-review">
+              <div class="client-review-info">
+                <img
+                  class="photo-profile"
+                  src="img/profilePhotos/FotoPerfilHomemOculos.jpg"
+                  alt="Foto de perfil de um homem com óculos escuro"
+                />
+                <div class="user-name">
+                  <h2>Gabriel</h2>
+                  <p>@Nome_usuário</p>
+                </div>
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </header>
+            <p>
+              Não é a RedBull, mas me deu Asas!! A Shape de Elite fazendo chegar
+              até os céus.
+            </p>
+          </div>
+          <div class="review">
+            <header class="header-review">
+              <div class="client-review-info">
+                <img
+                  class="photo-profile"
+                  src="img/profilePhotos/Hoia.png"
+                  alt="Homem fazendo pose de calistenia"
+                />
+                <div class="user-name">
+                  <h2>Benício</h2>
+                  <p>@benicio_swk</p>
+                </div>
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </header>
+            <p>
+              Me ajudou bastante, atendeu todas as minhas expectativas!! venha
+              consquistar um Shape de Elite!!
+            </p>
+          </div>
+          <div class="review">
+            <header class="header-review">
+              <div class="client-review-info">
+                <img
+                  class="user"
+                  src="img/profilePhotos/MusculosoDeOculos_formatoQuadrado.jpg"
+                  alt=""
+                />
+                <div class="user-name">
+                  <h2>Aoi</h2>
+                  <p>@Nome_usuário</p>
+                </div>
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </header>
+            <p>Gostei muito não, é 1Km da minha casa</p>
+          </div>
+          <div class="review">
+            <header class="header-review">
+              <div class="client-review-info">
+                <img
+                  class="user"
+                  src="img/profilePhotos/MusculosoDeOculos_formatoQuadrado.jpg"
+                  alt=""
+                />
+                <div class="user-name">
+                  <h2>Aoi</h2>
+                  <p>@Nome_usuário</p>
+                </div>
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </header>
+            <p>Gostei muito não, é 1Km da minha casa</p>
+          </div>
+          <div class="review">
+            <header class="header-review">
+              <div class="client-review-info">
+                <img
+                  class="user"
+                  src="img/profilePhotos/MusculosoDeOculos_formatoQuadrado.jpg"
+                />
+                <div class="user-name">
+                  <h2>Aoi</h2>
+                  <p>@Nome_usuário</p>
+                </div>
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </header>
+            <p>Gostei muito não, é 1Km da minha casa</p>
+          </div>
+          <div class="review">
+            <header class="header-review">
+              <div class="client-review-info">
+                <img
+                  class="user"
+                  src="img/profilePhotos/MusculosoDeOculos_formatoQuadrado.jpg"
+                  alt=""
+                />
+                <div class="user-name">
+                  <h2>Aoi</h2>
+                  <p>@Nome_usuário</p>
+                </div>
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </header>
+            <p>Gostei muito não, é 1Km da minha casa</p>
+          </div>
+          <div class="review">
+            <header class="header-review">
+              <div class="client-review-info">
+                <img
+                  class="user"
+                  src="img/profilePhotos/MusculosoDeOculos_formatoQuadrado.jpg"
+                  alt=""
+                />
+                <div class="user-name">
+                  <h2>Aoi</h2>
+                  <p>@Nome_usuário</p>
+                </div>
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </header>
+            <p>Gostei muito não, é 1Km da minha casa</p>
+          </div>
+          <div class="review">
+            <header class="header-review">
+              <div class="client-review-info">
+                <img
+                  class="user"
+                  src="img/profilePhotos/MusculosoDeOculos_formatoQuadrado.jpg"
+                  alt=""
+                />
+                <div class="user-name">
+                  <h2>Aoi</h2>
+                  <p>@Nome_usuário</p>
+                </div>
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </header>
+            <p>Gostei muito não, é 1Km da minha casa</p>
+          </div>
+          <div class="review">
+            <header class="header-review">
+              <div class="client-review-info">
+                <img
+                  class="user"
+                  src="img/profilePhotos/MusculosoDeOculos_formatoQuadrado.jpg"
+                  alt=""
+                />
+                <div class="user-name">
+                  <h2>Aoi</h2>
+                  <p>@Nome_usuário</p>
+                </div>
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </header>
+            <p>Gostei muito não, é 1Km da minha casa</p>
+          </div>
+        </div>
+      </section>
+      <!-- ========== Principais serviços da Shape de Elite - Carrosel ========== -->
+      <section id="third-section">
+        <h1>Principais serviços</h1>
+        <div id="slider">
+          <img
+            class="selected"
+            src="img/backgrounds/HomemLevantandoPneu.jpg"
+            alt="Homen levantando peso"
+          />
+          <img
+            src="img/backgrounds/MulherBicicletaGym.jpg"
+            alt="Mulher fazendo cardio na bicicleta"
+          />
+          <img
+            src="img/backgrounds/pilatesArLivre.jpg"
+            alt="Mulheres fazendo pilates"
+          />
+          <img
+            src="img/backgrounds/HomemSemCamisa.jpg"
+            alt="Homem fazendo musculação apoiado em elásticos"
+          />
+          <img
+            src="img/backgrounds/Aeróbica.jpg"
+            alt="Pessoas praticando aeróbica"
+          />
+        </div>
+        <div id="choicer-service">
+          <input
+            checked
+            type="radio"
+            name="slide"
+            id="slide-0"
+            onchange="changeImageSlideShow(0)"
+          />
+          <label id="label-0" for="slide-0"></label>
+          <input
+            type="radio"
+            name="slide"
+            id="slide-1"
+            onchange="changeImageSlideShow(1)"
+          />
+          <label id="label-1" for="slide-1"></label>
+          <input
+            type="radio"
+            name="slide"
+            id="slide-2"
+            onchange="changeImageSlideShow(2)"
+          />
+          <label id="label-2" for="slide-2"></label>
+          <input
+            type="radio"
+            name="slide"
+            id="slide-3"
+            onchange="changeImageSlideShow(3)"
+          />
+          <label id="label-3" for="slide-3"></label>
+          <input
+            type="radio"
+            name="slide"
+            id="slide-4"
+            onchange="changeImageSlideShow(4)"
+          />
+          <label id="label-4" for="slide-4"></label>
+          <div class="pop">
+            <h2 id="title-service">Crossfit</h2>
+          </div>
+        </div>
+      </section>
+      <!-- ========== Mensalidades da Shape de Elite ========== -->
+      <section id="fourth-section"></section>
+      <!-- ========== Pop up - Quando abre a página ========== -->
+      <dialog id="cookies-pop_up">
+        <form method="dialog">
+          <button id="close-pop_up"><i class="fa-solid fa-xmark"></i></button>
+          <div id="pop_up-content">
+            <!-- Ícone de cookie -->
+            <i class="fa-solid fa-cookie-bite"></i>
+            <div id="project-info">
+              <h2>Projeto Web - Shape de Elite</h2>
+              <p>
+                Projeto totalmente fictício, realizado no segundo semestre do
+                curso técnico de informática. Autores: Ítalo, Bénicio, Daniel.
+              </p>
+            </div>
+            <ul id="technologies">
+              <h3>Tecnologias usadas no projeto</h3>
+              <li><i id="html" class="fa-brands fa-html5"></i></li>
+              <li><i id="css" class="fa-brands fa-css3-alt"></i></li>
+              <li><i id="js" class="fa-brands fa-js"></i></li>
+              <li><i id="github" class="fa-brands fa-square-github"></i></li>
+            </ul>
+          </div>
+          <button id="accept-cookies_button">Ver projeto</button>
+        </form>
+      </dialog>
+    </main>
+    <!-- ========== Rodapé da página ========== -->
+    <footer>
+      <div id="footer-content">
+        <div id="footer-contacts">
+          <h3>Nossas redes</h3>
+          <div id="social-media">
+            <a
+              href="https://www.instagram.com/benicio_swk"
+              class="footer-link"
+              id="instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" class="footer-link" id="facebook">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#" class="footer-link" id="whatsapp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        <ul>
+          <h3>Nossa empresa</h3>
+          <li><a href="#" class="footer-link">Metodologias</a></li>
+          <li><a href="#" class="footer-link">Nossa empresa</a></li>
+          <li><a href="#" class="footer-link">Trabalhe conosco</a></li>
+        </ul>
+        <ul>
+          <h3>Suporte</h3>
+          <li><a href="#" class="footer-link">0800 000 000</a></li>
+          <li><a href="#" class="footer-link">Suporte online</a></li>
+          <li><a href="#" class="footer-link">Dúvidas frequentes</a></li>
+        </ul>
+      </div>
+      <div id="footer-copyright">&copy; 2024 | All rights reserved</div>
+    </footer>
+    <!-- ========== Scripts da página ========== -->
+    <script
+      src="https://kit.fontawesome.com/2ef0937c77.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="javaScript/homePage/modal.js"></script>
+    <script src="javaScript/homePage/videoControls.js"></script>
+    <script src="javaScript/homePage/openSideBar.js"></script>
+    <script src="javaScript/homePage/slide.js"></script>
+  </body>
 </html>
