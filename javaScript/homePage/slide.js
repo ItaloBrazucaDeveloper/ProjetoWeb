@@ -1,5 +1,7 @@
 const images = document.querySelectorAll("#slider img"),
-  inputs_radio = document.querySelectorAll('#choicer-service input[type="radio"]'),
+  inputs_radio = document.querySelectorAll(
+    '#choicer-service input[type="radio"]'
+  ),
   services = ["CrossFit", "Cardio", "Pilates", "Musculação", "Aeróbica"],
   service_title = document.getElementById("title-service");
 let position = 0;

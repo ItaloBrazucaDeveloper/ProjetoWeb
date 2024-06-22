@@ -7,5 +7,5 @@ screen.onmouseenter = () => {
 }
 
 screen.onclick = () => {
-  video.paused ? video.play() : video.pause()
-};
+  video.paused ? video.play() : video.pause();
+}

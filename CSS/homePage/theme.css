@@ -4,7 +4,8 @@
 }
 
 /* ---------- MAIN ---------- */
-section, main {
+section,
+main {
   background-color: #1a161b;
 }
 
@@ -36,10 +37,8 @@ section, main {
   background-color: #ffffff;
 }
 #first-section a:hover {
-  box-shadow: 0 0 5px #ffc000,
-              0 0 20px #ffc000,
-              0 0 60px #ffc000,
-              0 0 150px #ffc000;
+  box-shadow: 0 0 5px #ffc000, 0 0 20px #ffc000, 0 0 60px #ffc000,
+    0 0 150px #ffc000;
 }
 #home-text,
 .video-infos,
@@ -106,27 +105,28 @@ section, main {
 #service-title::before {
   content: "";
   position: absolute;
-  right: -2%; top: -5%;
-
+  top: -5%;
+  right: -2%;
   display: block;
-  height: 10px; width: 5px;
+  height: 10px;
+  width: 5px;
   background-color: #1a161b;
 }
 #service-title {
   color: black;
   background-color: #fefefe;
   outline: 3px solid #fff;
-
   border-right: 5px solid #1a161b;
   border-bottom: 5px solid #1a161b;
 }
 #service-title::after {
   content: "";
   position: absolute;
-  left: -1%; bottom: -5%;
-
+  left: -1%;
+  bottom: -5%;
   display: block;
-  height: 4.6px; width: 10px;
+  height: 4.6px;
+  width: 10px;
   background-color: #1a161b;
 }
 
