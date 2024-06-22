@@ -137,16 +137,45 @@ section {
 
 /* ---------- Conteúdo CSS da FIRST SECTION ---------- */
 #first-section {
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
   height: 100vh;
-  margin-top: 3em;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 100px;
 }
-#users-slide_show::after {
-  content: "...+10mil clientes!";
-  color: #eee;
-  font-size: 1.2rem;
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50%;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+}
+#users-slide_show {
+  display: flex;
+  column-gap: 6.5px;
+}
+#users-slide_show input {
+  position: absolute;
+  z-index: 1;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  cursor: pointer;
+}
+#users-slide_show .user {
+  border-radius: 50%;
+  height: 54px;
+  width: 54px;
+  opacity: 0.8;
+  background-color: #f8f8f8;
+}
+#users-slide_show .user.selected {
+  opacity: 1;
+  border: 2px solid white;
+  transition: 0.3s opacity ease;
 }
 #home-text {
   display: flex;
@@ -154,7 +183,8 @@ section {
   align-items: center;
 }
 #home-text h1 {
-  font-size: clamp(3rem, 10vw, 5.4rem);
+  text-align: center;
+  font-size: clamp(3rem, 10vw, 6.5rem);
   font-weight: 500;
   background: linear-gradient(45deg, #f6fad1, #e29a41, #f1e04c, #dbec3e);
   background-size: 400% 100%;
@@ -172,77 +202,86 @@ section {
 }
 #home-text #sub-text {
   color: #eee;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 300;
 }
-#to_be-elite {
-  /* Botão de matricula */
-  margin-top: 25px;
-  font-weight: 400;
-  padding: 15px 20px;
-  border-radius: 3px;
-  font-size: 1.5rem;
-  transition: 0.3s ease-out;
+#select_places {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 25px;
+  width: fit-content;
+  font-size: 1.6rem;
+  border-radius: 25px;
+  background-color: #ff6347;
 }
-.user {
-  /* Cículos com foto de usuários */
-  display: inline-block;
-  border-radius: 50%;
-  height: 60px;
-  width: 60px;
-  background-color: #f8f8f8;
+#select_places select {
+  appearance: none;
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  background-color: transparent;
 }
-.fa-volume-xmark,
-.fa-volume-high {
+#select_places label {
+  background-color: #fcfcfc;
+  padding: 10px 20px;
+  border-radius: 25px;
   cursor: pointer;
 }
-#video-promo {
+.reels {
   /* Conteiner com todas as coisas do vídeo */
   position: relative;
+  left: 21%;
+  top: 14%;
+  translate: -50%;
   cursor: pointer;
   border-radius: 10px;
   height: 620px;
 }
-#video-promo video {
-  /* Somente o vídeo a ser exibido */
+.reels video {
+  /* Vídeo a ser exibido */
   height: 100%;
-  border-radius: 10px;
 }
-#video-infos {
+.video-infos {
   /* Todas as informações gráficas do vídeo */
   position: absolute;
   top: 1.5%;
   left: 4%;
-
   display: grid;
   grid-template-rows: 1fr 1fr;
   width: 92%;
   height: 97%;
 }
-#video-infos p {
+.video-infos h2 {
+  color: #fcfcfc;
+}
+.video-infos p {
   font-size: 12pt;
 }
-#container-user_info_interaction {
+.container-user_info_interaction {
   /* Container com informações textuais do vídeo */
   display: flex;
   justify-content: space-between;
   align-items: end;
 }
-#video-user-infos {
+.video-user-infos {
   /* foto de perfil da gym, descrição do vídeo e nome da música/som */
   display: grid;
   row-gap: 3px;
   margin-bottom: 7px;
 }
-#video-user-infos #description {
+.video-user-infos #description {
   width: 250px;
 }
-#video-interactions li {
+.video-interactions li {
   font-size: 18pt;
   text-align: center;
   margin-top: 25px;
 }
-#video-interactions img {
+.video-interactions img {
   border-radius: 10px;
   border: 1.75px solid #fefefe;
 }
@@ -296,7 +335,8 @@ section {
   align-items: center;
 }
 .header-review img {
-  height: 3rem; width: 3rem;
+  height: 3rem;
+  width: 3rem;
   border-radius: 50%;
   margin-right: 0.7em;
 }
@@ -323,7 +363,8 @@ section {
 }
 #choicer-service {
   position: absolute;
-  bottom: 5%; left: 50%;
+  bottom: 5%;
+  left: 50%;
   translate: -50%;
   display: flex;
   justify-content: center;
@@ -331,12 +372,14 @@ section {
 }
 #slider {
   position: relative;
-  height: 100%; width: 100%;
+  height: 100%;
+  width: 100%;
   border-radius: 10px;
 }
 #slider img {
   position: absolute;
-  height: 100%; width: 100%;
+  height: 100%;
+  width: 100%;
   opacity: 0;
   object-fit: cover;
   transition: 1s opacity ease;
@@ -352,7 +395,8 @@ section {
   display: flex;
   cursor: pointer;
   border-radius: 8px;
-  width: 3.75em; height: 1.5em;
+  width: 3.75em;
+  height: 1.5em;
   transition: 0.4s ease-in-out;
 }
 #choicer-service input[type="radio"]:checked + label {
@@ -360,53 +404,61 @@ section {
   transition: 0.4s ease-in-out;
 }
 @keyframes showPop {
-  from { scale: 0 }
-  to { scale: 1 }
+  from {
+    scale: 0;
+  }
+  to {
+    scale: 1;
+  }
 }
 .pop {
   position: absolute;
-  bottom: 200%; left: 13%;
+  bottom: 200%;
+  left: 13%;
   translate: -50%;
   padding: 5px 10px;
   border-radius: 12px;
   box-shadow: 2.5px 2.5px 0 #ff6347;
   background-color: #fcfcfc;
-  animation: showPop .5s ease-out 1 forwards;
+  animation: showPop 0.5s ease-out 1 forwards;
 }
 .pop::before {
   content: " ";
   position: absolute;
   z-index: -1;
-  left: 50%; bottom: -25%;
-  translate: -50%; rotate: 45deg;
-  height: 16px; width: 16px;
+  left: 50%;
+  bottom: -25%;
+  translate: -50%;
+  rotate: 45deg;
+  height: 16px;
+  width: 16px;
   border-bottom: 2px solid #ff6347;
   border-right: 3px solid #ff6347;
   background-color: #fcfcfc;
 }
 #choicer-service:has(input[type="radio"]:checked:nth-child(1)) .pop {
   left: 13%;
-  transition: .7s left ease-in-out;
+  transition: 0.7s left ease-in-out;
 }
 #choicer-service:has(input[type="radio"]:checked:nth-child(3)) .pop {
   left: 31%;
-  transition: .7s left ease-in-out;
+  transition: 0.7s left ease-in-out;
 }
 #choicer-service:has(input[type="radio"]:checked:nth-child(5)) .pop {
   left: 50%;
-  transition: .7s left ease-in-out;
+  transition: 0.7s left ease-in-out;
 }
 #choicer-service:has(input[type="radio"]:checked:nth-child(7)) .pop {
   left: 69%;
-  transition: .7s left ease-in-out;
+  transition: 0.7s left ease-in-out;
 }
 #choicer-service:has(input[type="radio"]:checked:nth-child(7)) .pop {
   left: 69%;
-  transition: .7s left ease-in-out;
+  transition: 0.7s left ease-in-out;
 }
 #choicer-service:has(input[type="radio"]:checked:nth-child(9)) .pop {
   left: 87%;
-  transition: .7s left ease-in-out;
+  transition: 0.7s left ease-in-out;
 }
 
 /* ---------- Conteúdo da FOURTH SECTION ---------- */

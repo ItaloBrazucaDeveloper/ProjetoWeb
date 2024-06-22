@@ -4,7 +4,7 @@
 }
 
 /* ---------- MAIN ---------- */
-main {
+section, main {
   background-color: #1a161b;
 }
 
@@ -29,6 +29,9 @@ main {
 }
 
 /* ---------- FIRST SECTION ---------- */
+#first-section {
+  background-color: transparent;
+}
 #first-section a {
   background-color: #ffffff;
 }
@@ -39,18 +42,18 @@ main {
               0 0 150px #ffc000;
 }
 #home-text,
-#video-infos,
-#video-interactions li {
+.video-infos,
+.video-interactions li {
   color: #fefefe;
 }
 #home-text h2 {
-  color: #f3d85e;
+  color: #fcfcfc;
 }
-#video-promo {
+.reels {
   border: 2px solid #fff;
   box-shadow: 7px 7px 0 #ff6347;
 }
-#video-interactions li .fa-heart {
+.video-interactions li .fa-heart {
   color: #ff0000;
 }
 
