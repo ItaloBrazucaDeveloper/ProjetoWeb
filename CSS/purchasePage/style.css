@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* ---------- Conteúdo CSS GLOBAL da página ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Red Hat Display", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+main,
+section {
+  height: 100vh;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1a161b;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+.blocked {
+  /* bloqueia o scroll da página */
+  overflow: hidden;
+}
+.button {
+  border: none;
+  outline: none;
+  width: 100%;
+
+  font-size: 1.3rem;
+  font-weight: 400;
+  border-radius: 3px;
+
+  padding: 7px 0;
+  cursor: pointer;
+}
+.button.a {
+  text-align: center;
+  font-weight: 500;
+  color: #fcfcfc;
+  background-color: #ff6347;
+}
+.input-box {
+  display: flex;
+  position: relative;
+}
+.input-box input {
+  border: none;
+  outline: none;
+  height: 50px;
+
+  font-size: 1.3rem;
+  width: 100%;
+  padding-left: 40px;
+  border-radius: 0 8px 0 8px;
+}
+.input-box .icon {
+  position: absolute;
+  top: 50%; left: 20px;
+  translate: -50% -50%;
+}
+
+/* ---------- Conteúdo CSS do HEADER ---------- */
+#top-content {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+
+  padding: 15px 0;
+  background-color: #201823;
+  border-bottom: 2px solid #80808024;
+}
+#top-content #steps-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  column-gap: 70px;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+#top-content #steps-list > .steps {
+  display: inline;
+}
+.steps span {
+  color: #fcfcfc;
+}
+.progress-count {
+  margin: auto;
+  text-align: center;
+  line-height: 40px;
+
+  width: fit-content;
+  font-weight: 400;
+  height: 40px;
+  width: 40px;
+
+  border-radius: 50%;
+  border: 2px solid #fcfcfc;
+  position: relative;
+  z-index: 2;
+
+  color: #fcfcfc;
+  background-color: #1a161b;
+  transition: 0.3s scale ease-in-out;
+}
+.progress-count.close {
+  color: #fff;
+  scale: 0.3;
+  background-color: #fcfcfc;
+}
+.progress-count.done {
+  position: relative;
+  background-color: #16de1c;
+  border-color: transparent;
+
+  color: transparent;
+  transition: 1s background ease-in, 1s border-color 1s ease-out;
+}
+.progress-count.done::before {
+  /* ícone de check */
+  content: "✔️";
+  color: transparent;
+  text-shadow: 0 0 0 #fcfcfc;
+
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+
+  position: absolute;
+  bottom: 27%; left: 50%;
+  translate: -50%;
+}
+#steps-list {
+  position: relative;
+}
+.progress-count.done:not(.close)::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+
+  width: 350%;
+  height: 2px;
+  background-color: #fcfcfc;
+}
+
+/* ---------- Conteúdo CSS da FIRST-SECTION ---------- */
+#plans {
+  display: flex;
+  column-gap: 30px;
+  margin-top: 80px;
+}
+#plans:hover .plan_card {
+  opacity: 0.5;
+  filter: blur(2px);
+}
+#plans .plan_card:hover {
+  opacity: 1;
+  scale: 1.1;
+  filter: blur(0);
+}
+.plan_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  row-gap: 15px;
+  padding: 20px 60px;
+  border-radius: 5px;
+
+  cursor: pointer;
+  background-color: #fcfcfc;
+  box-shadow: 5px 5px 0 tomato;
+  transition: 0.2s opacity ease-in, 0.3s scale ease-out;
+}
+.plan-name {
+  font-size: 2.3rem;
+}
+.benefits-plan {
+  display: grid;
+  row-gap: 12px;
+  font-size: 1.2rem;
+  list-style: none;
+}
+.benefits-plan li {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+
+  border-radius: 20px;
+  background-color: #ff6347;
+  box-shadow: 0px 1px 0 tomato;
+}
+.benefits-plan li span {
+  margin-left: 10px;
+  width: 100%;
+  padding: 5px 10px;
+
+  text-indent: 5px;
+  border-radius: 20px;
+  background-color: #eee;
+}
+.selected-benefit i,
+.unselected-benefit i {
+  color: #fcfcfc;
+  text-shadow: 1px 1px 0 #fcfcfc;
+}
+.unselected-benefit {
+  opacity: 0.3;
+  font-weight: 350;
+}
+.plan_card .button.a {
+  margin-top: -5px;
+  margin-bottom: 30px;
+}
+.plan_price {
+  text-align: center;
+}
+.original_price {
+  font-weight: 450;
+}
+.offer-plan_price {
+  font-size: 3rem;
+}
+
+/* ---------- Conteúdo CSS da SECOND-SECTION ---------- */
+#identification {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#identification h1 {
+  color: #fcfcfc;
+}
+#client-id {
+  display: grid;
+  row-gap: 20px;
+  width: 40%;
+
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 1.4rem;
+}
+#client-id .input-box input {
+  box-shadow: 3px 5px 0 tomato;
+}
+#client-id .input-box input:focus {
+  outline: 3px solid tomato;
+}
+
+/* ---------- Conteúdo CSS do THIRD-SECTION ---------- */
+#purchase {
+  justify-content: space-around;
+}
+/* Seletor de forma de pagamento */
+#choice-purchase_form h1 {
+  color: #fcfcfc;
+}
+#choice-purchase_form {
+  width: 40%;
+  padding: 10px;
+}
+.choice-purchase_radio {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  margin-top: 20px;
+  padding: 10px;
+  height: 50px;
+
+  border-radius: 0 5px 0 5px;
+  box-shadow: 5px 5px 0 #ff6347;
+  background-color: #fff;
+  cursor: pointer;
+}
+.choice-purchase_radio label {
+  width: 100%;
+  padding: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.choice-purchase_radio input[type="radio"] {
+  appearance: none;
+  border: 3px dotted black;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.choice-purchase_radio input[type="radio"]:checked {
+  border: 5px solid black;
+  transition: .1s border linear;
+}
+.choice-purchase_radio:not(:has(input[type="radio"]:checked)) {
+  opacity: .6;
+}
+
+/* ---------- Formulário de pagamento - Cartão ---------- */
+#card_purchase-form {
+  display: grid;
+  row-gap: 15px;
+  padding: 15px;
+
+  border-radius: 10px;
+  background-color: #fcfcfc;
+  box-shadow: 5px 5px 0 #ff6347;
+}
+#cards_icons {
+  margin-bottom: -13px;
+}
+#card_purchase-form .input-box input {
+  background-color: #eaeaea;
+}
+#card_purchase-form .input-box input:focus {
+  border: 2px solid tomato;
+}
+#purchase-card h1 {
+  color: #fcfcfc;
+}
+#purchase-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  row-gap: 10px;
+  width: 30%;
+  padding: 10px;
+  margin-top: 75px;
+}
+#container-card_type,
+#card-type {
+  position: relative;
+  display: grid;
+  row-gap: 4px;
+  width: 100%;
+  cursor: pointer;
+}
+#card-type {
+  display: flex;
+  justify-content: center;
+  column-gap: 15px;
+
+  font-size: 1.3rem;
+  height: 47px;
+  border: none;
+
+  outline: none;
+  color: #222222c7;
+  font-weight: 450;
+  border-radius: 0 8px 0 8px;
+
+  padding-left: 40px;
+  appearance: none;
+  background-color: #eaeaea;
+}
+.arrow_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  bottom: 21%;
+  left: 4.7%;
+  translate: -50%;
+}
+#buttons-next_step {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+#terms {
+  min-width: 430px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+#terms > summary {
+  cursor: pointer;
+}
+
+/* ---------- Mensagem de confirmação ---------- */
+#finish_message {
+  display: grid;
+  place-items: center;
+  row-gap: 20px;
+
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #fcfcfc;
+}
+#finish_message ul {
+  display: grid;
+  row-gap: 6px;
+}
+#finish_message ul li {
+  list-style: square;
+  list-style-position: inside;
+}
+#finish_message ul li a {
+  text-decoration: underline;
+}
