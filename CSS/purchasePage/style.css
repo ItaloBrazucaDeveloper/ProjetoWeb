@@ -20,13 +20,6 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #1a161b;
-}
-input[type="month"]::-webkit-calendar-picker-indicator {
-  cursor: pointer;
-  position: absolute;
-  translate: -50%;
-  left: 4.56%;
 }
 ::-webkit-scrollbar {
   width: 0;
@@ -48,12 +41,10 @@ input[type="month"]::-webkit-calendar-picker-indicator {
 .button.a {
   text-align: center;
   font-weight: 500;
-  color: #fcfcfc;
-  background-color: #ff6347;
 }
 .button.a:disabled {
   cursor: default;
-  opacity: .7;
+  opacity: 0.7;
 }
 .input-box {
   display: flex;
@@ -80,11 +71,11 @@ input[type="month"]::-webkit-calendar-picker-indicator {
 .input-box .error_message.active {
   display: flex;
   position: absolute;
-  right: 5%; top: -20%;
-  background: linear-gradient(360deg, #eaeaea 50%, #fcfcfc 50%);
+  right: 5%;
+  top: -25%;
   font-weight: 500;
+  font-size: 1rem;
   padding-inline: 5px;
-  color: #e41313;
 }
 
 /* ---------- Conteúdo CSS do HEADER ---------- */
@@ -93,8 +84,6 @@ input[type="month"]::-webkit-calendar-picker-indicator {
   z-index: 5;
   width: 100%;
   padding: 15px 0;
-  background-color: #201823;
-  border-bottom: 2px solid #80808024;
 }
 #top-content #steps-list {
   display: flex;
@@ -107,9 +96,6 @@ input[type="month"]::-webkit-calendar-picker-indicator {
 #top-content #steps-list > .steps {
   display: inline;
 }
-.steps span {
-  color: #fcfcfc;
-}
 .progress-count {
   margin: auto;
   text-align: center;
@@ -119,23 +105,16 @@ input[type="month"]::-webkit-calendar-picker-indicator {
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  border: 2px solid #fcfcfc;
   position: relative;
   z-index: 2;
-  color: #fcfcfc;
-  background-color: #1a161b;
   transition: 0.3s scale ease-in-out;
 }
 .progress-count.close {
-  color: #fff;
   scale: 0.3;
-  background-color: #fcfcfc;
 }
 .progress-count.done {
   position: relative;
-  background-color: #16de1c;
   border-color: transparent;
-
   color: transparent;
   transition: 1s background ease-in, 1s border-color 1s ease-out;
 }
@@ -188,8 +167,6 @@ input[type="month"]::-webkit-calendar-picker-indicator {
   padding: 20px 60px;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #fcfcfc;
-  box-shadow: 5px 5px 0 tomato;
   transition: 0.2s opacity ease-in, 0.3s scale ease-out;
 }
 .plan-name {
@@ -205,10 +182,7 @@ input[type="month"]::-webkit-calendar-picker-indicator {
   display: flex;
   align-items: center;
   padding-left: 10px;
-
   border-radius: 20px;
-  background-color: #ff6347;
-  box-shadow: 0px 1px 0 tomato;
 }
 .benefits-plan li span {
   margin-left: 10px;
@@ -216,12 +190,6 @@ input[type="month"]::-webkit-calendar-picker-indicator {
   padding: 5px 10px;
   text-indent: 5px;
   border-radius: 20px;
-  background-color: #eee;
-}
-.selected-benefit i,
-.unselected-benefit i {
-  color: #fcfcfc;
-  text-shadow: 1px 1px 0 #fcfcfc;
 }
 .unselected-benefit {
   opacity: 0.3;
@@ -247,9 +215,7 @@ input[type="month"]::-webkit-calendar-picker-indicator {
   flex-direction: column;
   align-items: center;
 }
-#identification h1 {
-  color: #fcfcfc;
-}
+
 #client-id {
   display: grid;
   row-gap: 20px;
@@ -258,20 +224,10 @@ input[type="month"]::-webkit-calendar-picker-indicator {
   padding: 10px;
   font-size: 1.4rem;
 }
-#client-id .input-box input {
-  box-shadow: 3px 5px 0 tomato;
-}
-#client-id .input-box input:focus {
-  outline: 3px solid tomato;
-}
 
 /* ---------- Conteúdo CSS do THIRD-SECTION ---------- */
 #purchase {
   justify-content: space-around;
-}
-/* Seletor de forma de pagamento */
-#choice-purchase_form h1 {
-  color: #fcfcfc;
 }
 #choice-purchase_form {
   width: 40%;
@@ -285,8 +241,6 @@ input[type="month"]::-webkit-calendar-picker-indicator {
   padding: 10px;
   height: 50px;
   border-radius: 0 5px 0 5px;
-  box-shadow: 5px 5px 0 #ff6347;
-  background-color: #fff;
   cursor: pointer;
 }
 .choice-purchase_radio label {
@@ -316,20 +270,9 @@ input[type="month"]::-webkit-calendar-picker-indicator {
   row-gap: 15px;
   padding: 15px;
   border-radius: 10px;
-  background-color: #fcfcfc;
-  box-shadow: 5px 5px 0 #ff6347;
 }
 #cards_icons {
   margin-bottom: -13px;
-}
-#card_purchase-form .input-box input {
-  background-color: #eaeaea;
-}
-#card_purchase-form .input-box input:focus {
-  outline: 2px solid #ff6347;
-}
-#purchase-card h1 {
-  color: #fcfcfc;
 }
 #purchase-card {
   display: flex;
@@ -339,6 +282,12 @@ input[type="month"]::-webkit-calendar-picker-indicator {
   width: 30%;
   padding: 10px;
   margin-top: 75px;
+}
+input[type="month"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  position: absolute;
+  translate: -50%;
+  left: 4.56%;
 }
 #container-card_type,
 #card-type {
@@ -355,13 +304,11 @@ input[type="month"]::-webkit-calendar-picker-indicator {
   font-size: 1.3rem;
   height: 47px;
   border: none;
-  outline: none;
-  color: #222222c7;
+  outline: none;;
   font-weight: 450;
   border-radius: 0 8px 0 8px;
   padding-left: 40px;
   appearance: none;
-  background-color: #eaeaea;
 }
 .arrow_icon {
   display: flex;
@@ -372,12 +319,12 @@ input[type="month"]::-webkit-calendar-picker-indicator {
   left: 4.7%;
   translate: -50%;
 }
-#buttons-next_step {
+.button_container {
   display: flex;
   justify-content: space-between;
   column-gap: 20px;
 }
-#buttons-next_step a {
+.button_container a {
   width: 100%;
 }
 #terms {
@@ -394,10 +341,8 @@ input[type="month"]::-webkit-calendar-picker-indicator {
   display: grid;
   place-items: center;
   row-gap: 20px;
-
   border-radius: 8px;
   padding: 20px;
-  background-color: #fcfcfc;
 }
 #finish_message ul {
   display: grid;

@@ -4,6 +4,7 @@
     <title>Assinatura - Shape de Elite</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../CSS/purchasePage/style.css" />
+    <link rel="stylesheet" href="../CSS/purchasePage/theme.css" />
   </head>
   <body class="scroll blocked">
     <!-- ========== Cabeçalho da página ========== -->
@@ -137,54 +138,84 @@
       </section>
       <section id="identification">
         <h1>Identifique-se</h1>
-        <form method="post" id="client-id">
+        <form action="#purchase" method="post" id="client-id">
           <div class="input-box">
             <!-- Email -->
             <input
               required
               type="email"
-              placeholder="Email"
-              minlength="45"
-              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
               id="client-email"
+              placeholder="Email"
+              minlength="21"
+              maxlength="45"
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
+              autocomplete="email"
+              title="Email"
             />
             <div class="icon">
               <i class="fa-solid fa-envelope"></i>
             </div>
+            <label class="error_message" for="client-email"
+              >Email inválido</label
+            >
           </div>
           <div class="input-box">
             <!-- CPF -->
             <input
               required
               type="text"
-              maxlength="11"
-              placeholder="CPF"
-              pattern="[0-9]"
-              title="Somente números neste campo!"
               id="cpf-client"
+              minlength="14"
+              maxlength="14"
+              placeholder="CPF"
+              pattern="^[0-9]{3}\.[0-9]{3}\.[0-9]{3}\-[0-9]{2}"
+              autocomplete="off"
             />
             <div class="icon">
               <i class="fa-solid fa-address-card"></i>
             </div>
+            <label class="error_message" for="cpf-client"
+              >Somente números neste campo!</label
+            >
           </div>
           <div class="input-box">
             <!-- N° de telefone -->
             <input
               required
               type="tel"
-              maxlength="11"
-              placeholder="Telefone"
-              pattern="[0-9]"
-              title="Somente números neste campo!"
               id="client-phone-number"
+              minlength="14"
+              maxlength="16"
+              placeholder="Telefone"
+              pattern="\([0-9]{2}\)\s([0-9]{1}\.)?([0-9]{4})\-([0-9]{4})"
+              autocomplete="tel"
+              title="Telefone"
             />
             <div class="icon">
               <i class="fa-solid fa-square-phone"></i>
             </div>
+            <label class="error_message" for="client-phone-number"
+              >Somente números neste campo!</label
+            >
           </div>
-          <a href="#purchase">
-            <button id="choice_plan_button" class="button a" type="button">Confirmar</button>
-          </a>
+          <div class="button_container">
+            <a href="#purchase">
+              <button
+                type="submit"
+                id="choice_plan_button"
+                class="button a"
+                type="button"
+                disabled
+              >
+                Confirmar
+              </button>
+            </a>
+            <a href="#plan-choice">
+              <button class="button a" type="button">
+                Voltar
+              </button>
+            </a>
+          </div>
         </form>
       </section>
       <section id="purchase">
@@ -248,7 +279,6 @@
               />
             </h2>
             <div id="plan_choice-info">
-              <!-- Informações do plano escolhido -->
               <h4>Preço do plano escolhido</h4>
               <p>Plano escolhido</p>
             </div>
@@ -257,17 +287,18 @@
               <input
                 required
                 type="text"
-                name="Nome"
-                id="nome_char"
+                id="client_name-card"
                 placeholder="Nome titular"
-                pattern="[a-z|A-z]+"
-                title="Somante letras devem ser colocados neste campo"
+                pattern="(^[a-zA-z]+)\s([a-zA-z]+)"
+                title="Nome titular"
+                minlength="7"
                 maxlength="25"
+                autocomplete="off"
               />
               <div class="icon">
                 <i class="fa-solid fa-user"></i>
               </div>
-              <label class="error_message" for="nome_char"
+              <label class="error_message" for="client_name-card"
                 >Somente letras neste campo!</label
               >
             </div>
@@ -276,18 +307,18 @@
               <input
                 required
                 type="text"
-                name="num_cartao"
-                id="num_cartao"
+                id="num_card"
                 placeholder="Número do cartão"
-                pattern="[0-9]{16}"
-                title="Somente números(16) devem ser colocados neste campo"
-                autocomplete="off"
+                pattern="([0-9]{4})\s([0-9]{4})\s([0-9]{4})\s([0-9]{4})"
+                title="Número do cartão inválido!"
+                minlength="16"
                 maxlength="16"
+                autocomplete="off"
               />
               <div class="icon">
                 <i class="fa-solid fa-credit-card"></i>
               </div>
-              <label class="error_message" for="nome_char"
+              <label class="error_message" for="num_card"
                 >Somente números neste campo!</label
               >
             </div>
@@ -296,8 +327,7 @@
               <input
                 required
                 type="month"
-                name="dt_venc"
-                id="dt_venc"
+                id="date_expiration_card"
                 min="2024-06"
               />
             </div>
@@ -306,17 +336,18 @@
               <input
                 required
                 type="text"
-                name="CVV"
-                id="CVV"
+                id="verif_code_card"
                 placeholder="Código de verificação (CVV)"
                 pattern="[0-9]{3}"
-                title="Somente números(16) devem ser colocados neste campo"
+                title="Códido CVV inválido!"
+                minlength="3"
                 maxlength="3"
+                autocomplete="off"
               />
               <div class="icon">
                 <i class="fa-regular fa-credit-card"></i>
               </div>
-              <label class="error_message" for="nome_char"
+              <label class="error_message" for="verif_code_card"
                 >Somente números neste campo!</label
               >
             </div>
@@ -330,13 +361,15 @@
                 <i class="fa-solid fa-chevron-down"></i>
               </div>
             </div>
-            <div id="buttons-next_step">
+            <div class="button_container">
               <!-- Confirmar informações ou cancelar -->
-              <a href="#terms" id="confirm_info-card">
-                <button disabled class="button a" type="submit">Confirmar</button>
+              <a href="#terms">
+                <button id="confirm_info-card" disabled class="button a" type="submit">
+                  Confirmar
+                </button>
               </a>
-              <a href="#plan-choice" id="change_plan">
-                <button type="button" class="button a">Alterar plano</button>
+              <a href="#identification">
+                <button type="button" class="button a">Voltar</button>
               </a>
             </div>
             <details id="terms">

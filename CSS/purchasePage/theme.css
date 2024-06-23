@@ -1,0 +1,98 @@
+/* ---------- Section ---------- */
+section {
+  background: #1a161b;
+}
+
+/* ---------- Inputs ---------- */
+.button.a {
+  color: #fcfcfc;
+  background-color: #ff6347;
+}
+.input-box input {
+  background-color: #eaeaea;
+}
+.input-box .error_message.active {
+  color: #e41313;
+  background: linear-gradient(#fcfcfc 57%, #eaeaea 50%);
+}
+
+/* ---------- Barra de progresso ---------- */
+#top-content {
+  background-color: #201823;
+  border-bottom: 2px solid #80808024;
+}
+.progress-count {
+  background-color: #1a161b;
+}
+.steps span,
+.progress-count,
+.progress-count.close {
+  color: #fcfcfc;
+}
+.progress-count {
+  border: 2px solid #fcfcfc;
+}
+.progress-count.close {
+  background-color: #fcfcfc;
+}
+.progress-count.done {
+  color: transparent;
+  background-color: #16de1c;
+}
+
+/* ---------- Planos ---------- */
+.plan_card {
+  background-color: #fcfcfc;
+  box-shadow: 5px 5px 0 tomato;
+}
+.benefits-plan li {
+  background-color: #ff6347;
+  box-shadow: 0px 1px 0 tomato;
+}
+.benefits-plan li span {
+  background-color: #eee;
+}
+.selected-benefit i,
+.unselected-benefit i {
+  color: #fcfcfc;
+  text-shadow: 1px 1px 0 #fcfcfc;
+}
+
+/* ---------- Indentificação ---------- */
+#identification h1 {
+  color: #fcfcfc;
+}
+#client-id {
+  background-color: #fcfcfc;
+  box-shadow: 5px 5px 0 #ff6347;
+}
+#client-id .input-box input:focus {
+  outline: 3px solid #ff6347;
+}
+
+/* ---------- Pagamento ---------- */
+/* Seletor de forma de pagamento */
+.choice-purchase_radio {
+  box-shadow: 5px 5px 0 #ff6347;
+  background-color: #fcfcfc;
+}
+#purchase-card h1,
+#choice-purchase_form h1 {
+  color: #fcfcfc;
+}
+#card_purchase-form {
+  background-color: #fcfcfc;
+  box-shadow: 5px 5px 0 #ff6347;
+}
+#card_purchase-form .input-box input:focus {
+  outline: 2px solid #ff6347;
+}
+#card-type {
+  color: #222222c7;
+  background-color: #eaeaea;
+}
+
+/* ---------- Mensagem final ---------- */
+#finish_message {
+  background-color: #fcfcfc;
+}
