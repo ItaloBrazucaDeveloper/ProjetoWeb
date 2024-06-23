@@ -462,6 +462,80 @@ section {
 }
 
 /* ---------- Conteúdo da FOURTH SECTION ---------- */
+#plans {
+  display: flex;
+  column-gap: 30px;
+  margin-top: 80px;
+}
+#plans:hover .plan_card {
+  opacity: 0.5;
+  filter: blur(2px);
+}
+#plans .plan_card:hover {
+  opacity: 1;
+  scale: 1.1;
+  filter: blur(0);
+}
+.plan_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+  padding: 20px 60px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #fcfcfc;
+  box-shadow: 5px 5px 0 tomato;
+  transition: 0.2s opacity ease-in, 0.3s scale ease-out;
+}
+.plan-name {
+  font-size: 2.3rem;
+}
+.benefits-plan {
+  display: grid;
+  row-gap: 12px;
+  font-size: 1.2rem;
+  list-style: none;
+}
+.benefits-plan li {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+
+  border-radius: 20px;
+  background-color: #ff6347;
+  box-shadow: 0px 1px 0 tomato;
+}
+.benefits-plan li span {
+  margin-left: 10px;
+  width: 100%;
+  padding: 5px 10px;
+  text-indent: 5px;
+  border-radius: 20px;
+  background-color: #eee;
+}
+.selected-benefit i,
+.unselected-benefit i {
+  color: #fcfcfc;
+  text-shadow: 1px 1px 0 #fcfcfc;
+}
+.unselected-benefit {
+  opacity: 0.3;
+  font-weight: 350;
+}
+.plan_card .button.a {
+  margin-top: -5px;
+  margin-bottom: 30px;
+}
+.plan_price {
+  text-align: center;
+}
+.original_price {
+  font-weight: 450;
+}
+.offer-plan_price {
+  font-size: 3rem;
+}
 
 /* ---------- Conteúdo CSS do FOOTER ---------- */
 #footer-content {

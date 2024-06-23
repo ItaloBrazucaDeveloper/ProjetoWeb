@@ -1,129 +1,161 @@
-/* Arquivo onde terão todas as validações das entradas do usuário */
+const regex_num = /[0-9]/g,
+  regex_char = /[a-z|A-Z]/g;
+const form = document.querySelector("#card_purchase-form"),
+  input_name = document.querySelector("#nome_char"),
+  input_num_card = document.querySelector("#num_cartao"),
+  input_date_card = document.querySelector("#dt_venc"),
+  input_verif_num_card = document.querySelector("#CVV"),
+  error_message = document.querySelectorAll(".error_message"),
+  cpf = document.querySelector("#cpf-client"),
+  tel_num = document.querySelector("#client-phone-number"),
+  choice_plan_button = document.querySelector("choice_plan_button");
+let done_inputs_card = 0,
+  done_inputs_id = 0;
 
-/* ---------- Seção de inicialização das variáveis ---------- */
-const regex_num = /[0-9]/g; // Expressão regular para números
-const regex_char = /[a-z|A-Z]/g; // Expressão regular para letras
-const card_purchase_form = document.querySelector("#card_purchase_form");
-const nome_char = document.querySelector("#nome_char");
-const num_cartao = document.querySelector("#num_cartao");
-const dt_venc = document.querySelector("#dt_venc");
-const CVV = document.querySelector("#CVV");
-
-// Daniel
-/* ---------- Validação de CPF ---------- */
-// Impedir que o usuário digite letras neste campo
-// Fazer o cálculo matemático para verificar CPF
-
-/* ---------- Validação de Telefone ---------- */
-// Impedir que o usuário digite letras neste campo
-// impedir que o usuário coloque mais de 11 número
-
-
-// Bénicio
-/* ---------- Validação de Nome Titular ---------- */
-// Impedir que o usuário digite números neste campo
-nome_char.addEventListener("input", function(event) {
-  if (isOnlyChar(nome_char.value) == false){
-    this.value = this.value.replace(/[0-9]/g, '');
-    alert("Proibido numeros neste campo!!");
-  }
-
-// Impedir que o usuário digite mais de 25 caracteres
-if (nome_char.value.length >= 25){
-  alert("Atingiu o limite de caracteres!!");
+function isOnlyDigit(value) {
+  return value.match(regex_char) ? false : true;
 }
-});
-
-/* ---------- Validação de Número do cartão ---------- */
-// Impedir que o usuário digite letras neste campo
-num_cartao.addEventListener("input", function(event){
-  if(isOnlyDigit(num_cartao.value) == false){
-    this.value = this.value.replace(/[a-zA-Z]/g, '');
-    alert("Proibido caracteres neste campo!!");
+function isOnlyChar(value) {
+  return value.match(regex_num) ? false : true;
+}
+function verifyInputs(count_inputs) {
+  if (count_inputs == 3) {
+    confirm_info_card.disabled = false;
   }
-
-  // Forçando digitar no campo nome
-  //Impede de seguir para os proximos campos se nome estiver em branco!!
-  if (nome_char.value === ""){
-    alert("Campo nome está vazio!!");
-    this.value = this.value.replace(/[0-9]/g, '');
-  }
-
-
-
-// Impedir que o usuário digite mais de 16 digitos
- if(num_cartao.value.length >= 16){
-  alert("Atingiu o numero maximo de digitos");
- }
-});
-
-/* ---------- Validação de Data de vencimento ---------- */
-// Impedir que o usuário digite letras neste campo
-dt_venc.addEventListener("input", function(event){
-  if(isOnlyDigit(dt_venc.value) ==false){
-    alert("Proibido caracteres neste campo");
-    this.value = this.value.replace(/[a-zA-Z]/g, '');
-  }
-
-
-  // Forçando digitar no campo nome
-  //Impede de seguir para os proximos campos se nome estiver em branco!!
-  if (nome_char.value === ""){
-    alert("Campo nome está vazio!!");
-    this.value = this.value.replace(/[0-9]/g, '');
-  }
-
-
-// Impedir que o usuário digite mais de 4 digitos 
-if(dt_venc.value.length >= 4){
-  alert("Atingiu o numero maximo de digitos");
 }
 
-  // O codigo que aplica o max. de digitos esta no HTML
-
-// Verificar se o mês > 1 && mês < 12
-if(dt_venc.value.length = 2 && dt_venc.value > 1250){
-  alert("Mes/Ano incorreto!!");
-  this.value = this.value.replace(/[0-9]/g, '');
+cpf.onfocus = () => {
+  let outline_color = cpf.style.outlineColor;
+  if (outline_color != "lime" || outline_color != "red") {
+    cpf.style.outline = "2px solid tomato";
+  }
 }
-// Verificar se o ano tem mínimo de 4 números
-  // Está verificando no vento abaixo
-});
-/* ---------- Validação de código de verificação ---------- */
-CVV.addEventListener("input", function(event){
-
-  // Forçando digitar no campo nome
-  //Impede de seguir para os proximos campos se nome estiver em branco!!
-  if (nome_char.value === ""){
-    alert("Campo nome está vazio!!");
-    this.value = this.value.replace(/[0-9]/g, '');
+cpf.onblur = () => {
+  if (cpf.value == "") {
+    cpf.style.outline = "none";
+  } else if (cpf.style.outlineColor == "lime") {
+    done_inputs_card++;
   }
-
-  // Verificar a data de vencimento tem no mínimo de 4 números
-  if(dt_venc.value.length < 4){
-    alert("data de vencimento não atingiu os 4 digitos!");
-    this.value = this.value.replace(/[0-9]/g, '');
-  }
-
-// Impedir que o usuário digite letras neste campo
-if (isOnlyDigit(CVV) == false){
-  alert("Não é permitido caracteres neste campo!!");
-  this.value = this.value.replace(/[a-zA-Z]/g, '');
 }
-// impedir que o usuário digite mais de 3 digitos
-  // Essa função está no HTML
-  if(CVV >= 3){
-    alert("Você atingiu o numero maximo de digitos!!");
+cpf.oninput = () => {
+  let nums = cpf.value;
+  if (!isOnlyDigit(nums)) {
+    cpf.style.outline = "3px solid red";
+    error_message[0].classList.add("active");
+  } else if (nums == "") {
+    error_message[0].classList.remove("active");
+    cpf.style.outline = "2px solid tomato";
+    verifyInputs(3);
+  } else {
+    cpf.style.outline = "2px solid lime";
+    verifyInputs(done_inputs_id);
   }
-});
-
-
-// Retorna se um valor é composto apenas por números
-function isOnlyDigit(valor) {
-  return valor.match(regex_char) ? false : true;
 }
 
-// Retorna se um valor é composto apenas por letras
-function isOnlyChar(valor) {
-  return valor.match(regex_num) ? false : true;
+tel_num.onfocus = () => {
+  let outline_color = tel_num.style.boxS;
+  if (outline_color != "lime" || outline_color != "red") {
+    tel_num.style.outline = "2px solid tomato";
+  }
+}
+tel_num.onblur = () => {
+  if (tel_num.value == "") {
+    tel_num.style.outline = "none";
+  } else if (tel_num.style.outlineColor == "lime") {
+    done_inputs_card++;
+  }
+}
+tel_num.oninput = () => {
+  let nums = tel_num.value;
+  if (!isOnlyDigit(nums)) {
+    tel_num.style.outline = "3px solid red";
+    error_message[0].classList.add("active");
+  } else if (nums == "") {
+    error_message[0].classList.remove("active");
+    tel_num.style.outline = "2px solid tomato";
+  } else {
+    tel_num.style.outline = "2px solid lime";
+    verifyInputs(done_inputs_id);
+  }
+}
+
+input_name.onfocus = () => {
+  let outline_color = input_name.style.outlineColor;
+  if (outline_color != "lime" || outline_color != "red") {
+    input_name.style.outline = "2px solid tomato";
+  }
+}
+input_name.onblur = () => {
+  if (input_name.value == "") {
+    input_name.style.outline = "none";
+  } else if (input_name.style.outlineColor == "lime") {
+    done_inputs_card++;
+  }
+}
+input_name.oninput = () => {
+  let chars = input_name.value;
+  if (!isOnlyChar(chars)) {
+    input_name.style.outline = "3px solid red";
+    error_message[0].classList.add("active");
+  } else if (chars == "") {
+    error_message[0].classList.remove("active");
+    input_name.style.outline = "2px solid tomato";
+  } else if (chars.length > 6) {
+    input_name.style.outline = "2px solid lime";
+    verifyInputs(done_inputs_card);
+  }
+}
+
+input_num_card.onfocus = () => {
+  let outline_color = input_num_card.style.outlineColor;
+  if (outline_color != "lime" || outline_color != "red") {
+    input_num_card.style.outline = "2px solid tomato";
+  }
+}
+input_num_card.onblur = () => {
+  if (input_num_card.value == "") {
+    input_num_card.style.outline = "none";
+  } else if (input_num_card.style.outlineColor == "lime") {
+    done_inputs_card++;
+  }
+}
+input_num_card.oninput = () => {
+  let nums = input_num_card.value;
+  if (!isOnlyDigit(nums)) {
+    input_num_card.style.outline = "3px solid red";
+    error_message[1].classList.add("active");
+  } else if (nums == "") {
+    error_message[1].classList.remove("active");
+    input_num_card.style.outline = "2px solid tomato";
+  } else {
+    input_num_card.style.outline = "2px solid lime";
+    verifyInputs(done_inputs_card);
+  }
+}
+
+input_verif_num_card.onfocus = () => {
+  let outline_color = input_verif_num_card.style.outlineColor;
+  if (outline_color != "lime" || outline_color != "red") {
+    input_verif_num_card.style.outline = "2px solid tomato";
+  }
+}
+input_verif_num_card.onblur = () => {
+  if (input_verif_num_card.value == "") {
+    input_verif_num_card.style.outline = "none";
+  } else if (input_verif_num_card.style.outlineColor == "lime") {
+    done_inputs_card++;
+  }
+}
+input_verif_num_card.oninput = () => {
+  let code_verif = input_verif_num_card.value;
+  if (!isOnlyDigit(code_verif)) {
+    error_message[2].classList.add("active");
+    input_verif_num_card.style.outline = "3px solid red";
+  } else if (code_verif == "") {
+    error_message[2].classList.remove("active");
+    input_verif_num_card.style.outline = "2px solid tomato";
+  } else {
+    input_verif_num_card.style.outline = "2px solid lime";
+    verifyInputs(done_inputs_card);
+  }
 }
