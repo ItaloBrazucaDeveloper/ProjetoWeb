@@ -17,7 +17,7 @@ function changeClasses(i) {
 
 body.onload = () => {
   window.scrollTo(0, 0);
-};
+}
 
 for (const plan_card of plan_cards) {
   plan_card.onclick = () => {
@@ -28,13 +28,13 @@ for (const plan_card of plan_cards) {
       <p>Preço total: ${price_plan.innerText}</p>
     `;
     changeClasses(0);
-  };
+  }
 }
 
 confirm_info_id.onclick = () => {
   changeClasses(1);
-};
+}
 
 confirm_info_card.onclick = () => {
   changeClasses(2);
-};
+}

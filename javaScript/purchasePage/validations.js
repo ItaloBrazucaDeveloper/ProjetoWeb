@@ -76,7 +76,6 @@ function applyMaskIn(input) {
       } else if (num.length == 14) {
         input.value += " ";
       }
-      break;
   }
 }
 
@@ -95,7 +94,6 @@ function verifOutlines() {
   confirm_info_card.disabled = count_card == 3 ? false : true;
 }
 
-
 for (let input of inputs) {
   input.onfocus = () => {
     let outline_color = input.style.outlineColor;
@@ -103,35 +101,32 @@ for (let input of inputs) {
       input.style.outline = "2px solid tomato";
     }
   }
-  input.oninput = (e) => {
+  input.onchange = (e) => {
     let value = input.value;
     const id_input = input.getAttribute("id");
     const message_error = document.querySelector(
       ".input-box #" + id_input + " ~ .error_message"
     );
 
-    if (value.length >= input.getAttribute("minlength")) {
-      if (verifInput(input) === true) {
-        input.style.outline = "2px solid lime";
-        message_error.classList.remove("active");
-      } else {
-        input.style.outline = "3px solid red";
-        message_error.classList.add("active");
-      }
+    if (verifInput(input) === true) {
+      input.style.outline = "2px solid lime";
+      message_error.classList.remove("active");
+    } else {
+      input.style.outline = "3px solid red";
+      message_error.classList.add("active");
     }
-
-    if (e.inputType == "insertText") applyMaskIn(input);
-
     if (input.style.outlineColor == "lime") {
       if (!valid_inputs.find((id) => id == id_input)) {
         valid_inputs.push(id_input);
       }
+    } else if (input.style.outlineColor == "red") {
+      let index = valid_inputs.indexOf(id_input);
+      valid_inputs.splice(index, 1);
     }
-    if (message_error.getAttribute("class") == "error_message active") {
-      valid_inputs.splice(id_input, 1);
-    }
-    console.log(valid_inputs);
     verifOutlines();
+  }
+  input.oninput = (e) => {
+    if (e.inputType == "insertText") applyMaskIn(input);
   }
   input.onblur = () => {
     if (input.value == "") {
