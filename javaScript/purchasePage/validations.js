@@ -1,5 +1,4 @@
 const inputs = document.querySelectorAll(".input-box input"),
-  forms = document.querySelectorAll("form"),
   confirm_info_id = document.querySelector("#confirm_info-id"),
   confirm_info_card = document.querySelector("#confirm_info-card");
 let valid_inputs = [];
@@ -82,8 +81,8 @@ function applyMaskIn(input) {
 }
 
 function verifOutlines() {
-  let count_id = 0,
-    count_card = 0;
+  let count_id = 0;
+  let count_card = 0;
   for (let id of valid_inputs) {
     if (id == "client-email" || id == "cpf-client" || id == "client-phone-number") {
       count_id++;
@@ -96,21 +95,22 @@ function verifOutlines() {
   confirm_info_card.disabled = count_card == 3 ? false : true;
 }
 
+
 for (let input of inputs) {
   input.onfocus = () => {
     let outline_color = input.style.outlineColor;
     if (outline_color != "lime" && outline_color != "red") {
       input.style.outline = "2px solid tomato";
     }
-  };
+  }
   input.oninput = (e) => {
     let value = input.value;
     const id_input = input.getAttribute("id");
+    const message_error = document.querySelector(
+      ".input-box #" + id_input + " ~ .error_message"
+    );
 
     if (value.length >= input.getAttribute("minlength")) {
-      const message_error = document.querySelector(
-        ".input-box #" + id_input + " ~ .error_message"
-      );
       if (verifInput(input) === true) {
         input.style.outline = "2px solid lime";
         message_error.classList.remove("active");
@@ -126,16 +126,16 @@ for (let input of inputs) {
       if (!valid_inputs.find((id) => id == id_input)) {
         valid_inputs.push(id_input);
       }
-    } else if (input.style.outlineColor == "red") {
-      valid_inputs.splice(id_input, 3);
-      console.log("retirou", id_input);
+    }
+    if (message_error.getAttribute("class") == "error_message active") {
+      valid_inputs.splice(id_input, 1);
     }
     console.log(valid_inputs);
     verifOutlines();
-  };
+  }
   input.onblur = () => {
     if (input.value == "") {
       input.style.outline = "none";
     }
-  };
+  }
 }
