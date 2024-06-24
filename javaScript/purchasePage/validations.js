@@ -6,6 +6,7 @@ let valid_inputs = [];
 
 function isCpfValid(cpf) {
   cpf = cpf.replace(/[.-]/g, "");
+  if (cpf == "00000000000") return false;
   let count = 1,
     verify_count = 0,
     multiplier = 10,
@@ -84,18 +85,10 @@ function verifOutlines() {
   let count_id = 0,
     count_card = 0;
   for (let id of valid_inputs) {
-    if (
-      id == "client-email" ||
-      id == "cpf-client" ||
-      id == "client-phone-number"
-    ) {
+    if (id == "client-email" || id == "cpf-client" || id == "client-phone-number") {
       count_id++;
     }
-    if (
-      id == "client_name-card" ||
-      id == "num_card" ||
-      id == "verif_code_card"
-    ) {
+    if (id == "client_name-card" || id == "num_card" || id == "verif_code_card") {
       count_card++;
     }
   }
@@ -134,8 +127,10 @@ for (let input of inputs) {
         valid_inputs.push(id_input);
       }
     } else if (input.style.outlineColor == "red") {
-      valid_inputs.splice(id_input, 1);
+      valid_inputs.splice(id_input, 3);
+      console.log("retirou", id_input);
     }
+    console.log(valid_inputs);
     verifOutlines();
   };
   input.onblur = () => {
