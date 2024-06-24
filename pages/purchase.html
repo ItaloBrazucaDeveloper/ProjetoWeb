@@ -168,14 +168,14 @@
               minlength="14"
               maxlength="14"
               placeholder="CPF"
-              pattern="^[0-9]{3}\.[0-9]{3}\.[0-9]{3}\-[0-9]{2}"
+              pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}\-[0-9]{2}"
               autocomplete="off"
             />
             <div class="icon">
               <i class="fa-solid fa-address-card"></i>
             </div>
             <label class="error_message" for="cpf-client"
-              >Somente números neste campo!</label
+              >CPF inválido!</label
             >
           </div>
           <div class="input-box">
@@ -195,14 +195,14 @@
               <i class="fa-solid fa-square-phone"></i>
             </div>
             <label class="error_message" for="client-phone-number"
-              >Somente números neste campo!</label
+              >Telefone inválido</label
             >
           </div>
           <div class="button_container">
             <a href="#purchase">
               <button
-                type="submit"
-                id="choice_plan_button"
+                type="button"
+                id="confirm_info-id"
                 class="button a"
                 type="button"
                 disabled
@@ -299,7 +299,7 @@
                 <i class="fa-solid fa-user"></i>
               </div>
               <label class="error_message" for="client_name-card"
-                >Somente letras neste campo!</label
+                >Nome titular inválido</label
               >
             </div>
             <div class="input-box">
@@ -311,15 +311,15 @@
                 placeholder="Número do cartão"
                 pattern="([0-9]{4})\s([0-9]{4})\s([0-9]{4})\s([0-9]{4})"
                 title="Número do cartão inválido!"
-                minlength="16"
-                maxlength="16"
+                minlength="19"
+                maxlength="19"
                 autocomplete="off"
               />
               <div class="icon">
                 <i class="fa-solid fa-credit-card"></i>
               </div>
               <label class="error_message" for="num_card"
-                >Somente números neste campo!</label
+                >Número de cartão inválido</label
               >
             </div>
             <div class="input-box">
@@ -348,7 +348,7 @@
                 <i class="fa-regular fa-credit-card"></i>
               </div>
               <label class="error_message" for="verif_code_card"
-                >Somente números neste campo!</label
+                >Código de verificação inválido</label
               >
             </div>
             <div id="container-card_type">
@@ -364,7 +364,7 @@
             <div class="button_container">
               <!-- Confirmar informações ou cancelar -->
               <a href="#terms">
-                <button id="confirm_info-card" disabled class="button a" type="submit">
+                <button id="confirm_info-card" disabled class="button a" type="button">
                   Confirmar
                 </button>
               </a>

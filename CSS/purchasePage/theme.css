@@ -66,9 +66,6 @@ section {
   background-color: #fcfcfc;
   box-shadow: 5px 5px 0 #ff6347;
 }
-#client-id .input-box input:focus {
-  outline: 3px solid #ff6347;
-}
 
 /* ---------- Pagamento ---------- */
 /* Seletor de forma de pagamento */
@@ -83,9 +80,6 @@ section {
 #card_purchase-form {
   background-color: #fcfcfc;
   box-shadow: 5px 5px 0 #ff6347;
-}
-#card_purchase-form .input-box input:focus {
-  outline: 2px solid #ff6347;
 }
 #card-type {
   color: #222222c7;
