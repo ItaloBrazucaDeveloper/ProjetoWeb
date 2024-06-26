@@ -35,7 +35,6 @@ function applyMaskIn(input) {
       }
       break;
   }
-  return value.match(pattern);
 }
 
 function isCpfValid(cpf) {
@@ -103,10 +102,10 @@ for (let input of inputs) {
       input.style.outline = "2px solid tomato";
     }
   }
-  input.onchange = (e) => {
+  input.oninput = (e) => {
     let value = input.value;
-    const id_input = input.getAttribute("id");
-      pattern = input.getAttribute("pattern");
+    const id_input = input.getAttribute("id"),
+      pattern = input.getAttribute("pattern"),
       message_error = document.querySelector(
         ".input-box #" + id_input + " ~ .error_message"
       );
@@ -123,9 +122,6 @@ for (let input of inputs) {
       }
       changeButton();
     }
-  }
-  input.oninput = (e) => {
-    if (e.inputType == "insertText") applyMaskIn(input);
   }
   input.onblur = () => {
     if (input.value == "") {
