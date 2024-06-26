@@ -7,12 +7,12 @@ body.onload = () => {
   if (!localStorage.accept_cookies) {
     modal.showModal();
   }
-};
+}
 
 button_close.onclick = () => {
   modal.close();
-};
+}
 
 button_accept.onclick = () => {
   localStorage.accept_cookies = "true";
-};
+}

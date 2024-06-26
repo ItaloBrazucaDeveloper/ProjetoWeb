@@ -35,6 +35,7 @@ function applyMaskIn(input) {
       }
       break;
   }
+  return value.match(pattern);
 }
 
 function isCpfValid(cpf) {
@@ -102,7 +103,7 @@ for (let input of inputs) {
       input.style.outline = "2px solid tomato";
     }
   }
-  input.oninput = (e) => {
+  input.onchange = (e) => {
     let value = input.value;
     const id_input = input.getAttribute("id");
       pattern = input.getAttribute("pattern");
@@ -122,6 +123,9 @@ for (let input of inputs) {
       }
       changeButton();
     }
+  }
+  input.oninput = (e) => {
+    if (e.inputType == "insertText") applyMaskIn(input);
   }
   input.onblur = () => {
     if (input.value == "") {
