@@ -70,22 +70,34 @@ function isCpfValid(cpf) {
 
 function verifInput(id, value, pattern) {
   switch (id) {
-    case "cpf-client": if (!isCpfValid(value)) return false;
-      break;
+    case "cpf-client":
+      if (!isCpfValid(value)) return false;
+    // case "client-email": Validação de email
+    // case...
   }
-  return value.match(pattern);
+  return value.match(pattern) != null ? true : false;
 }
 
 function changeButton() {
-  let count_id = 0, count_card = 0;
+  let count_id = 0,
+    count_card = 0;
   for (let input of inputs) {
     let id = input.getAttribute("id");
     let outline_color = input.style.outlineColor;
     if (outline_color == "lime") {
-      if (id == "client-email" || id == "cpf-client" || id == "client-phone-number") {
+      if (
+        id == "client-email" ||
+        id == "cpf-client" ||
+        id == "client-phone-number"
+      ) {
         count_id++;
       }
-      if (id == "client_name-card" || id == "num_card" || id == "verif_code_card" || id == "date_expiration_card") {
+      if (
+        id == "client_name-card" ||
+        id == "num_card" ||
+        id == "verif_code_card" ||
+        id == "date_expiration_card"
+      ) {
         count_card++;
       }
     }
@@ -101,7 +113,7 @@ for (let input of inputs) {
     if (outline_color != "lime" && outline_color != "red") {
       input.style.outline = "2px solid tomato";
     }
-  }
+  };
   input.oninput = (e) => {
     let value = input.value;
     const id_input = input.getAttribute("id"),
@@ -124,8 +136,6 @@ for (let input of inputs) {
     }
   }
   input.onblur = () => {
-    if (input.value == "") {
-      input.style.outline = "none";
-    }
+    if (input.value == "") input.style.outline = "none";
   }
 }
