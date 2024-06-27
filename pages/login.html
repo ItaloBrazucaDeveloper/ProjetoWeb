@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login - Shape de elite</title>
+    <link rel="stylesheet" href="/CSS/loginPage/style.css" />
+  </head>
+  <body>
+    <form id="login" action="pages/registerPage.html" method="POST">
+      <h1>Login</h1>
+      <div class="input-box">
+        <!-- Matrícula -->
+        <label for="employer_num">Matrícula</label>
+        <input
+          required
+          type="text"
+          name="employer_num"
+          id="employer_num"
+          pattern="^[0-9]{5}\-[0-9]{1}"
+          autocomplete="username"
+          placeholder="Matrícula"
+        />
+      </div>
+      <div class="input-box">
+        <!-- Senha -->
+        <label for="passwd-input">Senha</label>
+        <input type="password" name="" id="passwd-input" pattern="" autocomplete="off" placeholder="Senha"/>
+      </div>
+      <div id="container-buttons">
+        <button type="submit">Confirmar</button>
+        <button type="button">Voltar</button>
+      </div>
+    </form>
+    <script src="/javaScript/loginPage/login.js"></script>
+  </body>
+</html>
